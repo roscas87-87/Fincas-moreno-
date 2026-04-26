@@ -30,55 +30,66 @@
     }
 
     /* NAV */
-    /* NAV */
+    /* NAV OPCIÓN C */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      height: auto;
-      padding: 0;
-      display: block;
+      display: flex; flex-direction: column;
       background: transparent;
-      border-bottom: none;
       transition: box-shadow 0.3s;
     }
     nav.scrolled { box-shadow: var(--shadow); }
-    .nav-inner {
-      position: relative;
-      width: 100%;
-    }
+
+    /* LOGO STRIP */
     .nav-logo {
-      display: block;
-      width: 100%;
+      display: block; width: 100%;
+      background: var(--cream);
     }
     .nav-logo-img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
+      width: 100%; height: auto;
+      display: block; object-fit: cover;
     }
-    .nav-links { display: none; }
-    .hamburger {
-      position: absolute;
-      top: 50%; right: 1.5rem;
-      transform: translateY(-50%);
-      display: flex !important;
-      flex-direction: column;
-      gap: 6px;
-      cursor: pointer;
-      z-index: 110;
-      background: none;
-      border: none;
-      padding: 0;
-    }
-    .hamburger span {
-      width: 28px; height: 2.5px;
+
+    /* NAV BAR BELOW LOGO */
+    .nav-bar {
       background: var(--dark);
-      border-radius: 2px;
-      display: block;
-      transition: all 0.3s;
+      border-top: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      padding: 0;
+      overflow-x: auto;
     }
-    .hamburger.open span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
+    .nav-bar a {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(247,243,238,0.7);
+      text-decoration: none;
+      padding: 0.85rem 1.2rem;
+      white-space: nowrap;
+      transition: color 0.2s, background 0.2s;
+      border-right: 1px solid rgba(184,151,90,0.15);
+    }
+    .nav-bar a:first-child { border-left: 1px solid rgba(184,151,90,0.15); }
+    .nav-bar a:hover { color: var(--gold); background: rgba(184,151,90,0.08); }
+    .nav-bar .nav-bar-cta {
+      background: var(--gold); color: #fff !important;
+      margin-left: 0.5rem; border: none !important;
+      padding: 0.85rem 1.5rem;
+    }
+    .nav-bar .nav-bar-cta:hover { background: var(--gold-light) !important; }
+
+    /* HIDE OLD ELEMENTS */
+    .nav-links { display: none !important; }
+    .hamburger { display: none !important; }
+    .mobile-menu { display: none !important; }
+
+    @media (max-width: 700px) {
+      .nav-bar { justify-content: flex-start; }
+      .nav-bar a { font-size: 0.65rem; padding: 0.75rem 0.85rem; letter-spacing: 0.12em; }
+    }
 
     /* MOBILE MENU */
     .mobile-menu {
@@ -1145,13 +1156,18 @@
 
 <!-- NAV -->
 <nav id="mainNav">
-  <div class="nav-inner">
-    <a class="nav-logo" href="index.html">
-      <img src="logoheader.png" alt="FincasMoreno" class="nav-logo-img" />
-    </a>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </button>
+  <a class="nav-logo" href="index.html">
+    <img src="logoheader.png" alt="FincasMoreno" class="nav-logo-img" />
+  </a>
+  <div class="nav-bar">
+    <a href="#servicios">Servicios</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#precios">Precios</a>
+    <a href="#equipo">Equipo</a>
+    <a href="#faq">FAQ</a>
+    <a href="#blog">Blog</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#contacto" class="nav-bar-cta">Presupuesto Gratis</a>
   </div>
 </nav>
 
