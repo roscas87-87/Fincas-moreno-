@@ -667,6 +667,358 @@
     .footer-links a:hover { color: var(--gold-light); }
     .footer-copy { font-size: 0.75rem; color: rgba(247,243,238,0.3); }
 
+    /* AREA PROPIETARIOS NAV BTN */
+    .nav-propietarios {
+      display: flex; align-items: center; gap: 0.5rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--dark) !important;
+      padding: 0.45rem 1rem;
+      border-radius: 2px;
+      font-size: 0.75rem !important;
+      letter-spacing: 0.1em;
+      transition: all 0.2s !important;
+    }
+    .nav-propietarios svg { width: 13px; height: 13px; stroke: var(--gold); fill: none; stroke-width: 2; }
+    .nav-propietarios:hover { background: var(--gold) !important; color: #fff !important; border-color: var(--gold) !important; }
+    .nav-propietarios:hover svg { stroke: #fff; }
+
+    /* PRICING */
+    .pricing { background: var(--cream); }
+    .pricing-header { text-align: center; margin-bottom: 1rem; }
+    .pricing-header .section-title { max-width: 100%; }
+    .pricing-sub { text-align: center; font-size: 0.9rem; color: var(--muted); margin-bottom: 4rem; }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto 2rem;
+    }
+    .pricing-card {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      border-radius: 2px;
+      position: relative;
+      transition: transform 0.25s, box-shadow 0.25s;
+      text-align: center;
+    }
+    .pricing-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .pricing-card.featured {
+      background: var(--dark);
+      border-color: var(--gold);
+    }
+    .pricing-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--gold);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .pricing-plan {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .pricing-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--dark);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+    .pricing-card.featured .pricing-price { color: var(--cream); }
+    .pricing-price sup { font-size: 1.2rem; vertical-align: super; }
+    .pricing-price sub { font-size: 0.9rem; color: var(--muted); }
+    .pricing-card.featured .pricing-price sub { color: rgba(247,243,238,0.5); }
+    .pricing-note { font-size: 0.75rem; color: var(--muted); margin-bottom: 2rem; }
+    .pricing-card.featured .pricing-note { color: rgba(247,243,238,0.4); }
+    .pricing-divider { height: 1px; background: var(--border); margin-bottom: 1.8rem; }
+    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 0.9rem; margin-bottom: 2rem; text-align: left; }
+    .pricing-features li {
+      display: flex; gap: 0.75rem; align-items: flex-start;
+      font-size: 0.83rem; color: var(--muted); line-height: 1.5;
+    }
+    .pricing-card.featured .pricing-features li { color: rgba(247,243,238,0.65); }
+    .pricing-check { color: var(--gold); font-size: 0.9rem; flex-shrink: 0; margin-top: 1px; }
+    .pricing-btn {
+      display: block; width: 100%;
+      background: var(--gold); color: #fff;
+      padding: 0.85rem; border: none; cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      text-decoration: none; border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .pricing-btn:hover { background: var(--charcoal); }
+    .pricing-card:not(.featured) .pricing-btn { background: transparent; border: 1px solid var(--border); color: var(--dark); }
+    .pricing-card:not(.featured) .pricing-btn:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
+    .pricing-disclaimer { text-align: center; font-size: 0.78rem; color: var(--muted); max-width: 600px; margin: 0 auto; line-height: 1.7; }
+
+    /* TEAM */
+    .team { background: var(--warm-white); }
+    .team-header { text-align: center; margin-bottom: 4rem; }
+    .team-header .section-title { max-width: 100%; }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .team-card {
+      text-align: center;
+      transition: transform 0.25s;
+    }
+    .team-card:hover { transform: translateY(-4px); }
+    .team-avatar-wrap {
+      width: 110px; height: 110px;
+      border-radius: 50%;
+      margin: 0 auto 1.2rem;
+      background: var(--cream);
+      border: 2px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .team-avatar-wrap::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 3px; background: var(--gold);
+    }
+    .team-initials {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem; font-weight: 400;
+      color: var(--gold);
+    }
+    .team-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem; font-weight: 400;
+      color: var(--dark); margin-bottom: 0.3rem;
+    }
+    .team-role {
+      font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.8rem;
+    }
+    .team-bio { font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
+    .team-colegiado {
+      display: inline-block; margin-top: 0.8rem;
+      font-size: 0.7rem; color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 0.25rem 0.7rem; border-radius: 20px;
+    }
+
+    /* INCIDENCIAS */
+    .incidencias {
+      background: var(--dark);
+      padding: 7rem 5vw;
+      text-align: center;
+    }
+    .incidencias .section-label { color: var(--gold-light); }
+    .incidencias .section-title { color: var(--cream); max-width: 100%; margin: 0 auto 1rem; }
+    .incidencias-sub { font-size: 0.9rem; color: rgba(247,243,238,0.5); margin-bottom: 3.5rem; }
+    .incidencias-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+    }
+    .inc-step {
+      background: rgba(184,151,90,0.07);
+      border: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .inc-step:hover { background: rgba(184,151,90,0.13); }
+    .inc-step-icon {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: rgba(184,151,90,0.12);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.2rem;
+    }
+    .inc-step-icon svg { width: 22px; height: 22px; stroke: var(--gold-light); fill: none; stroke-width: 1.5; }
+    .inc-step-title { font-size: 0.9rem; font-weight: 600; color: var(--cream); margin-bottom: 0.5rem; }
+    .inc-step-text { font-size: 0.8rem; color: rgba(247,243,238,0.5); line-height: 1.65; }
+    .incidencias-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-whatsapp {
+      background: #25D366;
+      color: #fff;
+      padding: 0.9rem 2.2rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      transition: background 0.25s, transform 0.2s;
+    }
+    .btn-whatsapp:hover { background: #1ebe5d; transform: translateY(-2px); }
+    .btn-whatsapp svg { width: 18px; height: 18px; fill: #fff; }
+
+    /* FAQ */
+    .faq { background: var(--cream); }
+    .faq-header { text-align: center; margin-bottom: 4rem; }
+    .faq-header .section-title { max-width: 100%; }
+    .faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-question {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.6rem 0; cursor: pointer; gap: 1rem;
+      transition: color 0.2s;
+      user-select: none;
+    }
+    .faq-question:hover { color: var(--gold); }
+    .faq-q-text { font-size: 0.95rem; font-weight: 500; color: inherit; line-height: 1.4; }
+    .faq-icon {
+      width: 24px; height: 24px; flex-shrink: 0;
+      border: 1px solid var(--border); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s, border-color 0.2s, transform 0.3s;
+    }
+    .faq-icon svg { width: 10px; height: 10px; stroke: var(--muted); fill: none; stroke-width: 2.5; transition: stroke 0.2s; }
+    .faq-item.open .faq-icon { background: var(--gold); border-color: var(--gold); transform: rotate(45deg); }
+    .faq-item.open .faq-icon svg { stroke: #fff; }
+    .faq-item.open .faq-question { color: var(--gold); }
+    .faq-answer {
+      font-size: 0.87rem; color: var(--muted); line-height: 1.8;
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      padding: 0;
+    }
+    .faq-answer-inner { padding-bottom: 1.5rem; }
+    .faq-item.open .faq-answer { max-height: 300px; }
+
+    /* BLOG */
+    .blog { background: var(--warm-white); }
+    .blog-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
+    .blog-header .section-title { margin: 0; }
+    .blog-ver-mas {
+      font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gold); text-decoration: none;
+      display: flex; align-items: center; gap: 0.5rem;
+      transition: gap 0.2s;
+    }
+    .blog-ver-mas:hover { gap: 0.9rem; }
+    .blog-ver-mas svg { width: 14px; height: 14px; stroke: var(--gold); fill: none; stroke-width: 2; }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .blog-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+      cursor: pointer;
+    }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .blog-card-img {
+      height: 160px;
+      background: var(--dark);
+      position: relative;
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .blog-card-img-pattern {
+      position: absolute; inset: 0; opacity: 0.08;
+    }
+    .blog-card-cat {
+      position: absolute; top: 1rem; left: 1rem;
+      background: var(--gold);
+      color: #fff; font-size: 0.65rem;
+      font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.7rem; border-radius: 20px;
+    }
+    .blog-card-icon { width: 40px; height: 40px; stroke: rgba(184,151,90,0.3); fill: none; stroke-width: 1; }
+    .blog-card-body { padding: 1.5rem; }
+    .blog-card-date { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.08em; margin-bottom: 0.6rem; }
+    .blog-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; font-weight: 400;
+      color: var(--dark); line-height: 1.4; margin-bottom: 0.8rem;
+    }
+    .blog-card-excerpt { font-size: 0.82rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.2rem; }
+    .blog-card-link {
+      font-size: 0.75rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold); text-decoration: none;
+    }
+
+    /* WHATSAPP FLOTANTE */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2rem; right: 2rem;
+      z-index: 200;
+      display: flex; flex-direction: column; align-items: flex-end; gap: 0.75rem;
+    }
+    .whatsapp-tooltip {
+      background: var(--dark);
+      color: var(--cream);
+      font-size: 0.8rem;
+      padding: 0.6rem 1rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      opacity: 0; transform: translateX(10px);
+      transition: opacity 0.2s, transform 0.2s;
+      pointer-events: none;
+    }
+    .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; transform: translateX(0); }
+    .whatsapp-btn {
+      width: 56px; height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: pulse-wa 2.5s infinite;
+    }
+    .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
+    .whatsapp-btn svg { width: 28px; height: 28px; fill: #fff; }
+    @keyframes pulse-wa {
+      0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+      50% { box-shadow: 0 4px 30px rgba(37,211,102,0.7), 0 0 0 8px rgba(37,211,102,0.1); }
+    }
+
+    /* RESPONSIVE nuevos */
+    @media (max-width: 900px) {
+      .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 2rem; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+      .incidencias-steps { grid-template-columns: 1fr; max-width: 380px; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-header { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 600px) {
+      .team-grid { grid-template-columns: 1fr; }
+    }
+
     /* ANIMATIONS */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
@@ -715,7 +1067,14 @@
     <li><a href="#nosotros">Nosotros</a></li>
     <li><a href="#proceso">Proceso</a></li>
     <li><a href="#testimonios">Clientes</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contacto" class="nav-cta">Contactar</a></li>
+    <li>
+      <a href="#" class="nav-propietarios">
+        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Área Propietarios
+      </a>
+    </li>
   </ul>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -728,7 +1087,13 @@
   <a href="#nosotros" onclick="closeMenu()">Nosotros</a>
   <a href="#proceso" onclick="closeMenu()">Proceso</a>
   <a href="#testimonios" onclick="closeMenu()">Clientes</a>
-  <a href="#contacto" class="mobile-cta" onclick="closeMenu()">Contactar</a>
+  <a href="#faq" onclick="closeMenu()">Preguntas Frecuentes</a>
+  <a href="#blog" onclick="closeMenu()">Blog</a>
+  <a href="#contacto" onclick="closeMenu()">Contacto</a>
+  <a href="#" onclick="closeMenu()" style="color:var(--gold); display:flex; align-items:center; gap:0.5rem;">
+    🔒 Área Propietarios (próximamente)
+  </a>
+  <a href="#contacto" class="mobile-cta" onclick="closeMenu()">Solicitar Presupuesto</a>
 </div>
 
 <!-- HERO -->
@@ -1079,12 +1444,259 @@
   </div>
 </section>
 
+<!-- PRICING -->
+<section class="pricing" id="precios">
+  <div class="pricing-header reveal">
+    <p class="section-label">Tarifas orientativas</p>
+    <h2 class="section-title">Gestión profesional a un precio <em>justo</em></h2>
+  </div>
+  <p class="pricing-sub reveal">Precios aproximados por vivienda/mes · El presupuesto final depende del tamaño y necesidades de tu comunidad</p>
+  <div class="pricing-grid">
+    <div class="pricing-card reveal">
+      <div class="pricing-plan">Esencial</div>
+      <div class="pricing-price"><sup>desde </sup>80<sup>€</sup><sub>/mes</sub></div>
+      <div class="pricing-note">Comunidades pequeñas · hasta 20 viviendas</div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="pricing-check">✓</span> Gestión contable básica</li>
+        <li><span class="pricing-check">✓</span> Convocatoria y acta de junta anual</li>
+        <li><span class="pricing-check">✓</span> Cobro de cuotas y morosidad</li>
+        <li><span class="pricing-check">✓</span> Atención telefónica y email</li>
+        <li><span class="pricing-check">✓</span> Acceso a plataforma online</li>
+      </ul>
+      <a href="#contacto" class="pricing-btn">Solicitar Presupuesto</a>
+    </div>
+    <div class="pricing-card featured reveal">
+      <div class="pricing-badge">Más popular</div>
+      <div class="pricing-plan">Completo</div>
+      <div class="pricing-price"><sup>desde </sup>150<sup>€</sup><sub>/mes</sub></div>
+      <div class="pricing-note">Comunidades medianas · 20–80 viviendas</div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="pricing-check">✓</span> Todo lo del plan Esencial</li>
+        <li><span class="pricing-check">✓</span> Gestión de incidencias y averías</li>
+        <li><span class="pricing-check">✓</span> Coordinación de proveedores</li>
+        <li><span class="pricing-check">✓</span> Asesoría legal incluida</li>
+        <li><span class="pricing-check">✓</span> Informes mensuales detallados</li>
+        <li><span class="pricing-check">✓</span> Administrador dedicado</li>
+      </ul>
+      <a href="#contacto" class="pricing-btn">Solicitar Presupuesto</a>
+    </div>
+    <div class="pricing-card reveal">
+      <div class="pricing-plan">Premium</div>
+      <div class="pricing-price"><sup>desde </sup>280<sup>€</sup><sub>/mes</sub></div>
+      <div class="pricing-note">Grandes comunidades · +80 viviendas</div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="pricing-check">✓</span> Todo lo del plan Completo</li>
+        <li><span class="pricing-check">✓</span> Gestión de seguros comunitarios</li>
+        <li><span class="pricing-check">✓</span> Urgencias 24/7</li>
+        <li><span class="pricing-check">✓</span> Subvenciones y rehabilitación</li>
+        <li><span class="pricing-check">✓</span> Acceso prioritario al equipo</li>
+        <li><span class="pricing-check">✓</span> Reuniones presenciales ilimitadas</li>
+      </ul>
+      <a href="#contacto" class="pricing-btn">Solicitar Presupuesto</a>
+    </div>
+  </div>
+  <p class="pricing-disclaimer reveal">* Precios orientativos por comunidad y mes, sin IVA. El presupuesto definitivo se elabora tras analizar las características específicas de tu comunidad. <strong>Consulta gratuita y sin compromiso.</strong></p>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="equipo">
+  <div class="team-header reveal">
+    <p class="section-label">Nuestro equipo</p>
+    <h2 class="section-title">Las personas que cuidarán tu <em>comunidad</em></h2>
+  </div>
+  <div class="team-grid">
+    <div class="team-card reveal">
+      <div class="team-avatar-wrap">
+        <div class="team-initials">AM</div>
+      </div>
+      <div class="team-name">Antonio Moreno</div>
+      <div class="team-role">Director · Administrador Principal</div>
+      <p class="team-bio">Administrador de Fincas colegiado con más de 25 años de experiencia. Especialista en comunidades complejas y resolución de conflictos vecinales.</p>
+      <span class="team-colegiado">Colegiado Nº 2847</span>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-avatar-wrap">
+        <div class="team-initials">LM</div>
+      </div>
+      <div class="team-name">Laura Moreno</div>
+      <div class="team-role">Gestora de Comunidades</div>
+      <p class="team-bio">Graduada en Administración y Dirección de Empresas. Especializada en gestión contable y financiera de comunidades de propietarios.</p>
+      <span class="team-colegiado">Colegiada Nº 3142</span>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-avatar-wrap">
+        <div class="team-initials">CR</div>
+      </div>
+      <div class="team-name">Carlos Ruiz</div>
+      <div class="team-role">Asesor Jurídico</div>
+      <p class="team-bio">Abogado especialista en Derecho Civil y Propiedad Horizontal. Gestiona todas las reclamaciones legales y recursos de las comunidades clientes.</p>
+      <span class="team-colegiado">Abogado Nº 8821</span>
+    </div>
+  </div>
+</section>
+
+<!-- INCIDENCIAS -->
+<section class="incidencias" id="incidencias">
+  <p class="section-label reveal">Para propietarios actuales</p>
+  <h2 class="section-title reveal">¿Tienes una avería o incidencia? <em>Te atendemos ya.</em></h2>
+  <p class="incidencias-sub reveal">Reporta cualquier problema en 3 sencillos pasos. Respuesta garantizada en menos de 24h laborables.</p>
+  <div class="incidencias-steps">
+    <div class="inc-step reveal">
+      <div class="inc-step-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <div class="inc-step-title">1. Contáctanos</div>
+      <p class="inc-step-text">Escríbenos por WhatsApp, llama al teléfono o envía un email con la descripción del problema.</p>
+    </div>
+    <div class="inc-step reveal">
+      <div class="inc-step-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div class="inc-step-title">2. Gestión inmediata</div>
+      <p class="inc-step-text">En menos de 24 horas coordinamos la solución con nuestros proveedores de confianza.</p>
+    </div>
+    <div class="inc-step reveal">
+      <div class="inc-step-icon">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="inc-step-title">3. Resolución y cierre</div>
+      <p class="inc-step-text">Te informamos de cada paso hasta la resolución. Cero sorpresas en el presupuesto.</p>
+    </div>
+  </div>
+  <div class="incidencias-btns reveal">
+    <a href="https://wa.me/34600000000?text=Hola,%20soy%20propietario%20y%20quiero%20reportar%20una%20incidencia" class="btn-whatsapp" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp Directo
+    </a>
+    <a href="tel:+34912345678" class="btn-primary">Llamar Ahora</a>
+    <a href="mailto:incidencias@fincasmoreno.es" class="btn-outline" style="border-color:rgba(247,243,238,0.3);color:var(--cream)">Enviar Email</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-header reveal">
+    <p class="section-label">Preguntas frecuentes</p>
+    <h2 class="section-title">Todo lo que quieres <em>saber</em> antes de llamar</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-q-text">¿Cuánto cuesta cambiar de administrador de fincas?</span>
+        <div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner">El cambio de administrador no tiene ningún coste para la comunidad. Nosotros nos encargamos de todo el proceso de traspaso, incluyendo la recogida de documentación del anterior administrador. La única inversión es nuestra tarifa mensual de gestión, que puedes consultar en la sección de precios.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-q-text">¿Cuánto tiempo tarda el traspaso?</span>
+        <div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner">Normalmente entre 2 y 4 semanas desde que se aprueba en junta el cambio de administrador. El proceso incluye la comunicación al anterior administrador, recogida de toda la documentación (contabilidad, contratos, actas) y traspaso de cuentas bancarias. Durante todo el proceso te mantenemos informado.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-q-text">¿Tengo que hablar yo con el administrador anterior?</span>
+        <div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner">No. Nosotros nos encargamos de toda la comunicación con el administrador saliente. Solo necesitamos que la junta apruebe el cambio y que el presidente firme la documentación necesaria. A partir de ahí, gestionamos todo sin que suponga ninguna molestia para los propietarios.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-q-text">¿Cómo reclamáis a los vecinos morosos?</span>
+        <div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner">Seguimos un proceso escalado: primero enviamos recordatorios amistosos, luego reclamaciones formales por carta certificada y, si no hay respuesta, iniciamos el proceso monitorio judicial (que es ágil y económico). Todo sin coste adicional para la comunidad en los planes Completo y Premium.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-q-text">¿Tenéis contrato de permanencia?</span>
+        <div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner">No exigimos permanencia mínima. Trabajamos con contratos anuales renovables, como marca la Ley de Propiedad Horizontal, pero si la comunidad no está satisfecha con el servicio, puede cambiarnos en la siguiente junta ordinaria. Nuestra mejor garantía es que nuestros clientes llevan con nosotros una media de 9 años.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-q-text">¿Puedo ver los gastos de mi comunidad en tiempo real?</span>
+        <div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner">Sí. A través de nuestra plataforma Netfincas (disponible próximamente), cualquier propietario puede consultar el estado de cuentas, los últimos recibos, las actas de juntas y el histórico de incidencias desde su móvil o tablet en cualquier momento. La transparencia total es uno de nuestros valores fundamentales.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog" id="blog">
+  <div class="blog-header reveal">
+    <div>
+      <p class="section-label">Blog y noticias</p>
+      <h2 class="section-title">Consejos y novedades para <em>propietarios</em></h2>
+    </div>
+    <a href="#" class="blog-ver-mas">Ver todos los artículos <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  </div>
+  <div class="blog-grid">
+    <div class="blog-card reveal">
+      <div class="blog-card-img">
+        <svg class="blog-card-icon" viewBox="0 0 24 24"><path d="M3 9L12 2L21 9V20A1 1 0 0 1 20 21H15V16H9V21H4A1 1 0 0 1 3 20V9Z"/></svg>
+        <div class="blog-card-cat">Legal</div>
+        <svg class="blog-card-img-pattern" viewBox="0 0 100 100"><defs><pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1" fill="#b8975a"/></pattern></defs><rect width="100" height="100" fill="url(#dots)"/></svg>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-date">15 Enero 2025</div>
+        <div class="blog-card-title">Novedades en la Ley de Propiedad Horizontal para 2025</div>
+        <p class="blog-card-excerpt">Todo lo que debe saber tu comunidad sobre los cambios legislativos que afectan a las juntas, las obras y la gestión de morosidad este año.</p>
+        <a href="#" class="blog-card-link">Leer más →</a>
+      </div>
+    </div>
+    <div class="blog-card reveal">
+      <div class="blog-card-img" style="background:#2e2a25">
+        <svg class="blog-card-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        <div class="blog-card-cat">Finanzas</div>
+        <svg class="blog-card-img-pattern" viewBox="0 0 100 100"><defs><pattern id="dots2" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1" fill="#b8975a"/></pattern></defs><rect width="100" height="100" fill="url(#dots2)"/></svg>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-date">3 Diciembre 2024</div>
+        <div class="blog-card-title">Cómo reclamar a un vecino moroso paso a paso</div>
+        <p class="blog-card-excerpt">Guía práctica para presidentes de comunidad: desde la primera notificación amistosa hasta el proceso monitorio judicial.</p>
+        <a href="#" class="blog-card-link">Leer más →</a>
+      </div>
+    </div>
+    <div class="blog-card reveal">
+      <div class="blog-card-img" style="background:#1a1714">
+        <svg class="blog-card-icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        <div class="blog-card-cat">Mantenimiento</div>
+        <svg class="blog-card-img-pattern" viewBox="0 0 100 100"><defs><pattern id="dots3" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1" fill="#b8975a"/></pattern></defs><rect width="100" height="100" fill="url(#dots3)"/></svg>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-date">20 Noviembre 2024</div>
+        <div class="blog-card-title">Ayudas y subvenciones para rehabilitar tu edificio en 2025</div>
+        <p class="blog-card-excerpt">El Plan de Recuperación incluye fondos para eficiencia energética. Te explicamos cómo acceder a estas ayudas desde tu comunidad.</p>
+        <a href="#" class="blog-card-link">Leer más →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP FLOTANTE -->
+<div class="whatsapp-float">
+  <div class="whatsapp-tooltip">💬 ¿Hablamos? Respuesta inmediata</div>
+  <a href="https://wa.me/34600000000?text=Hola,%20me%20gustaría%20obtener%20información%20sobre%20vuestros%20servicios" class="whatsapp-btn" target="_blank" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <a class="footer-logo" href="#"><span>Fincas</span>Moreno</a>
   <ul class="footer-links">
     <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#precios">Precios</a></li>
+    <li><a href="#equipo">Equipo</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#blog">Blog</a></li>
     <li><a href="#contacto">Contacto</a></li>
     <li><a href="#">Política de Privacidad</a></li>
     <li><a href="#">Aviso Legal</a></li>
@@ -1109,6 +1721,14 @@
   function closeMenu() {
     document.getElementById('mobileMenu').classList.remove('open');
     document.getElementById('hamburger').classList.remove('open');
+  }
+
+  // FAQ accordion
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
   }
 
   // Reveal on scroll
