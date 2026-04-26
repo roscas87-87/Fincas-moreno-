@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayudas y Subvenciones para Rehabilitar tu Edificio en 2025 | FincasMoreno</title>
+  <meta name="description" content="Guía completa de ayudas, subvenciones y fondos Next Generation para rehabilitación energética de edificios en 2025. Cómo solicitarlas y cuánto puedes recibir." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #f7f3ee; --warm-white: #fdfaf6; --gold: #b8975a; --gold-light: #d4b07a;
+      --dark: #1a1714; --charcoal: #2e2a25; --muted: #7a7065;
+      --border: rgba(184,151,90,0.25); --shadow: 0 8px 40px rgba(26,23,20,0.12);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--warm-white); color: var(--dark); overflow-x: hidden; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 5vw; height: 72px; display: flex; align-items: center; justify-content: space-between; background: rgba(253,250,246,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); transition: box-shadow 0.3s; }
+    nav.scrolled { box-shadow: var(--shadow); }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.55rem; font-weight: 600; color: var(--dark); text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { background: var(--gold); color: #fff !important; padding: 0.55rem 1.4rem; border-radius: 2px; }
+    .nav-cta:hover { background: var(--charcoal) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 24px; height: 2px; background: var(--dark); border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; background: var(--warm-white); border-bottom: 1px solid var(--border); box-shadow: var(--shadow); z-index: 99; padding: 1.5rem 5vw 2rem; flex-direction: column; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-size: 1rem; font-weight: 500; color: var(--dark); text-decoration: none; padding: 1rem 0; border-bottom: 1px solid var(--border); }
+    .mobile-menu a:last-child { border-bottom: none; }
+
+    .article-hero { background: var(--dark); padding: 9rem 5vw 5rem; position: relative; overflow: hidden; }
+    .article-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: var(--warm-white); clip-path: ellipse(55% 100% at 50% 100%); }
+    .article-hero-inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
+    .article-breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(247,243,238,0.4); margin-bottom: 1.5rem; }
+    .article-breadcrumb a { color: var(--gold-light); text-decoration: none; }
+    .article-breadcrumb svg { width: 12px; height: 12px; stroke: rgba(247,243,238,0.3); fill: none; stroke-width: 2; }
+    .article-cat { display: inline-block; background: var(--gold); color: #fff; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 20px; margin-bottom: 1.5rem; }
+    .article-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.1; color: var(--cream); margin-bottom: 1.5rem; }
+    .article-title em { font-style: italic; color: var(--gold-light); }
+    .article-meta { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; font-size: 0.8rem; color: rgba(247,243,238,0.45); }
+    .article-meta-item { display: flex; align-items: center; gap: 0.4rem; }
+    .article-meta svg { width: 14px; height: 14px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+
+    .article-layout { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; max-width: 1100px; margin: 0 auto; padding: 5rem 5vw 7rem; align-items: start; }
+    .article-content { min-width: 0; }
+    .article-intro { font-size: 1.08rem; color: var(--charcoal); line-height: 1.85; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); font-weight: 300; }
+    .article-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 400; color: var(--dark); margin: 3rem 0 1.2rem; line-height: 1.2; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--dark); margin: 2rem 0 0.8rem; }
+    .article-content p { font-size: 0.93rem; color: var(--muted); line-height: 1.85; margin-bottom: 1.2rem; }
+    .article-content ul, .article-content ol { padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 1.5rem; }
+    .article-content ul li, .article-content ol li { font-size: 0.9rem; color: var(--muted); line-height: 1.7; padding-left: 1.6rem; position: relative; }
+    .article-content ul li::before { content: ''; position: absolute; left: 0; top: 0.65em; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+    .article-content ol { counter-reset: ol-counter; }
+    .article-content ol li { counter-increment: ol-counter; }
+    .article-content ol li::before { content: counter(ol-counter); position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); line-height: 1.85; }
+
+    .callout { border-left: 3px solid var(--gold); background: var(--cream); padding: 1.5rem 1.8rem; margin: 2rem 0; border-radius: 0 2px 2px 0; }
+    .callout-title { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+    .callout p { font-size: 0.88rem; color: var(--charcoal); margin: 0; }
+    .callout-warning { border-left-color: #c0392b; }
+    .callout-warning .callout-title { color: #c0392b; }
+    .callout-success { border-left-color: #27ae60; }
+    .callout-success .callout-title { color: #27ae60; }
+
+    /* AYUDAS CARDS */
+    .ayudas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+    .ayuda-card { background: var(--cream); border: 1px solid var(--border); padding: 1.5rem; border-radius: 2px; border-top: 3px solid var(--gold); }
+    .ayuda-card-name { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .ayuda-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: var(--dark); margin-bottom: 0.6rem; line-height: 1.3; }
+    .ayuda-card-amount { font-size: 1.4rem; font-weight: 600; color: var(--dark); margin-bottom: 0.3rem; }
+    .ayuda-card-amount span { font-size: 0.8rem; font-weight: 400; color: var(--muted); }
+    .ayuda-card-text { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+    .article-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.85rem; }
+    .article-table th { background: var(--dark); color: var(--cream); padding: 0.9rem 1.2rem; text-align: left; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .article-table td { padding: 0.85rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--muted); line-height: 1.5; background: var(--warm-white); }
+    .article-table tr:last-child td { border-bottom: none; }
+    .article-table tr:hover td { background: var(--cream); }
+    .highlight { color: var(--gold); font-weight: 600; }
+
+    .article-sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 1.5rem; }
+    .sidebar-card { background: var(--cream); border: 1px solid var(--border); padding: 1.8rem; border-radius: 2px; }
+    .sidebar-card-title { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
+    .toc-list { list-style: none; display: flex; flex-direction: column; }
+    .toc-list li { border-bottom: 1px solid var(--border); }
+    .toc-list li:last-child { border-bottom: none; }
+    .toc-list a { display: block; padding: 0.7rem 0; font-size: 0.82rem; color: var(--muted); text-decoration: none; line-height: 1.4; transition: color 0.2s, padding-left 0.2s; }
+    .toc-list a:hover { color: var(--gold); padding-left: 0.4rem; }
+    .sidebar-cta { background: var(--dark); border: 1px solid var(--border); padding: 2rem; border-radius: 2px; text-align: center; }
+    .sidebar-cta-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--cream); margin-bottom: 0.8rem; line-height: 1.3; }
+    .sidebar-cta-text { font-size: 0.8rem; color: rgba(247,243,238,0.5); margin-bottom: 1.5rem; line-height: 1.6; }
+    .sidebar-btn { display: block; background: var(--gold); color: #fff; padding: 0.85rem; text-align: center; text-decoration: none; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 2px; transition: background 0.2s; }
+    .sidebar-btn:hover { background: var(--gold-light); }
+    .sidebar-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tag { font-size: 0.72rem; color: var(--muted); border: 1px solid var(--border); padding: 0.3rem 0.7rem; border-radius: 20px; text-decoration: none; transition: all 0.2s; }
+    .tag:hover { border-color: var(--gold); color: var(--gold); }
+
+    .related { background: var(--cream); padding: 5rem 5vw; }
+    .related-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--dark); margin-bottom: 2.5rem; text-align: center; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 800px; margin: 0 auto; }
+    .related-card { background: var(--warm-white); border: 1px solid var(--border); padding: 1.8rem; border-radius: 2px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; display: block; }
+    .related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .related-cat { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.7rem; }
+    .related-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: var(--dark); line-height: 1.4; margin-bottom: 0.6rem; }
+    .related-card-date { font-size: 0.75rem; color: var(--muted); }
+
+    .article-cta { background: var(--dark); padding: 5rem 5vw; text-align: center; position: relative; overflow: hidden; }
+    .article-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 100%, rgba(184,151,90,0.15) 0%, transparent 70%); }
+    .article-cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 300; color: var(--cream); margin-bottom: 1rem; position: relative; z-index: 1; }
+    .article-cta-title em { font-style: italic; color: var(--gold-light); }
+    .article-cta-text { font-size: 0.9rem; color: rgba(247,243,238,0.5); max-width: 480px; margin: 0 auto 2.5rem; line-height: 1.8; position: relative; z-index: 1; }
+    .article-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+    .btn-primary { background: var(--gold); color: #fff; padding: 0.9rem 2.2rem; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.25s; display: inline-block; }
+    .btn-primary:hover { background: var(--gold-light); }
+    .btn-outline-light { border: 1px solid rgba(247,243,238,0.25); color: var(--cream); padding: 0.9rem 2.2rem; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: border-color 0.25s; display: inline-block; }
+    .btn-outline-light:hover { border-color: var(--gold); color: var(--gold); }
+
+    footer { background: var(--charcoal); padding: 2.5rem 5vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid rgba(184,151,90,0.1); }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--cream); text-decoration: none; }
+    .footer-logo span { color: var(--gold); }
+    .footer-copy { font-size: 0.75rem; color: rgba(247,243,238,0.3); }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.75rem; color: rgba(247,243,238,0.4); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold-light); }
+
+    .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 200; }
+    .whatsapp-btn { width: 54px; height: 54px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); text-decoration: none; transition: transform 0.2s; animation: pulse-wa 2.5s infinite; }
+    .whatsapp-btn:hover { transform: scale(1.1); }
+    .whatsapp-btn svg { width: 26px; height: 26px; fill: #fff; }
+    @keyframes pulse-wa { 0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.4)}50%{box-shadow:0 4px 30px rgba(37,211,102,0.7),0 0 0 8px rgba(37,211,102,0.1)} }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 5vw 5rem; }
+      .article-sidebar { position: static; }
+      .ayudas-grid { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <a class="nav-logo" href="index.html"><span>Fincas</span>Moreno</a>
+  <ul class="nav-links">
+    <li><a href="index.html#servicios">Servicios</a></li>
+    <li><a href="index.html#precios">Precios</a></li>
+    <li><a href="index.html#blog">Blog</a></li>
+    <li><a href="index.html#contacto" class="nav-cta">Contactar</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">← Volver al inicio</a>
+  <a href="index.html#servicios" onclick="closeMenu()">Servicios</a>
+  <a href="index.html#blog" onclick="closeMenu()">Blog</a>
+  <a href="index.html#contacto" onclick="closeMenu()">Contactar</a>
+</div>
+
+<header class="article-hero">
+  <div class="article-hero-inner">
+    <div class="article-breadcrumb">
+      <a href="index.html">Inicio</a>
+      <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="index.html#blog">Blog</a>
+      <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      <span>Subvenciones rehabilitación</span>
+    </div>
+    <span class="article-cat">Mantenimiento</span>
+    <h1 class="article-title">Ayudas y subvenciones para<br/><em>rehabilitar tu edificio en 2025</em></h1>
+    <div class="article-meta">
+      <div class="article-meta-item">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        20 de noviembre de 2024
+      </div>
+      <div class="article-meta-item">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        Antonio Moreno · Administrador Colegiado
+      </div>
+      <div class="article-meta-item">
+        <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        11 min de lectura
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="article-layout">
+  <article class="article-content">
+
+    <p class="article-intro">
+      España cuenta en 2025 con el mayor volumen de ayudas para la rehabilitación de edificios de su historia, gracias al Plan de Recuperación, Transformación y Resiliencia financiado con fondos europeos Next Generation EU. Si tu comunidad tiene un edificio antiguo que necesita mejoras energéticas, de accesibilidad o de conservación, hay dinero disponible — y mucho. Esta guía te explica qué ayudas existen, cuánto puedes recibir y cómo solicitarlas.
+    </p>
+
+    <h2 id="por-que">¿Por qué rehabilitar ahora?</h2>
+    <p>El parque edificatorio español es uno de los más antiguos de Europa. Más del 55% de los edificios residenciales se construyó antes de 1980, cuando no existían normativas de eficiencia energética. Esto significa facturas más altas, menor confort y un mayor impacto medioambiental.</p>
+    <p>La buena noticia es que rehabilitar no solo reduce el gasto energético (hasta un 60-70% en casos bien ejecutados), sino que también aumenta el valor del inmueble y mejora la calidad de vida de los vecinos. Y en 2025, nunca ha habido tantas ayudas para hacerlo.</p>
+
+    <div class="callout callout-success">
+      <div class="callout-title">💰 Oportunidad histórica</div>
+      <p>España debe ejecutar miles de millones de euros en ayudas a la rehabilitación antes de 2026. Las comunidades que actúen ahora pueden acceder a subvenciones de hasta el <strong>80% del coste de la obra</strong>.</p>
+    </div>
+
+    <h2 id="programas">Principales programas de ayudas en 2025</h2>
+
+    <div class="ayudas-grid">
+      <div class="ayuda-card">
+        <div class="ayuda-card-name">Programa 3</div>
+        <div class="ayuda-card-title">Rehabilitación a nivel de edificio</div>
+        <div class="ayuda-card-amount">Hasta 30.000€ <span>por vivienda</span></div>
+        <p class="ayuda-card-text">Para obras que reduzcan al menos un 30% el consumo de energía primaria no renovable del edificio completo.</p>
+      </div>
+      <div class="ayuda-card">
+        <div class="ayuda-card-name">Programa 4</div>
+        <div class="ayuda-card-title">Mejora de la eficiencia energética</div>
+        <div class="ayuda-card-amount">Hasta 21.400€ <span>por vivienda</span></div>
+        <p class="ayuda-card-text">Para actuaciones concretas: fachadas, cubiertas, ventanas, instalaciones térmicas o iluminación.</p>
+      </div>
+      <div class="ayuda-card">
+        <div class="ayuda-card-name">Programa 5</div>
+        <div class="ayuda-card-title">Elaboración del libro del edificio</div>
+        <div class="ayuda-card-amount">Hasta 3.000€ <span>por edificio</span></div>
+        <p class="ayuda-card-text">Ayuda para elaborar el Libro del Edificio Existente, obligatorio para solicitar las ayudas de rehabilitación.</p>
+      </div>
+      <div class="ayuda-card">
+        <div class="ayuda-card-name">Deducción fiscal</div>
+        <div class="ayuda-card-title">IRPF por obras de rehabilitación</div>
+        <div class="ayuda-card-amount">Hasta 60% <span>de deducción</span></div>
+        <p class="ayuda-card-text">Deducción en el IRPF compatible con las subvenciones directas para obras que mejoren la eficiencia energética.</p>
+      </div>
+    </div>
+
+    <h2 id="requisitos">¿Qué requisitos debe cumplir mi edificio?</h2>
+    <p>Los requisitos varían según el programa, pero en general se pide que el edificio cumpla estas condiciones:</p>
+    <ul>
+      <li>Que tenga al menos 10 años de antigüedad</li>
+      <li>Que el 50% de la superficie sea uso residencial</li>
+      <li>Disponer del Certificado de Eficiencia Energética previo a las obras</li>
+      <li>Que las obras sean ejecutadas por empresa instaladora habilitada</li>
+      <li>Que la actuación mejore la calificación energética del edificio al menos una letra</li>
+      <li>Que exista acuerdo de la junta de propietarios para realizar las obras</li>
+    </ul>
+
+    <div class="callout">
+      <div class="callout-title">📋 Documento clave: el IEE</div>
+      <p>El Informe de Evaluación del Edificio (IEE) es el punto de partida. Analiza el estado de conservación, las condiciones de accesibilidad y la certificación energética. Es obligatorio para edificios de más de 50 años y necesario para solicitar muchas ayudas.</p>
+    </div>
+
+    <h2 id="obras">¿Qué obras están subvencionadas?</h2>
+    <table class="article-table">
+      <thead>
+        <tr>
+          <th>Tipo de obra</th>
+          <th>Subvención máxima</th>
+          <th>Mejora esperada</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Aislamiento de fachada</td>
+          <td class="highlight">Hasta 80%</td>
+          <td>-30% consumo calefacción</td>
+        </tr>
+        <tr>
+          <td>Sustitución de ventanas</td>
+          <td class="highlight">Hasta 60%</td>
+          <td>-20% pérdidas térmicas</td>
+        </tr>
+        <tr>
+          <td>Cubierta y azotea</td>
+          <td class="highlight">Hasta 80%</td>
+          <td>-25% pérdidas calor</td>
+        </tr>
+        <tr>
+          <td>Caldera de biomasa o aerotermia</td>
+          <td class="highlight">Hasta 70%</td>
+          <td>-50% coste energético</td>
+        </tr>
+        <tr>
+          <td>Placas solares comunitarias</td>
+          <td class="highlight">Hasta 80%</td>
+          <td>Autoconsumo compartido</td>
+        </tr>
+        <tr>
+          <td>Ascensor accesible</td>
+          <td class="highlight">Hasta 80%</td>
+          <td>Accesibilidad universal</td>
+        </tr>
+        <tr>
+          <td>Rampa y elementos accesibilidad</td>
+          <td class="highlight">Hasta 80%</td>
+          <td>Cumplimiento normativa</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="pasos">Cómo solicitar las ayudas paso a paso</h2>
+    <ol>
+      <li><strong>Encarga el Certificado de Eficiencia Energética</strong> — un técnico visita el edificio y emite el certificado de situación actual</li>
+      <li><strong>Obtén el Libro del Edificio Existente</strong> — documento que recoge el estado actual y las mejoras propuestas</li>
+      <li><strong>Aprueba las obras en junta de propietarios</strong> — con la mayoría necesaria según el tipo de actuación</li>
+      <li><strong>Solicita la subvención antes de iniciar la obra</strong> — este es el error más común: pedir la ayuda después de empezar invalida la solicitud</li>
+      <li><strong>Contrata empresa habilitada</strong> — las obras deben ejecutarse por instaladores con la habilitación correspondiente</li>
+      <li><strong>Ejecuta las obras y conserva todas las facturas</strong> — la justificación documental es fundamental</li>
+      <li><strong>Solicita el Certificado de Eficiencia Energética tras las obras</strong> — para acreditar la mejora conseguida</li>
+      <li><strong>Presenta la justificación</strong> — y recibe el pago de la subvención</li>
+    </ol>
+
+    <div class="callout callout-warning">
+      <div class="callout-title">⚠️ Error más frecuente</div>
+      <p>Muchas comunidades pierden la subvención por empezar las obras antes de que se apruebe la ayuda. <strong>Siempre hay que solicitar primero y esperar la resolución favorable antes de firmar el contrato con la empresa.</strong></p>
+    </div>
+
+    <h2 id="financiacion">¿Y si no tenemos dinero para adelantar?</h2>
+    <p>Este es uno de los principales frenos para muchas comunidades. Aunque la subvención puede cubrir hasta el 80% del coste, el 20% restante (y a veces el 80% hasta cobrar) hay que adelantarlo.</p>
+    <p>Existen varias soluciones:</p>
+    <ul>
+      <li><strong>Préstamos ICO para rehabilitación</strong> — condiciones muy ventajosas específicamente para comunidades de propietarios que vayan a recibir subvención</li>
+      <li><strong>Financiación de la empresa constructora</strong> — muchas empresas del sector ofrecen pago aplazado hasta cobrar la subvención</li>
+      <li><strong>Derrama extraordinaria</strong> — repartida entre todos los propietarios según su coeficiente</li>
+      <li><strong>Fondo de reserva</strong> — si está bien nutrido, puede usarse para adelantar parte del coste</li>
+    </ul>
+
+    <h2 id="conclusion">Conclusión: no esperes más</h2>
+    <p>Las ayudas del Plan de Recuperación tienen fondos limitados y fechas de cierre. Las comunidades que actúen en 2025 pueden acceder a subvenciones históricas que difícilmente se repetirán en el futuro. El proceso burocrático lleva tiempo, así que cuanto antes empieces a informarte y preparar la documentación, mejor posicionada estará tu comunidad.</p>
+    <p>En FincasMoreno te acompañamos en todo el proceso: desde la primera evaluación del edificio hasta la justificación final de la subvención. Consúltanos sin compromiso.</p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">📋 Índice</div>
+      <ul class="toc-list">
+        <li><a href="#por-que">¿Por qué rehabilitar ahora?</a></li>
+        <li><a href="#programas">Programas de ayudas</a></li>
+        <li><a href="#requisitos">Requisitos del edificio</a></li>
+        <li><a href="#obras">Obras subvencionadas</a></li>
+        <li><a href="#pasos">Cómo solicitarlas</a></li>
+        <li><a href="#financiacion">Financiación previa</a></li>
+        <li><a href="#conclusion">Conclusión</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">¿Tu edificio puede optar a subvenciones?</div>
+      <p class="sidebar-cta-text">Te analizamos las ayudas disponibles para tu comunidad. Consulta gratuita y sin compromiso.</p>
+      <a href="index.html#contacto" class="sidebar-btn">Consulta Gratis</a>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">🏷️ Temas</div>
+      <div class="sidebar-tags">
+        <a href="#" class="tag">Subvenciones</a>
+        <a href="#" class="tag">Next Generation</a>
+        <a href="#" class="tag">Eficiencia energética</a>
+        <a href="#" class="tag">Rehabilitación</a>
+        <a href="#" class="tag">IEE</a>
+        <a href="#" class="tag">Obras comunidad</a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<section class="related">
+  <h2 class="related-title">Artículos relacionados</h2>
+  <div class="related-grid">
+    <a href="ley-propiedad-horizontal.html" class="related-card">
+      <div class="related-cat">Legal</div>
+      <div class="related-card-title">Ley de Propiedad Horizontal 2025: Guía completa para propietarios</div>
+      <div class="related-card-date">15 Enero 2025</div>
+    </a>
+    <a href="vecinos-morosos.html" class="related-card">
+      <div class="related-cat">Finanzas</div>
+      <div class="related-card-title">Cómo reclamar a un vecino moroso paso a paso</div>
+      <div class="related-card-date">3 Diciembre 2024</div>
+    </a>
+  </div>
+</section>
+
+<section class="article-cta">
+  <h2 class="article-cta-title">¿Listo para <em>rehabilitar tu edificio</em>?</h2>
+  <p class="article-cta-text">Te ayudamos a identificar las ayudas disponibles y a gestionar todo el proceso de solicitud. Sin burocracia, sin complicaciones.</p>
+  <div class="article-cta-btns">
+    <a href="index.html#contacto" class="btn-primary">Consulta Gratuita</a>
+    <a href="index.html" class="btn-outline-light">Conocer FincasMoreno</a>
+  </div>
+</section>
+
+<footer>
+  <a class="footer-logo" href="index.html"><span>Fincas</span>Moreno</a>
+  <ul class="footer-links">
+    <li><a href="index.html#servicios">Servicios</a></li>
+    <li><a href="index.html#blog">Blog</a></li>
+    <li><a href="index.html#contacto">Contacto</a></li>
+    <li><a href="#">Política de Privacidad</a></li>
+  </ul>
+  <p class="footer-copy">© 2025 FincasMoreno · Todos los derechos reservados</p>
+</footer>
+
+<div class="whatsapp-float">
+  <a href="https://wa.me/34600000000" class="whatsapp-btn" target="_blank">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<script>
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); document.getElementById('hamburger').classList.toggle('open'); }
+  function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); document.getElementById('hamburger').classList.remove('open'); }
+</script>
+</body>
+</html>

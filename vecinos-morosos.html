@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cómo Reclamar a un Vecino Moroso Paso a Paso 2025 | FincasMoreno</title>
+  <meta name="description" content="Guía completa para reclamar deudas a vecinos morosos en tu comunidad de propietarios: desde la notificación amistosa hasta el proceso monitorio judicial." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #f7f3ee; --warm-white: #fdfaf6; --gold: #b8975a; --gold-light: #d4b07a;
+      --dark: #1a1714; --charcoal: #2e2a25; --muted: #7a7065;
+      --border: rgba(184,151,90,0.25); --shadow: 0 8px 40px rgba(26,23,20,0.12);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--warm-white); color: var(--dark); overflow-x: hidden; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 5vw; height: 72px; display: flex; align-items: center; justify-content: space-between; background: rgba(253,250,246,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); transition: box-shadow 0.3s; }
+    nav.scrolled { box-shadow: var(--shadow); }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.55rem; font-weight: 600; color: var(--dark); text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { background: var(--gold); color: #fff !important; padding: 0.55rem 1.4rem; border-radius: 2px; }
+    .nav-cta:hover { background: var(--charcoal) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 24px; height: 2px; background: var(--dark); border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; background: var(--warm-white); border-bottom: 1px solid var(--border); box-shadow: var(--shadow); z-index: 99; padding: 1.5rem 5vw 2rem; flex-direction: column; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-size: 1rem; font-weight: 500; color: var(--dark); text-decoration: none; padding: 1rem 0; border-bottom: 1px solid var(--border); }
+    .mobile-menu a:last-child { border-bottom: none; }
+
+    .article-hero { background: var(--dark); padding: 9rem 5vw 5rem; position: relative; overflow: hidden; }
+    .article-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: var(--warm-white); clip-path: ellipse(55% 100% at 50% 100%); }
+    .article-hero-inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
+    .article-breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(247,243,238,0.4); margin-bottom: 1.5rem; }
+    .article-breadcrumb a { color: var(--gold-light); text-decoration: none; }
+    .article-breadcrumb svg { width: 12px; height: 12px; stroke: rgba(247,243,238,0.3); fill: none; stroke-width: 2; }
+    .article-cat { display: inline-block; background: var(--gold); color: #fff; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 20px; margin-bottom: 1.5rem; }
+    .article-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.1; color: var(--cream); margin-bottom: 1.5rem; }
+    .article-title em { font-style: italic; color: var(--gold-light); }
+    .article-meta { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; font-size: 0.8rem; color: rgba(247,243,238,0.45); }
+    .article-meta-item { display: flex; align-items: center; gap: 0.4rem; }
+    .article-meta svg { width: 14px; height: 14px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+
+    .article-layout { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; max-width: 1100px; margin: 0 auto; padding: 5rem 5vw 7rem; align-items: start; }
+    .article-content { min-width: 0; }
+    .article-intro { font-size: 1.08rem; color: var(--charcoal); line-height: 1.85; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); font-weight: 300; }
+    .article-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 400; color: var(--dark); margin: 3rem 0 1.2rem; line-height: 1.2; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--dark); margin: 2rem 0 0.8rem; }
+    .article-content p { font-size: 0.93rem; color: var(--muted); line-height: 1.85; margin-bottom: 1.2rem; }
+    .article-content ul, .article-content ol { padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 1.5rem; }
+    .article-content ul li, .article-content ol li { font-size: 0.9rem; color: var(--muted); line-height: 1.7; padding-left: 1.6rem; position: relative; }
+    .article-content ul li::before { content: ''; position: absolute; left: 0; top: 0.65em; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+    .article-content ol { counter-reset: ol-counter; }
+    .article-content ol li { counter-increment: ol-counter; }
+    .article-content ol li::before { content: counter(ol-counter); position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); line-height: 1.85; }
+
+    .callout { border-left: 3px solid var(--gold); background: var(--cream); padding: 1.5rem 1.8rem; margin: 2rem 0; border-radius: 0 2px 2px 0; }
+    .callout-title { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+    .callout p { font-size: 0.88rem; color: var(--charcoal); margin: 0; }
+    .callout-warning { border-left-color: #c0392b; }
+    .callout-warning .callout-title { color: #c0392b; }
+    .callout-info { border-left-color: #2980b9; }
+    .callout-info .callout-title { color: #2980b9; }
+
+    /* TIMELINE STEPS */
+    .timeline { display: flex; flex-direction: column; gap: 0; margin: 2rem 0; }
+    .timeline-step { display: flex; gap: 1.5rem; padding-bottom: 2.5rem; position: relative; }
+    .timeline-step:last-child { padding-bottom: 0; }
+    .timeline-step:last-child .timeline-line { display: none; }
+    .timeline-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+    .timeline-num { width: 44px; height: 44px; border-radius: 50%; background: var(--dark); border: 2px solid var(--gold); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--gold); font-weight: 600; flex-shrink: 0; }
+    .timeline-line { width: 2px; background: var(--border); flex: 1; margin-top: 0.5rem; min-height: 40px; }
+    .timeline-body { padding-top: 0.6rem; }
+    .timeline-title { font-size: 1rem; font-weight: 600; color: var(--dark); margin-bottom: 0.5rem; }
+    .timeline-text { font-size: 0.87rem; color: var(--muted); line-height: 1.75; }
+    .timeline-badge { display: inline-block; margin-top: 0.6rem; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.8rem; border-radius: 20px; }
+    .badge-green { background: rgba(39,174,96,0.12); color: #27ae60; }
+    .badge-orange { background: rgba(230,126,34,0.12); color: #e67e22; }
+    .badge-red { background: rgba(192,57,43,0.12); color: #c0392b; }
+
+    .article-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.85rem; overflow: hidden; border-radius: 2px; }
+    .article-table th { background: var(--dark); color: var(--cream); padding: 0.9rem 1.2rem; text-align: left; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .article-table td { padding: 0.85rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--muted); line-height: 1.5; background: var(--warm-white); }
+    .article-table tr:last-child td { border-bottom: none; }
+    .article-table tr:hover td { background: var(--cream); }
+
+    .article-sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 1.5rem; }
+    .sidebar-card { background: var(--cream); border: 1px solid var(--border); padding: 1.8rem; border-radius: 2px; }
+    .sidebar-card-title { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+    .toc-list li { border-bottom: 1px solid var(--border); }
+    .toc-list li:last-child { border-bottom: none; }
+    .toc-list a { display: block; padding: 0.7rem 0; font-size: 0.82rem; color: var(--muted); text-decoration: none; line-height: 1.4; transition: color 0.2s, padding-left 0.2s; }
+    .toc-list a:hover { color: var(--gold); padding-left: 0.4rem; }
+    .sidebar-cta { background: var(--dark); border: 1px solid var(--border); padding: 2rem; border-radius: 2px; text-align: center; }
+    .sidebar-cta-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--cream); margin-bottom: 0.8rem; line-height: 1.3; }
+    .sidebar-cta-text { font-size: 0.8rem; color: rgba(247,243,238,0.5); margin-bottom: 1.5rem; line-height: 1.6; }
+    .sidebar-btn { display: block; background: var(--gold); color: #fff; padding: 0.85rem; text-align: center; text-decoration: none; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 2px; transition: background 0.2s; }
+    .sidebar-btn:hover { background: var(--gold-light); }
+    .sidebar-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tag { font-size: 0.72rem; color: var(--muted); border: 1px solid var(--border); padding: 0.3rem 0.7rem; border-radius: 20px; text-decoration: none; transition: all 0.2s; }
+    .tag:hover { border-color: var(--gold); color: var(--gold); }
+
+    .related { background: var(--cream); padding: 5rem 5vw; }
+    .related-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--dark); margin-bottom: 2.5rem; text-align: center; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 800px; margin: 0 auto; }
+    .related-card { background: var(--warm-white); border: 1px solid var(--border); padding: 1.8rem; border-radius: 2px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; display: block; }
+    .related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .related-cat { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.7rem; }
+    .related-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: var(--dark); line-height: 1.4; margin-bottom: 0.6rem; }
+    .related-card-date { font-size: 0.75rem; color: var(--muted); }
+
+    .article-cta { background: var(--dark); padding: 5rem 5vw; text-align: center; position: relative; overflow: hidden; }
+    .article-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 100%, rgba(184,151,90,0.15) 0%, transparent 70%); }
+    .article-cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 300; color: var(--cream); margin-bottom: 1rem; position: relative; z-index: 1; }
+    .article-cta-title em { font-style: italic; color: var(--gold-light); }
+    .article-cta-text { font-size: 0.9rem; color: rgba(247,243,238,0.5); max-width: 480px; margin: 0 auto 2.5rem; line-height: 1.8; position: relative; z-index: 1; }
+    .article-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+    .btn-primary { background: var(--gold); color: #fff; padding: 0.9rem 2.2rem; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.25s; display: inline-block; }
+    .btn-primary:hover { background: var(--gold-light); }
+    .btn-outline-light { border: 1px solid rgba(247,243,238,0.25); color: var(--cream); padding: 0.9rem 2.2rem; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: border-color 0.25s; display: inline-block; }
+    .btn-outline-light:hover { border-color: var(--gold); color: var(--gold); }
+
+    footer { background: var(--charcoal); padding: 2.5rem 5vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid rgba(184,151,90,0.1); }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--cream); text-decoration: none; }
+    .footer-logo span { color: var(--gold); }
+    .footer-copy { font-size: 0.75rem; color: rgba(247,243,238,0.3); }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.75rem; color: rgba(247,243,238,0.4); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold-light); }
+
+    .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 200; }
+    .whatsapp-btn { width: 54px; height: 54px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); text-decoration: none; transition: transform 0.2s; animation: pulse-wa 2.5s infinite; }
+    .whatsapp-btn:hover { transform: scale(1.1); }
+    .whatsapp-btn svg { width: 26px; height: 26px; fill: #fff; }
+    @keyframes pulse-wa { 0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.4)}50%{box-shadow:0 4px 30px rgba(37,211,102,0.7),0 0 0 8px rgba(37,211,102,0.1)} }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 5vw 5rem; }
+      .article-sidebar { position: static; }
+      .related-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <a class="nav-logo" href="index.html"><span>Fincas</span>Moreno</a>
+  <ul class="nav-links">
+    <li><a href="index.html#servicios">Servicios</a></li>
+    <li><a href="index.html#precios">Precios</a></li>
+    <li><a href="index.html#blog">Blog</a></li>
+    <li><a href="index.html#contacto" class="nav-cta">Contactar</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">← Volver al inicio</a>
+  <a href="index.html#servicios" onclick="closeMenu()">Servicios</a>
+  <a href="index.html#blog" onclick="closeMenu()">Blog</a>
+  <a href="index.html#contacto" onclick="closeMenu()">Contactar</a>
+</div>
+
+<header class="article-hero">
+  <div class="article-hero-inner">
+    <div class="article-breadcrumb">
+      <a href="index.html">Inicio</a>
+      <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="index.html#blog">Blog</a>
+      <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      <span>Vecinos morosos</span>
+    </div>
+    <span class="article-cat">Finanzas</span>
+    <h1 class="article-title">Cómo reclamar a un vecino moroso<br/><em>paso a paso en 2025</em></h1>
+    <div class="article-meta">
+      <div class="article-meta-item">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        3 de diciembre de 2024
+      </div>
+      <div class="article-meta-item">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        Antonio Moreno · Administrador Colegiado
+      </div>
+      <div class="article-meta-item">
+        <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        10 min de lectura
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="article-layout">
+  <article class="article-content">
+
+    <p class="article-intro">
+      La morosidad en las comunidades de propietarios es uno de los problemas más habituales y frustrantes. Un vecino que no paga sus cuotas perjudica a todos: obliga a retrasar obras necesarias, reduce el fondo de reserva y genera tensión en la convivencia. La buena noticia es que la Ley de Propiedad Horizontal te da herramientas muy eficaces para reclamar. En esta guía te explicamos todo el proceso, de principio a fin.
+    </p>
+
+    <h2 id="cuando">¿Cuándo se considera que un propietario es moroso?</h2>
+    <p>Un propietario es moroso en el momento en que deja de pagar cualquier cuota aprobada en junta, ya sea la cuota ordinaria mensual o una derrama extraordinaria. No existe un período de gracia obligatorio por ley, aunque en la práctica se suele esperar entre 30 y 60 días antes de iniciar acciones formales.</p>
+
+    <div class="callout">
+      <div class="callout-title">💡 Importante</div>
+      <p>El propietario moroso puede asistir a la junta pero <strong>no tiene derecho a voto</strong> mientras mantenga deuda con la comunidad. Esto está regulado expresamente en el artículo 15 de la LPH.</p>
+    </div>
+
+    <h2 id="proceso">El proceso de reclamación paso a paso</h2>
+    <p>La reclamación de deudas a propietarios morosos sigue un proceso escalado. Cada paso es más formal que el anterior y tiene más peso legal. Lo importante es no saltarse ninguno y documentarlo todo por escrito.</p>
+
+    <div class="timeline">
+      <div class="timeline-step">
+        <div class="timeline-left">
+          <div class="timeline-num">1</div>
+          <div class="timeline-line"></div>
+        </div>
+        <div class="timeline-body">
+          <div class="timeline-title">Reclamación amistosa</div>
+          <p class="timeline-text">El primer paso es contactar con el propietario moroso de forma amistosa, por escrito (email o carta), recordándole la deuda pendiente y solicitando su pago en un plazo razonable (normalmente 15 días). Muchos casos se resuelven aquí sin necesidad de ir más lejos.</p>
+          <span class="timeline-badge badge-green">Coste: cero</span>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-left">
+          <div class="timeline-num">2</div>
+          <div class="timeline-line"></div>
+        </div>
+        <div class="timeline-body">
+          <div class="timeline-title">Aprobación del saldo deudor en junta</div>
+          <p class="timeline-text">Si el moroso no paga, la comunidad debe aprobar en junta el importe exacto de la deuda (liquidación del saldo deudor). Este acuerdo es imprescindible para poder iniciar el proceso judicial. Se puede incluir en la junta ordinaria o en una extraordinaria convocada expresamente.</p>
+          <span class="timeline-badge badge-green">Coste: cero</span>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-left">
+          <div class="timeline-num">3</div>
+          <div class="timeline-line"></div>
+        </div>
+        <div class="timeline-body">
+          <div class="timeline-title">Requerimiento formal de pago</div>
+          <p class="timeline-text">Con el acta de la junta en mano, se envía al moroso un requerimiento formal por burofax (con certificación de contenido y acuse de recibo). Este documento tiene pleno valor probatorio y es el último aviso antes de acudir al juzgado. El plazo para pagar suele ser de 15 días.</p>
+          <span class="timeline-badge badge-orange">Coste: ~20-30€ burofax</span>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-left">
+          <div class="timeline-num">4</div>
+          <div class="timeline-line"></div>
+        </div>
+        <div class="timeline-body">
+          <div class="timeline-title">Proceso monitorio judicial</div>
+          <p class="timeline-text">Si el moroso sigue sin pagar, se presenta la demanda monitoria en el juzgado. Es un proceso rápido, sencillo y muy efectivo. Para deudas de hasta 2.000€ no es necesario abogado ni procurador. El juzgado notifica al deudor y le da 20 días para pagar u oponerse.</p>
+          <span class="timeline-badge badge-orange">Coste: tasas judiciales mínimas</span>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-left">
+          <div class="timeline-num">5</div>
+          <div class="timeline-line"></div>
+        </div>
+        <div class="timeline-body">
+          <div class="timeline-title">Embargo y ejecución</div>
+          <p class="timeline-text">Si el deudor no paga ni se opone, el juzgado emite auto de ejecución. Se pueden embargar cuentas bancarias, salarios o incluso el propio inmueble. La deuda comunitaria es preferente frente a otras deudas del propietario, lo que aumenta las posibilidades de cobro.</p>
+          <span class="timeline-badge badge-red">Solo si no hay otro remedio</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="documentos">Documentación necesaria</h2>
+    <p>Para iniciar el proceso monitorio necesitarás tener preparados estos documentos:</p>
+    <ul>
+      <li>Certificación del acuerdo de junta aprobando la liquidación de la deuda</li>
+      <li>Certificado del secretario (o administrador) acreditando la deuda, con el visto bueno del presidente</li>
+      <li>Copia de los estatutos de la comunidad</li>
+      <li>Justificante del burofax de requerimiento enviado al moroso</li>
+      <li>Extracto de la contabilidad que acredite las cuotas impagadas</li>
+    </ul>
+
+    <div class="callout callout-info">
+      <div class="callout-title">ℹ️ ¿Necesito abogado?</div>
+      <p>Para el proceso monitorio con deudas <strong>hasta 2.000€</strong> no es obligatorio abogado ni procurador. Por encima de esa cantidad sí es necesario. En cualquier caso, contar con el apoyo de un administrador de fincas colegiado simplifica enormemente el proceso.</p>
+    </div>
+
+    <h2 id="plazos">Plazos importantes que debes conocer</h2>
+    <table class="article-table">
+      <thead>
+        <tr>
+          <th>Acción</th>
+          <th>Plazo</th>
+          <th>Quién actúa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Prescripción de la deuda comunitaria</td>
+          <td>5 años</td>
+          <td>Comunidad debe reclamar antes</td>
+        </tr>
+        <tr>
+          <td>Plazo para pagar tras requerimiento</td>
+          <td>15 días (recomendado)</td>
+          <td>Propietario moroso</td>
+        </tr>
+        <tr>
+          <td>Plazo para oponerse al monitorio</td>
+          <td>20 días hábiles</td>
+          <td>Propietario moroso</td>
+        </tr>
+        <tr>
+          <td>Deuda que hereda el comprador</td>
+          <td>Año en curso + año anterior</td>
+          <td>Nuevo propietario</td>
+        </tr>
+        <tr>
+          <td>Impugnación del acuerdo de junta</td>
+          <td>3 meses o 1 año según el caso</td>
+          <td>Propietario disconforme</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="consejos">Consejos prácticos para gestionar la morosidad</h2>
+
+    <h3>Actúa rápido</h3>
+    <p>Cuanto antes se actúa, más fácil es cobrar. Una deuda de 2 meses es mucho más fácil de recuperar que una de 2 años. No esperes a que se acumule.</p>
+
+    <h3>Documenta todo por escrito</h3>
+    <p>Todos los contactos con el moroso deben quedar registrados: emails, cartas, burofaxes. Nunca reclames solo de forma verbal. Sin documentación escrita, es mucho más difícil demostrar que has intentado cobrar.</p>
+
+    <h3>No hagas acuerdos privados sin aprobación de la junta</h3>
+    <p>Si el moroso te propone un plan de pago, debe aprobarse en junta y quedar reflejado en acta. Un acuerdo verbal entre el presidente y el moroso no tiene validez legal y puede perjudicar a la comunidad.</p>
+
+    <div class="callout">
+      <div class="callout-title">✅ Ventaja clave de la LPH</div>
+      <p>Cuando se vende un piso con deudas comunitarias, el nuevo propietario responde de las deudas del año en curso y del año natural anterior. Además, la comunidad tiene derecho preferente de cobro sobre la vivienda. Esto hace que la deuda comunitaria sea de las más seguras de recuperar.</p>
+    </div>
+
+    <h2 id="prevencion">Cómo prevenir la morosidad en tu comunidad</h2>
+    <p>Más vale prevenir que curar. Estas son las medidas más eficaces para reducir la morosidad antes de que aparezca:</p>
+    <ul>
+      <li>Domiciliación bancaria de todas las cuotas — reduce el olvido involuntario</li>
+      <li>Presupuestos realistas y ajustados a las necesidades reales del edificio</li>
+      <li>Comunicación clara y transparente de en qué se gasta el dinero</li>
+      <li>Fondo de reserva bien nutrido para no depender de todos los pagos al día</li>
+      <li>Actuar rápido ante los primeros impagos, sin dejar que se acumulen</li>
+    </ul>
+
+    <h2 id="conclusion">Conclusión</h2>
+    <p>Reclamar a un vecino moroso no tiene por qué ser un proceso largo ni costoso si se siguen los pasos correctos desde el principio. La clave está en actuar con rapidez, documentarlo todo y no dudar en acudir al proceso monitorio cuando sea necesario — es mucho más sencillo de lo que parece.</p>
+    <p>En FincasMoreno gestionamos la morosidad de forma profesional y discreta, protegiendo siempre los intereses de la comunidad. Si tienes problemas con vecinos morosos, consúltanos sin compromiso.</p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">📋 Índice</div>
+      <ul class="toc-list">
+        <li><a href="#cuando">¿Cuándo es moroso?</a></li>
+        <li><a href="#proceso">Proceso paso a paso</a></li>
+        <li><a href="#documentos">Documentación necesaria</a></li>
+        <li><a href="#plazos">Plazos importantes</a></li>
+        <li><a href="#consejos">Consejos prácticos</a></li>
+        <li><a href="#prevencion">Cómo prevenirla</a></li>
+        <li><a href="#conclusion">Conclusión</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">¿Tienes vecinos morosos?</div>
+      <p class="sidebar-cta-text">Te gestionamos la reclamación de principio a fin. Consulta gratuita y sin compromiso.</p>
+      <a href="index.html#contacto" class="sidebar-btn">Consulta Gratis</a>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">🏷️ Temas</div>
+      <div class="sidebar-tags">
+        <a href="#" class="tag">Morosidad</a>
+        <a href="#" class="tag">Proceso monitorio</a>
+        <a href="#" class="tag">Cuotas comunidad</a>
+        <a href="#" class="tag">LPH</a>
+        <a href="#" class="tag">Junta propietarios</a>
+        <a href="#" class="tag">Embargo</a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<section class="related">
+  <h2 class="related-title">Artículos relacionados</h2>
+  <div class="related-grid">
+    <a href="ley-propiedad-horizontal.html" class="related-card">
+      <div class="related-cat">Legal</div>
+      <div class="related-card-title">Ley de Propiedad Horizontal 2025: Guía completa para propietarios</div>
+      <div class="related-card-date">15 Enero 2025</div>
+    </a>
+    <a href="subvenciones-rehabilitacion.html" class="related-card">
+      <div class="related-cat">Mantenimiento</div>
+      <div class="related-card-title">Ayudas y subvenciones para rehabilitar tu edificio en 2025</div>
+      <div class="related-card-date">20 Noviembre 2024</div>
+    </a>
+  </div>
+</section>
+
+<section class="article-cta">
+  <h2 class="article-cta-title">¿Necesitas ayuda con un <em>vecino moroso</em>?</h2>
+  <p class="article-cta-text">En FincasMoreno gestionamos la morosidad de forma profesional. Te asesoramos gratis en la primera consulta.</p>
+  <div class="article-cta-btns">
+    <a href="index.html#contacto" class="btn-primary">Consulta Gratuita</a>
+    <a href="index.html" class="btn-outline-light">Conocer FincasMoreno</a>
+  </div>
+</section>
+
+<footer>
+  <a class="footer-logo" href="index.html"><span>Fincas</span>Moreno</a>
+  <ul class="footer-links">
+    <li><a href="index.html#servicios">Servicios</a></li>
+    <li><a href="index.html#blog">Blog</a></li>
+    <li><a href="index.html#contacto">Contacto</a></li>
+    <li><a href="#">Política de Privacidad</a></li>
+  </ul>
+  <p class="footer-copy">© 2025 FincasMoreno · Todos los derechos reservados</p>
+</footer>
+
+<div class="whatsapp-float">
+  <a href="https://wa.me/34600000000" class="whatsapp-btn" target="_blank">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<script>
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); document.getElementById('hamburger').classList.toggle('open'); }
+  function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); document.getElementById('hamburger').classList.remove('open'); }
+</script>
+</body>
+</html>
