@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FincasMoreno – Administración de Fincas</title>
+  <link rel="icon" type="image/png" href="logoFM.png" />
+  <link rel="shortcut icon" type="image/png" href="logoFM.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
@@ -667,7 +669,36 @@
     .footer-links a:hover { color: var(--gold-light); }
     .footer-copy { font-size: 0.75rem; color: rgba(247,243,238,0.3); }
 
-    /* AREA PROPIETARIOS NAV BTN */
+    /* COOKIE BANNER */
+    .cookie-banner {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+      padding: 1.2rem 5vw;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1.5rem; flex-wrap: wrap;
+      transition: transform 0.3s ease;
+    }
+    .cookie-banner.hidden { transform: translateY(100%); }
+    .cookie-text { font-size: 0.82rem; color: rgba(247,243,238,0.65); line-height: 1.6; max-width: 600px; }
+    .cookie-text a { color: var(--gold-light); text-decoration: none; }
+    .cookie-btns { display: flex; gap: 0.8rem; flex-shrink: 0; flex-wrap: wrap; }
+    .cookie-accept {
+      background: var(--gold); color: #fff; border: none;
+      padding: 0.65rem 1.5rem; font-family: 'Outfit', sans-serif;
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer; border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .cookie-accept:hover { background: var(--gold-light); }
+    .cookie-reject {
+      background: transparent; color: rgba(247,243,238,0.4);
+      border: 1px solid rgba(247,243,238,0.15);
+      padding: 0.65rem 1.2rem; font-family: 'Outfit', sans-serif;
+      font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
+      cursor: pointer; border-radius: 2px; transition: all 0.2s;
+    }
+    .cookie-reject:hover { border-color: rgba(247,243,238,0.3); color: rgba(247,243,238,0.6); }
     .nav-propietarios {
       display: flex; align-items: center; gap: 0.5rem;
       background: transparent;
@@ -1042,7 +1073,7 @@
       opacity: 0;
       animation: fadeUp 0.8s 0.1s forwards;
     }
-    .hero-logo-img { height: 70px; width: auto; }
+    .hero-logo-img { height: 120px; width: auto; }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to { opacity: 1; transform: translateY(0); }
@@ -1126,7 +1157,7 @@
   <div class="hero-left">
     <p class="hero-eyebrow">Administración de Fincas · Desde 1998</p>
     <div class="hero-logo-wrap">
-      <img src="logo.png" alt="FincasMoreno" class="hero-logo-img" />
+      <img src="logofondoblanco.png" alt="FincasMoreno" class="hero-logo-img" />
     </div>
     <h1 class="hero-title">
       Tu comunidad,<br/>
@@ -1743,6 +1774,17 @@
   <p class="footer-copy">© 2025 FincasMoreno · Todos los derechos reservados</p>
 </footer>
 
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <p class="cookie-text">
+    🍪 Usamos cookies propias y de terceros para mejorar tu experiencia y analizar el tráfico. Puedes aceptarlas todas o solo las necesarias. Más info en nuestra <a href="politica-privacidad.html">Política de Cookies</a>.
+  </p>
+  <div class="cookie-btns">
+    <button class="cookie-reject" onclick="rejectCookies()">Solo necesarias</button>
+    <button class="cookie-accept" onclick="acceptCookies()">Aceptar todas</button>
+  </div>
+</div>
+
 <script>
   // Nav scroll
   const nav = document.getElementById('mainNav');
@@ -1768,6 +1810,19 @@
     const isOpen = item.classList.contains('open');
     document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
     if (!isOpen) item.classList.add('open');
+  }
+
+  // Cookie banner
+  if (localStorage.getItem('cookieConsent')) {
+    document.getElementById('cookieBanner').classList.add('hidden');
+  }
+  function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    document.getElementById('cookieBanner').classList.add('hidden');
+  }
+  function rejectCookies() {
+    localStorage.setItem('cookieConsent', 'rejected');
+    document.getElementById('cookieBanner').classList.add('hidden');
   }
 
   // Reveal on scroll
