@@ -1177,7 +1177,6 @@
     <div class="nav-bar-links">
       <a href="#servicios">Servicios</a>
       <a href="#precios">Precios</a>
-      <a href="#faq">FAQ</a>
       <a href="#blog">Blog</a>
       <a href="#contacto" class="nav-cta">Contactar</a>
     </div>
@@ -1191,6 +1190,7 @@
 <div class="nav-dropdown" id="navDropdown">
   <a href="#nosotros" onclick="closeDropdown()">Nosotros</a>
   <a href="#equipo" onclick="closeDropdown()">Equipo</a>
+  <a href="#faq" onclick="closeDropdown()">Preguntas Frecuentes</a>
   <a href="#testimonios" onclick="closeDropdown()">Clientes</a>
   <a href="#proceso" onclick="closeDropdown()">Cómo trabajamos</a>
   <a href="#incidencias" onclick="closeDropdown()">Reportar incidencia</a>
@@ -1843,16 +1843,25 @@
 </div>
 
 <script>
-  // Nav scroll
+  // Nav — se oculta al bajar, aparece al subir
   const nav = document.getElementById('mainNav');
+  const dropdown = document.getElementById('navDropdown');
+  let lastScroll = 0;
   window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-    // Ajustar posición del dropdown
-    const dropdown = document.getElementById('navDropdown');
-    if (dropdown.classList.contains('open')) {
-      dropdown.style.top = nav.offsetHeight + 'px';
+    const current = window.scrollY;
+    if (current > lastScroll && current > 100) {
+      // Bajando — ocultar nav
+      nav.style.transform = 'translateY(-100%)';
+      dropdown.classList.remove('open');
+      document.getElementById('navBurger').classList.remove('open');
+    } else {
+      // Subiendo — mostrar nav
+      nav.style.transform = 'translateY(0)';
     }
+    nav.classList.toggle('scrolled', current > 40);
+    lastScroll = current;
   });
+  nav.style.transition = 'transform 0.35s ease, box-shadow 0.3s';
 
   // Dropdown menu
   function toggleDropdown() {
