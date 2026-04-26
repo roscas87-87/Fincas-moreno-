@@ -36,13 +36,21 @@
       display: flex; flex-direction: column;
     }
 
-    /* FILA 1 — Logo completo */
+    /* FILA 1 — Cabecera completa con logo */
     .nav-logo {
-      display: block; width: 100%;
+      display: block;
+      width: 100%;
       background: var(--cream);
+      line-height: 0;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(26,23,20,0.06);
     }
     .nav-logo-img {
-      width: 100%; height: auto; display: block;
+      width: 100%;
+      height: clamp(88px, 12vw, 150px);
+      display: block;
+      object-fit: cover;
+      object-position: center;
     }
 
     /* FILA 2 — Links + hamburger */
@@ -52,6 +60,7 @@
       display: flex; align-items: center;
       justify-content: space-between;
       padding: 0 1rem;
+      min-height: 46px;
     }
     .nav-bar-links { display: flex; align-items: center; flex: 1; overflow: hidden; }
     .nav-bar-links a {
@@ -118,8 +127,14 @@
     .nav-top { display: none !important; }
     .hero-nav-logo { display: none !important; }
 
-    @media (max-width: 480px) {
-      .nav-bar-links a { font-size: 0.6rem; padding: 0.85rem 0.55rem; letter-spacing: 0.08em; }
+    @media (max-width: 700px) {
+      .nav-logo-img {
+        height: 92px;
+        object-position: left center;
+      }
+      .nav-bar { justify-content: flex-end; }
+      .nav-bar-links { display: none; }
+      .nav-burger { padding-right: 0; }
     }
 
     /* MOBILE MENU */
@@ -1836,6 +1851,7 @@
   }
   setNavPadding();
   window.addEventListener('resize', setNavPadding);
+  window.addEventListener('load', setNavPadding);
 
   // Nav — se oculta al bajar, aparece al subir
   const nav = document.getElementById('mainNav');
