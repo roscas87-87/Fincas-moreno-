@@ -27,6 +27,7 @@
       background: var(--warm-white);
       color: var(--dark);
       overflow-x: hidden;
+      padding-top: 0;
     }
 
     /* NAV — Fila 1: logo entero · Fila 2: links + hamburger */
@@ -1828,6 +1829,14 @@
 </div>
 
 <script>
+  // Ajustar padding del body según altura del nav
+  function setNavPadding() {
+    const navH = document.getElementById('mainNav').offsetHeight;
+    document.body.style.paddingTop = navH + 'px';
+  }
+  setNavPadding();
+  window.addEventListener('resize', setNavPadding);
+
   // Nav — se oculta al bajar, aparece al subir
   const nav = document.getElementById('mainNav');
   const dropdown = document.getElementById('navDropdown');
