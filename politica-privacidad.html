@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad y Aviso Legal | FincasMoreno</title>
+  <meta name="description" content="Política de privacidad, aviso legal y política de cookies de FincasMoreno - Administración de Fincas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #f7f3ee; --warm-white: #fdfaf6; --gold: #b8975a; --gold-light: #d4b07a;
+      --dark: #1a1714; --charcoal: #2e2a25; --muted: #7a7065;
+      --border: rgba(184,151,90,0.25); --shadow: 0 8px 40px rgba(26,23,20,0.12);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--warm-white); color: var(--dark); }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 0 5vw; height: 72px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(253,250,246,0.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-back {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--gold); }
+    .nav-back svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+    .legal-hero {
+      background: var(--dark); padding: 8rem 5vw 4rem;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .legal-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 50px; background: var(--warm-white); clip-path: ellipse(55% 100% at 50% 100%); }
+    .legal-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .legal-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--cream); }
+    .legal-date { margin-top: 1rem; font-size: 0.8rem; color: rgba(247,243,238,0.4); }
+
+    /* TABS */
+    .legal-tabs {
+      display: flex; justify-content: center; gap: 0;
+      border-bottom: 1px solid var(--border);
+      background: var(--cream); padding: 0 5vw;
+      position: sticky; top: 72px; z-index: 50;
+    }
+    .tab-btn {
+      padding: 1.2rem 2rem; font-size: 0.8rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--muted); background: none; border: none;
+      border-bottom: 2px solid transparent; cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+      margin-bottom: -1px;
+    }
+    .tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
+    .tab-btn:hover { color: var(--gold); }
+
+    .legal-content { max-width: 800px; margin: 0 auto; padding: 4rem 5vw 6rem; }
+    .legal-section { display: none; }
+    .legal-section.active { display: block; }
+
+    .legal-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; color: var(--dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    .legal-content h2:first-child { margin-top: 0; }
+    .legal-content h3 { font-size: 1rem; font-weight: 600; color: var(--dark); margin: 1.8rem 0 0.7rem; }
+    .legal-content p { font-size: 0.9rem; color: var(--muted); line-height: 1.85; margin-bottom: 1rem; }
+    .legal-content ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
+    .legal-content ul li { font-size: 0.88rem; color: var(--muted); line-height: 1.7; padding-left: 1.2rem; position: relative; }
+    .legal-content ul li::before { content: ''; position: absolute; left: 0; top: 0.65em; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+    .legal-content a { color: var(--gold); text-decoration: none; }
+    .legal-content a:hover { text-decoration: underline; }
+    .callout { background: var(--cream); border-left: 3px solid var(--gold); padding: 1.2rem 1.5rem; margin: 1.5rem 0; border-radius: 0 2px 2px 0; }
+    .callout p { margin: 0; font-size: 0.85rem; }
+
+    /* COOKIE BANNER */
+    .cookie-banner {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 300;
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+      padding: 1.2rem 5vw;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1.5rem; flex-wrap: wrap;
+      transform: translateY(0); transition: transform 0.3s;
+    }
+    .cookie-banner.hidden { transform: translateY(100%); }
+    .cookie-text { font-size: 0.82rem; color: rgba(247,243,238,0.65); line-height: 1.6; max-width: 600px; }
+    .cookie-text a { color: var(--gold-light); text-decoration: none; }
+    .cookie-btns { display: flex; gap: 0.8rem; flex-shrink: 0; }
+    .cookie-accept {
+      background: var(--gold); color: #fff;
+      border: none; padding: 0.65rem 1.5rem;
+      font-family: 'Outfit', sans-serif; font-size: 0.78rem;
+      font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      cursor: pointer; border-radius: 2px; transition: background 0.2s;
+    }
+    .cookie-accept:hover { background: var(--gold-light); }
+    .cookie-reject {
+      background: transparent; color: rgba(247,243,238,0.4);
+      border: 1px solid rgba(247,243,238,0.15);
+      padding: 0.65rem 1.2rem;
+      font-family: 'Outfit', sans-serif; font-size: 0.78rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      cursor: pointer; border-radius: 2px; transition: all 0.2s;
+    }
+    .cookie-reject:hover { border-color: rgba(247,243,238,0.3); color: rgba(247,243,238,0.6); }
+
+    footer { background: var(--charcoal); padding: 2rem 5vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid rgba(184,151,90,0.1); }
+    .footer-logo img { height: 36px; width: auto; }
+    .footer-copy { font-size: 0.75rem; color: rgba(247,243,238,0.3); }
+
+    @media (max-width: 600px) {
+      .legal-tabs { overflow-x: auto; }
+      .tab-btn { padding: 1rem 1.2rem; font-size: 0.72rem; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="logo.png" alt="FincasMoreno" />
+  </a>
+  <a href="index.html" class="nav-back">
+    <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Volver al inicio
+  </a>
+</nav>
+
+<!-- HERO -->
+<div class="legal-hero">
+  <p class="legal-eyebrow">Información legal</p>
+  <h1 class="legal-title">Aviso Legal y Política de Privacidad</h1>
+  <p class="legal-date">Última actualización: enero 2025</p>
+</div>
+
+<!-- TABS -->
+<div class="legal-tabs">
+  <button class="tab-btn active" onclick="showTab('privacidad', this)">Política de Privacidad</button>
+  <button class="tab-btn" onclick="showTab('legal', this)">Aviso Legal</button>
+  <button class="tab-btn" onclick="showTab('cookies', this)">Política de Cookies</button>
+</div>
+
+<!-- CONTENIDO -->
+<div class="legal-content">
+
+  <!-- PRIVACIDAD -->
+  <div class="legal-section active" id="privacidad">
+    <h2>1. Responsable del tratamiento</h2>
+    <p>En cumplimiento del Reglamento (UE) 2016/679 del Parlamento Europeo (RGPD) y la Ley Orgánica 3/2018 de Protección de Datos Personales (LOPDGDD), te informamos:</p>
+    <ul>
+      <li><strong>Responsable:</strong> FincasMoreno – Administración de Fincas</li>
+      <li><strong>Dirección:</strong> [Dirección pendiente de confirmar]</li>
+      <li><strong>Email:</strong> info@fincasmoreno.es</li>
+      <li><strong>Teléfono:</strong> [Teléfono pendiente de confirmar]</li>
+      <li><strong>Nº Colegiado:</strong> [Pendiente de confirmar]</li>
+    </ul>
+
+    <h2>2. Datos que recogemos</h2>
+    <p>A través del formulario de contacto de nuestra web recogemos únicamente los datos que tú nos proporcionas voluntariamente:</p>
+    <ul>
+      <li>Nombre y apellidos</li>
+      <li>Número de teléfono</li>
+      <li>Dirección de email</li>
+      <li>Dirección de la comunidad o inmueble</li>
+      <li>El mensaje o consulta que nos envías</li>
+    </ul>
+    <p>No recogemos datos sensibles ni realizamos perfilado automatizado.</p>
+
+    <h2>3. Finalidad y base legal del tratamiento</h2>
+    <h3>Atender tu consulta</h3>
+    <p>Usamos tus datos para responder a las consultas que nos envíes a través del formulario de contacto. Base legal: tu consentimiento expreso (art. 6.1.a RGPD).</p>
+    <h3>Envío de información comercial</h3>
+    <p>Solo si marcas la casilla correspondiente, podremos enviarte información sobre nuestros servicios. Puedes revocar este consentimiento en cualquier momento escribiendo a info@fincasmoreno.es.</p>
+
+    <h2>4. Conservación de los datos</h2>
+    <p>Conservamos tus datos durante el tiempo necesario para atender tu consulta y, en su caso, durante el plazo legalmente exigido. Una vez finalizada la relación, los datos serán bloqueados y eliminados en los plazos que establece la normativa vigente.</p>
+
+    <h2>5. Destinatarios de los datos</h2>
+    <p>No cedemos tus datos a terceros salvo obligación legal. Podemos compartirlos con proveedores de servicios tecnológicos (hosting, email) que actúan como encargados del tratamiento bajo contrato y con las mismas garantías de protección.</p>
+
+    <h2>6. Tus derechos</h2>
+    <p>Tienes derecho a acceder, rectificar, suprimir, limitar el tratamiento, oponerte al mismo y a la portabilidad de tus datos. Para ejercer tus derechos escríbenos a <a href="mailto:info@fincasmoreno.es">info@fincasmoreno.es</a> con una copia de tu DNI.</p>
+    <p>Si consideras que el tratamiento de tus datos no es adecuado, puedes presentar una reclamación ante la <a href="https://www.aepd.es" target="_blank">Agencia Española de Protección de Datos (AEPD)</a>.</p>
+
+    <div class="callout">
+      <p>🔒 Tu privacidad es importante para nosotros. Nunca vendemos ni compartimos tus datos con terceros con fines publicitarios.</p>
+    </div>
+  </div>
+
+  <!-- AVISO LEGAL -->
+  <div class="legal-section" id="legal">
+    <h2>1. Datos identificativos</h2>
+    <p>En cumplimiento del artículo 10 de la Ley 34/2002 de Servicios de la Sociedad de la Información (LSSI), se facilitan los siguientes datos:</p>
+    <ul>
+      <li><strong>Denominación:</strong> FincasMoreno – Administración de Fincas</li>
+      <li><strong>Domicilio:</strong> [Dirección pendiente de confirmar]</li>
+      <li><strong>Email de contacto:</strong> info@fincasmoreno.es</li>
+      <li><strong>Teléfono:</strong> [Pendiente de confirmar]</li>
+      <li><strong>Actividad:</strong> Administración de fincas y comunidades de propietarios</li>
+      <li><strong>Colegio profesional:</strong> Colegio de Administradores de Fincas</li>
+      <li><strong>Nº de colegiado:</strong> [Pendiente de confirmar]</li>
+    </ul>
+
+    <h2>2. Objeto y ámbito de aplicación</h2>
+    <p>El presente Aviso Legal regula el acceso y uso del sitio web <strong>fincasmoreno.es</strong>. El acceso a este sitio web implica la aceptación plena de las condiciones aquí establecidas.</p>
+
+    <h2>3. Propiedad intelectual e industrial</h2>
+    <p>Todos los contenidos de este sitio web (textos, imágenes, logotipos, diseño, código fuente) son propiedad de FincasMoreno o de terceros que han autorizado su uso, y están protegidos por las leyes de propiedad intelectual e industrial.</p>
+    <p>Queda expresamente prohibida la reproducción, distribución, comunicación pública o transformación de cualquier contenido de este sitio sin autorización escrita del titular.</p>
+
+    <h2>4. Exclusión de responsabilidad</h2>
+    <p>FincasMoreno no garantiza la disponibilidad continua del sitio web ni se responsabiliza de los daños derivados de interrupciones, errores técnicos o accesos no autorizados. Los contenidos tienen carácter informativo y no constituyen asesoramiento jurídico vinculante.</p>
+
+    <h2>5. Enlaces a terceros</h2>
+    <p>Este sitio puede contener enlaces a páginas externas. FincasMoreno no controla ni se responsabiliza de los contenidos, políticas de privacidad o prácticas de sitios de terceros.</p>
+
+    <h2>6. Legislación aplicable y jurisdicción</h2>
+    <p>Las presentes condiciones se rigen por la legislación española. Para cualquier controversia derivada del uso de este sitio web, las partes se someten a los juzgados y tribunales del domicilio del usuario, salvo que la normativa establezca otro fuero imperativo.</p>
+  </div>
+
+  <!-- COOKIES -->
+  <div class="legal-section" id="cookies">
+    <h2>1. ¿Qué son las cookies?</h2>
+    <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas un sitio web. Permiten que el sitio recuerde tus preferencias y mejoren tu experiencia de navegación.</p>
+
+    <h2>2. Cookies que utilizamos</h2>
+    <h3>Cookies técnicas (necesarias)</h3>
+    <p>Son imprescindibles para el funcionamiento básico del sitio web. No requieren tu consentimiento y no pueden desactivarse.</p>
+    <ul>
+      <li><strong>cookie_consent:</strong> Recuerda si has aceptado o rechazado las cookies. Duración: 1 año.</li>
+    </ul>
+
+    <h3>Cookies analíticas (opcionales)</h3>
+    <p>Nos ayudan a entender cómo los usuarios interactúan con el sitio web para mejorar su funcionamiento. Solo se activan si das tu consentimiento.</p>
+    <ul>
+      <li><strong>Google Analytics (_ga, _gid):</strong> Mide el tráfico y comportamiento de usuarios. Duración: hasta 2 años. <a href="https://policies.google.com/privacy" target="_blank">Política de privacidad de Google</a>.</li>
+    </ul>
+
+    <h2>3. Cómo gestionar las cookies</h2>
+    <p>Puedes aceptar o rechazar las cookies opcionales a través del banner que aparece en tu primera visita. También puedes configurar tu navegador para bloquear o eliminar cookies:</p>
+    <ul>
+      <li><a href="https://support.google.com/chrome/answer/95647" target="_blank">Google Chrome</a></li>
+      <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web" target="_blank">Mozilla Firefox</a></li>
+      <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank">Safari</a></li>
+    </ul>
+    <p>Ten en cuenta que desactivar ciertas cookies puede afectar a la funcionalidad del sitio web.</p>
+
+    <h2>4. Actualización de esta política</h2>
+    <p>Podemos actualizar esta política de cookies cuando sea necesario. Te recomendamos revisarla periódicamente. La fecha de última actualización aparece en la cabecera de este documento.</p>
+
+    <div class="callout">
+      <p>Si tienes dudas sobre el uso de cookies en este sitio, escríbenos a <a href="mailto:info@fincasmoreno.es">info@fincasmoreno.es</a>.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a class="footer-logo" href="index.html">
+    <img src="logo.png" alt="FincasMoreno" />
+  </a>
+  <p class="footer-copy">© 2025 FincasMoreno · Todos los derechos reservados</p>
+</footer>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <p class="cookie-text">
+    Usamos cookies propias y de terceros para mejorar tu experiencia y analizar el tráfico. Puedes aceptarlas todas o solo las necesarias. Más info en nuestra <a href="politica-privacidad.html#cookies">Política de Cookies</a>.
+  </p>
+  <div class="cookie-btns">
+    <button class="cookie-reject" onclick="rejectCookies()">Solo necesarias</button>
+    <button class="cookie-accept" onclick="acceptCookies()">Aceptar todas</button>
+  </div>
+</div>
+
+<script>
+  // Tabs
+  function showTab(id, btn) {
+    document.querySelectorAll('.legal-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+  }
+  // Cookies banner
+  if (localStorage.getItem('cookieConsent')) {
+    document.getElementById('cookieBanner').classList.add('hidden');
+  }
+  function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    document.getElementById('cookieBanner').classList.add('hidden');
+  }
+  function rejectCookies() {
+    localStorage.setItem('cookieConsent', 'rejected');
+    document.getElementById('cookieBanner').classList.add('hidden');
+  }
+</script>
+</body>
+</html>

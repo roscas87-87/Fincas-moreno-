@@ -1019,7 +1019,30 @@
       .team-grid { grid-template-columns: 1fr; }
     }
 
-    /* ANIMATIONS */
+    /* LOGO IMG */
+    .nav-logo-img { height: 38px; width: auto; display: block; }
+    /* SOCIAL ICONS */
+    .footer-social { display: flex; gap: 0.8rem; align-items: center; }
+    .social-btn {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(184,151,90,0.3);
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .social-btn:hover { background: var(--gold); border-color: var(--gold); }
+    .social-btn svg { width: 16px; height: 16px; fill: rgba(247,243,238,0.5); transition: fill 0.2s; }
+    .social-btn:hover svg { fill: #fff; }
+    footer { flex-wrap: wrap; gap: 1.5rem; }
+
+    /* HERO LOGO */
+    .hero-logo-wrap {
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.1s forwards;
+    }
+    .hero-logo-img { height: 70px; width: auto; }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to { opacity: 1; transform: translateY(0); }
@@ -1061,7 +1084,9 @@
 
 <!-- NAV -->
 <nav id="mainNav">
-  <a class="nav-logo" href="index.html"><span>Fincas</span>Moreno</a>
+  <a class="nav-logo" href="index.html">
+    <img src="logo.png" alt="FincasMoreno" class="nav-logo-img" />
+  </a>
   <ul class="nav-links">
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#nosotros">Nosotros</a></li>
@@ -1100,6 +1125,9 @@
 <section class="hero">
   <div class="hero-left">
     <p class="hero-eyebrow">Administración de Fincas · Desde 1998</p>
+    <div class="hero-logo-wrap">
+      <img src="logo.png" alt="FincasMoreno" class="hero-logo-img" />
+    </div>
     <h1 class="hero-title">
       Tu comunidad,<br/>
       <em>gestionada</em><br/>
@@ -1691,7 +1719,9 @@
 
 <!-- FOOTER -->
 <footer>
-  <a class="footer-logo" href="index.html"><span>Fincas</span>Moreno</a>
+  <a class="footer-logo" href="index.html">
+    <img src="logo.png" alt="FincasMoreno" style="height:40px; width:auto;" />
+  </a>
   <ul class="footer-links">
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#precios">Precios</a></li>
@@ -1699,9 +1729,17 @@
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#blog">Blog</a></li>
     <li><a href="#contacto">Contacto</a></li>
-    <li><a href="#">Política de Privacidad</a></li>
-    <li><a href="#">Aviso Legal</a></li>
+    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+    <li><a href="politica-privacidad.html">Aviso Legal</a></li>
   </ul>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/fincasmoreno" target="_blank" class="social-btn" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/fincasmoreno" target="_blank" class="social-btn" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+  </div>
   <p class="footer-copy">© 2025 FincasMoreno · Todos los derechos reservados</p>
 </footer>
 
