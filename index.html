@@ -29,66 +29,96 @@
       overflow-x: hidden;
     }
 
-    /* NAV */
-    /* NAV OPCIÓN C */
+    /* NAV — Fila 1: logo entero · Fila 2: links + hamburger */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; flex-direction: column;
-      background: transparent;
-      transition: box-shadow 0.3s;
     }
-    nav.scrolled { box-shadow: var(--shadow); }
 
-    /* LOGO STRIP */
+    /* FILA 1 — Logo completo */
     .nav-logo {
       display: block; width: 100%;
       background: var(--cream);
     }
     .nav-logo-img {
-      width: 100%; height: auto;
-      display: block; object-fit: cover;
+      width: 100%; height: auto; display: block;
     }
 
-    /* NAV BAR BELOW LOGO */
+    /* FILA 2 — Links + hamburger */
     .nav-bar {
       background: var(--dark);
       border-top: 2px solid var(--gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0;
-      padding: 0;
-      overflow-x: auto;
+      display: flex; align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
     }
-    .nav-bar a {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: rgba(247,243,238,0.7);
+    .nav-bar-links { display: flex; align-items: center; flex: 1; overflow: hidden; }
+    .nav-bar-links a {
+      font-size: 0.68rem; font-weight: 500;
+      letter-spacing: 0.13em; text-transform: uppercase;
+      color: rgba(247,243,238,0.75);
       text-decoration: none;
-      padding: 0.85rem 1.2rem;
+      padding: 0.85rem 0.8rem;
       white-space: nowrap;
-      transition: color 0.2s, background 0.2s;
-      border-right: 1px solid rgba(184,151,90,0.15);
+      transition: color 0.2s;
     }
-    .nav-bar a:first-child { border-left: 1px solid rgba(184,151,90,0.15); }
-    .nav-bar a:hover { color: var(--gold); background: rgba(184,151,90,0.08); }
-    .nav-bar .nav-bar-cta {
+    .nav-bar-links a:hover { color: var(--gold); }
+    .nav-bar-links .nav-cta {
       background: var(--gold); color: #fff !important;
-      margin-left: 0.5rem; border: none !important;
-      padding: 0.85rem 1.5rem;
+      padding: 0.45rem 0.9rem; border-radius: 2px;
+      margin-left: 0.4rem; font-size: 0.65rem;
     }
-    .nav-bar .nav-bar-cta:hover { background: var(--gold-light) !important; }
+    .nav-bar-links .nav-cta:hover { background: var(--gold-light) !important; }
 
-    /* HIDE OLD ELEMENTS */
+    /* HAMBURGER en fila 2 */
+    .nav-burger {
+      display: flex; flex-direction: column; gap: 5px;
+      cursor: pointer; background: none; border: none;
+      padding: 0.85rem 0.5rem; flex-shrink: 0;
+    }
+    .nav-burger span {
+      width: 22px; height: 2px;
+      background: rgba(247,243,238,0.8);
+      border-radius: 2px; display: block; transition: all 0.3s;
+    }
+    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* MENÚ DESPLEGABLE */
+    .nav-dropdown {
+      display: none; position: fixed;
+      left: 0; right: 0; z-index: 98;
+      background: var(--dark);
+      border-bottom: 2px solid var(--gold);
+      flex-direction: column;
+    }
+    .nav-dropdown.open { display: flex; }
+    .nav-dropdown a {
+      font-size: 0.9rem; font-weight: 500;
+      color: rgba(247,243,238,0.8);
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid rgba(184,151,90,0.15);
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-dropdown a:hover { color: var(--gold); background: rgba(184,151,90,0.05); }
+    .nav-dropdown a:last-child { border-bottom: none; }
+    .nav-dropdown .drop-cta {
+      background: var(--gold); color: #fff !important;
+      margin: 1rem 1.5rem; border-radius: 2px;
+      text-align: center; border-bottom: none !important;
+    }
+
+    /* HIDE OLD */
     .nav-links { display: none !important; }
     .hamburger { display: none !important; }
     .mobile-menu { display: none !important; }
+    .nav-top { display: none !important; }
+    .hero-nav-logo { display: none !important; }
 
-    @media (max-width: 700px) {
-      .nav-bar { justify-content: flex-start; }
-      .nav-bar a { font-size: 0.65rem; padding: 0.75rem 0.85rem; letter-spacing: 0.12em; }
+    @media (max-width: 480px) {
+      .nav-bar-links a { font-size: 0.6rem; padding: 0.85rem 0.55rem; letter-spacing: 0.08em; }
     }
 
     /* MOBILE MENU */
@@ -1136,22 +1166,38 @@
 </head>
 <body>
 
-<!-- NAV -->
+<!-- NAV — 2 filas -->
 <nav id="mainNav">
+  <!-- FILA 1: Logo entero -->
   <a class="nav-logo" href="index.html">
     <img src="logoheader.png" alt="FincasMoreno" class="nav-logo-img" />
   </a>
+  <!-- FILA 2: Links principales + hamburger -->
   <div class="nav-bar">
-    <a href="#servicios">Servicios</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#precios">Precios</a>
-    <a href="#equipo">Equipo</a>
-    <a href="#faq">FAQ</a>
-    <a href="#blog">Blog</a>
-    <a href="#contacto">Contacto</a>
-    <a href="#contacto" class="nav-bar-cta">Presupuesto Gratis</a>
+    <div class="nav-bar-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#precios">Precios</a>
+      <a href="#faq">FAQ</a>
+      <a href="#blog">Blog</a>
+      <a href="#contacto" class="nav-cta">Contactar</a>
+    </div>
+    <button class="nav-burger" id="navBurger" onclick="toggleDropdown()">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<!-- MENÚ DESPLEGABLE -->
+<div class="nav-dropdown" id="navDropdown">
+  <a href="#nosotros" onclick="closeDropdown()">Nosotros</a>
+  <a href="#equipo" onclick="closeDropdown()">Equipo</a>
+  <a href="#testimonios" onclick="closeDropdown()">Clientes</a>
+  <a href="#proceso" onclick="closeDropdown()">Cómo trabajamos</a>
+  <a href="#incidencias" onclick="closeDropdown()">Reportar incidencia</a>
+  <a href="politica-privacidad.html" onclick="closeDropdown()">Política de Privacidad</a>
+  <a href="#" onclick="closeDropdown()" style="color:var(--gold)">🔒 Área Propietarios</a>
+  <a href="#contacto" class="drop-cta" onclick="closeDropdown()">Solicitar Presupuesto Gratis</a>
+</div>
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
@@ -1801,6 +1847,31 @@
   const nav = document.getElementById('mainNav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 40);
+    // Ajustar posición del dropdown
+    const dropdown = document.getElementById('navDropdown');
+    if (dropdown.classList.contains('open')) {
+      dropdown.style.top = nav.offsetHeight + 'px';
+    }
+  });
+
+  // Dropdown menu
+  function toggleDropdown() {
+    const dropdown = document.getElementById('navDropdown');
+    const burger = document.getElementById('navBurger');
+    const nav = document.getElementById('mainNav');
+    const isOpen = dropdown.classList.toggle('open');
+    burger.classList.toggle('open', isOpen);
+    dropdown.style.top = nav.offsetHeight + 'px';
+  }
+  function closeDropdown() {
+    document.getElementById('navDropdown').classList.remove('open');
+    document.getElementById('navBurger').classList.remove('open');
+  }
+  // Cerrar al pulsar fuera
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('nav') && !e.target.closest('.nav-dropdown')) {
+      closeDropdown();
+    }
   });
 
   // Mobile menu
