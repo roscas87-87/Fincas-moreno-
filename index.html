@@ -70,7 +70,7 @@
       transition: background 0.2s !important;
     }
     .nav-cta:hover { background: var(--charcoal) !important; color: #fff !important; }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 110; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 110; font-size: 38px; background: none; border: none; color: var(--dark); line-height: 1; }
     .hamburger span { width: 24px; height: 2px; background: var(--dark); border-radius: 2px; transition: all 0.3s; }
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
@@ -1051,7 +1051,9 @@
     }
 
     /* LOGO IMG */
-    .nav-logo-img { height: 38px; width: auto; display: block; }
+    .nav-logo-img { width: 170px; height: auto; object-fit: contain; display: block; }
+    .nav-logo { display: flex; align-items: center; }
+    nav { height: 90px; }
     /* SOCIAL ICONS */
     .footer-social { display: flex; gap: 0.8rem; align-items: center; }
     .social-btn {
@@ -1073,7 +1075,12 @@
       opacity: 0;
       animation: fadeUp 0.8s 0.1s forwards;
     }
-    .hero-logo-img { height: 120px; width: auto; }
+    .hero-logo-img { width: 220px; height: auto; object-fit: contain; }
+    @media (max-width: 600px) {
+      .nav-logo-img { width: 150px; }
+      nav { height: 95px; }
+      .hero-logo-img { width: 180px; }
+    }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to { opacity: 1; transform: translateY(0); }
@@ -1132,9 +1139,7 @@
       </a>
     </li>
   </ul>
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
-  </div>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
 </nav>
 
 <!-- MOBILE MENU -->
@@ -1796,12 +1801,12 @@
   function toggleMenu() {
     const menu = document.getElementById('mobileMenu');
     const btn = document.getElementById('hamburger');
-    menu.classList.toggle('open');
-    btn.classList.toggle('open');
+    const isOpen = menu.classList.toggle('open');
+    btn.textContent = isOpen ? '✕' : '☰';
   }
   function closeMenu() {
     document.getElementById('mobileMenu').classList.remove('open');
-    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('hamburger').textContent = '☰';
   }
 
   // FAQ accordion
