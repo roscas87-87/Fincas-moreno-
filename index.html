@@ -3,9 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FincasMoreno – Administración de Fincas</title>
+  <title>Administrador de Fincas en Granada | FincasMoreno – Armilla</title>
+  <meta name="description" content="FincasMoreno, administrador de fincas en Granada. Gestión integral de comunidades de propietarios en Armilla, Granada y provincia. Presupuesto gratis. Llámanos: 668 558 159. Email: info@fincasmoreno.es" />
+  <meta name="keywords" content="administrador de fincas Granada, administrador fincas Armilla, gestión comunidades propietarios Granada, administrador fincas colegiado Granada, FincasMoreno" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://fincasmoreno.es/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fincasmoreno.es/" />
+  <meta property="og:title" content="Administrador de Fincas en Granada | FincasMoreno" />
+  <meta property="og:description" content="Gestión integral de comunidades de propietarios en Granada. Transparencia, rigor legal y atención personalizada. Presupuesto gratis." />
+  <meta property="og:image" content="https://fincasmoreno.es/logo.png" />
   <link rel="icon" type="image/png" href="logoFM.png" />
   <link rel="shortcut icon" type="image/png" href="logoFM.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FincasMoreno - Administración de Fincas",
+    "image": "https://fincasmoreno.es/logo.png",
+    "url": "https://fincasmoreno.es",
+    "telephone": "+34668558159",
+    "email": "info@fincasmoreno.es",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Diputación, 81A",
+      "addressLocality": "Armilla",
+      "postalCode": "18100",
+      "addressRegion": "Granada",
+      "addressCountry": "ES"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "18:30"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/fincasmoreno",
+      "https://www.instagram.com/fincasmoreno"
+    ],
+    "description": "Administrador de fincas colegiado en Granada. Gestión integral de comunidades de propietarios en Armilla, Granada y provincia.",
+    "priceRange": "€€",
+    "foundingDate": "1998"
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
@@ -30,19 +73,16 @@
       padding-top: 0;
     }
 
-    /* NAV — Fila 1: logo entero · Fila 2: links + hamburger */
+    /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; flex-direction: column;
+      transition: transform 0.35s ease, box-shadow 0.3s;
     }
-
-    /* FILA 1 — Cabecera completa con logo */
     .nav-logo {
-      display: block;
-      width: 100%;
+      display: block; width: 100%;
       background: var(--cream);
-      line-height: 0;
-      overflow: hidden;
+      line-height: 0; overflow: hidden;
       box-shadow: 0 4px 18px rgba(26,23,20,0.06);
     }
     .nav-logo-img {
@@ -52,8 +92,6 @@
       object-fit: cover;
       object-position: center;
     }
-
-    /* FILA 2 — Links + hamburger */
     .nav-bar {
       background: var(--dark);
       border-top: 2px solid var(--gold);
@@ -79,8 +117,6 @@
       margin-left: 0.4rem; font-size: 0.65rem;
     }
     .nav-bar-links .nav-cta:hover { background: var(--gold-light) !important; }
-
-    /* HAMBURGER en fila 2 */
     .nav-burger {
       display: flex; flex-direction: column; gap: 5px;
       cursor: pointer; background: none; border: none;
@@ -94,8 +130,6 @@
     .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .nav-burger.open span:nth-child(2) { opacity: 0; }
     .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    /* MENÚ DESPLEGABLE */
     .nav-dropdown {
       display: none; position: fixed;
       left: 0; right: 0; z-index: 98;
@@ -119,70 +153,11 @@
       margin: 1rem 1.5rem; border-radius: 2px;
       text-align: center; border-bottom: none !important;
     }
-
-    /* HIDE OLD */
-    .nav-links { display: none !important; }
-    .hamburger { display: none !important; }
-    .mobile-menu { display: none !important; }
-    .nav-top { display: none !important; }
-    .hero-nav-logo { display: none !important; }
-
     @media (max-width: 700px) {
-      .nav-logo-img {
-        height: 92px;
-        object-position: left center;
-      }
+      .nav-logo-img { height: 92px; object-position: left center; }
       .nav-bar { justify-content: flex-end; }
       .nav-bar-links { display: none; }
-      .nav-burger { padding-right: 0; }
     }
-
-    /* MOBILE MENU */
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 72px; left: 0; right: 0;
-      background: var(--warm-white);
-      border-bottom: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      z-index: 99;
-      padding: 1.5rem 5vw 2rem;
-      flex-direction: column;
-      gap: 0;
-      transform: translateY(-10px);
-      opacity: 0;
-      transition: opacity 0.25s, transform 0.25s;
-    }
-    .mobile-menu.open {
-      display: flex;
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .mobile-menu a {
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--dark);
-      text-decoration: none;
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--border);
-      letter-spacing: 0.04em;
-      transition: color 0.2s;
-    }
-    .mobile-menu a:last-child { border-bottom: none; }
-    .mobile-menu a:hover { color: var(--gold); }
-    .mobile-menu .mobile-cta {
-      margin-top: 1rem;
-      background: var(--gold);
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      border-radius: 2px;
-      border-bottom: none;
-      letter-spacing: 0.1em;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-    }
-    .mobile-menu .mobile-cta:hover { background: var(--charcoal); color: #fff; }
 
     /* HERO */
     .hero {
@@ -191,8 +166,6 @@
       grid-template-columns: 1fr 1fr;
       position: relative;
       overflow: hidden;
-      margin-top: 0;
-      padding-top: 0;
     }
     .hero-left {
       background: var(--dark);
@@ -209,127 +182,80 @@
       z-index: 2;
     }
     .hero-eyebrow {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.5rem;
-      opacity: 0;
-      animation: fadeUp 0.8s 0.2s forwards;
+      font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.5rem;
+      opacity: 0; animation: fadeUp 0.8s 0.2s forwards;
     }
     .hero-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(3rem, 5vw, 5.5rem);
-      font-weight: 300;
-      line-height: 1.05;
-      color: var(--cream);
-      margin-bottom: 1.8rem;
-      opacity: 0;
-      animation: fadeUp 0.8s 0.4s forwards;
+      font-weight: 300; line-height: 1.05;
+      color: var(--cream); margin-bottom: 1.8rem;
+      opacity: 0; animation: fadeUp 0.8s 0.4s forwards;
     }
-    .hero-title em {
-      font-style: italic;
-      color: var(--gold-light);
-    }
+    .hero-title em { font-style: italic; color: var(--gold-light); }
     .hero-subtitle {
-      font-size: 0.95rem;
-      font-weight: 300;
-      color: rgba(247,243,238,0.6);
-      line-height: 1.75;
-      max-width: 400px;
-      margin-bottom: 3rem;
-      opacity: 0;
-      animation: fadeUp 0.8s 0.6s forwards;
+      font-size: 0.95rem; font-weight: 300;
+      color: rgba(247,243,238,0.6); line-height: 1.75;
+      max-width: 400px; margin-bottom: 3rem;
+      opacity: 0; animation: fadeUp 0.8s 0.6s forwards;
     }
     .hero-btns {
       display: flex; gap: 1rem; flex-wrap: wrap;
-      opacity: 0;
-      animation: fadeUp 0.8s 0.8s forwards;
+      opacity: 0; animation: fadeUp 0.8s 0.8s forwards;
     }
     .btn-primary {
-      background: var(--gold);
-      color: #fff;
-      padding: 0.9rem 2.2rem;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 2px;
-      transition: background 0.25s, transform 0.2s;
+      background: var(--gold); color: #fff;
+      padding: 0.9rem 2.2rem; font-size: 0.8rem;
+      font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; text-decoration: none;
+      border-radius: 2px; transition: background 0.25s, transform 0.2s;
       display: inline-block;
     }
     .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
     .btn-outline {
-      border: 1px solid rgba(247,243,238,0.3);
-      color: var(--cream);
-      padding: 0.9rem 2.2rem;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 2px;
-      transition: border-color 0.25s, color 0.25s;
-      display: inline-block;
+      border: 1px solid rgba(247,243,238,0.3); color: var(--cream);
+      padding: 0.9rem 2.2rem; font-size: 0.8rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      text-decoration: none; border-radius: 2px;
+      transition: border-color 0.25s, color 0.25s; display: inline-block;
     }
     .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
     .hero-stats {
       display: flex; gap: 3rem; margin-top: 4rem;
       padding-top: 2.5rem;
       border-top: 1px solid rgba(184,151,90,0.2);
-      opacity: 0;
-      animation: fadeUp 0.8s 1s forwards;
+      opacity: 0; animation: fadeUp 0.8s 1s forwards;
     }
     .hero-stat-num {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.4rem;
-      font-weight: 300;
-      color: var(--gold-light);
-      line-height: 1;
+      font-size: 2.4rem; font-weight: 300;
+      color: var(--gold-light); line-height: 1;
     }
     .hero-stat-label {
-      font-size: 0.72rem;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(247,243,238,0.45);
-      margin-top: 0.3rem;
+      font-size: 0.72rem; font-weight: 400;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(247,243,238,0.45); margin-top: 0.3rem;
     }
     .hero-right {
       position: relative;
       background: linear-gradient(135deg, #e8dfd3 0%, #d0c4b2 100%);
       overflow: hidden;
     }
-    .hero-right-img {
-      width: 100%; height: 100%; object-fit: cover; opacity: 0.5;
-    }
     .hero-right-overlay {
       position: absolute; inset: 0;
       background: linear-gradient(160deg, rgba(247,243,238,0.05) 0%, rgba(184,151,90,0.15) 100%);
     }
-    .hero-pattern {
-      position: absolute; bottom: 0; right: 0;
-      width: 55%; height: 55%;
-      opacity: 0.06;
-    }
+    .hero-pattern { position: absolute; bottom: 0; right: 0; width: 55%; height: 55%; opacity: 0.06; }
     .hero-badge {
       position: absolute; bottom: 3rem; left: 3rem;
-      background: var(--dark);
-      color: var(--cream);
-      padding: 1.5rem 2rem;
-      border-left: 3px solid var(--gold);
+      background: var(--dark); color: var(--cream);
+      padding: 1.5rem 2rem; border-left: 3px solid var(--gold);
       max-width: 260px;
-      opacity: 0;
-      animation: fadeUp 0.8s 1.1s forwards;
+      opacity: 0; animation: fadeUp 0.8s 1.1s forwards;
     }
-    .hero-badge-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
-      font-weight: 400;
-      margin-bottom: 0.4rem;
-    }
+    .hero-badge-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; margin-bottom: 0.4rem; }
     .hero-badge-text { font-size: 0.78rem; color: rgba(247,243,238,0.6); line-height: 1.5; }
 
     /* TRUST BAR */
@@ -343,31 +269,23 @@
     }
     .trust-item {
       display: flex; align-items: center; gap: 0.75rem;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
+      font-size: 0.8rem; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
     }
     .trust-icon { width: 18px; height: 18px; fill: var(--gold); flex-shrink: 0; }
 
-    /* SECTION COMMONS */
+    /* SECTIONS */
     section { padding: 7rem 5vw; }
     .section-label {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1rem;
+      font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem;
     }
     .section-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(2rem, 3.5vw, 3.2rem);
-      font-weight: 300;
-      line-height: 1.15;
-      color: var(--dark);
-      max-width: 560px;
+      font-weight: 300; line-height: 1.15;
+      color: var(--dark); max-width: 560px;
     }
     .section-title em { font-style: italic; color: var(--gold); }
 
@@ -376,65 +294,39 @@
     .services-header { text-align: center; margin-bottom: 4rem; }
     .services-header .section-title { max-width: 100%; }
     .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5px;
-      background: var(--border);
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px; background: var(--border);
       border: 1px solid var(--border);
-      max-width: 1100px;
-      margin: 0 auto;
+      max-width: 1100px; margin: 0 auto;
     }
     .service-card {
       background: var(--warm-white);
       padding: 2.8rem 2.5rem;
-      position: relative;
-      overflow: hidden;
-      transition: background 0.3s;
+      position: relative; overflow: hidden; transition: background 0.3s;
     }
     .service-card:hover { background: var(--cream); }
     .service-card::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0;
-      height: 2px;
-      background: var(--gold);
-      transform: scaleX(0);
-      transform-origin: left;
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--gold); transform: scaleX(0); transform-origin: left;
       transition: transform 0.35s ease;
     }
     .service-card:hover::before { transform: scaleX(1); }
-    .service-number {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3.5rem;
-      font-weight: 300;
-      color: var(--border);
-      line-height: 1;
-      margin-bottom: 1.2rem;
-    }
     .service-icon-wrap {
-      width: 48px; height: 48px;
-      border: 1px solid var(--border);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
+      width: 48px; height: 48px; border: 1px solid var(--border);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
       margin-bottom: 1.5rem;
     }
     .service-icon { width: 22px; height: 22px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
     .service-name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.35rem;
-      font-weight: 400;
-      color: var(--dark);
-      margin-bottom: 0.8rem;
+      font-size: 1.35rem; font-weight: 400; color: var(--dark); margin-bottom: 0.8rem;
     }
     .service-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.75; }
 
     /* WHY US */
     .why {
-      background: var(--dark);
-      color: var(--cream);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-      padding: 0;
+      background: var(--dark); color: var(--cream);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0;
     }
     .why-left {
       padding: 7rem 5vw 7rem 7vw;
@@ -443,80 +335,32 @@
     .why-left .section-label { color: var(--gold-light); }
     .why-left .section-title { color: var(--cream); }
     .why-body {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: rgba(247,243,238,0.6);
-      line-height: 1.85;
-      max-width: 420px;
-      margin-bottom: 3rem;
+      margin-top: 2rem; font-size: 0.9rem;
+      color: rgba(247,243,238,0.6); line-height: 1.85;
+      max-width: 420px; margin-bottom: 3rem;
     }
     .why-features { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
     .why-feature { display: flex; gap: 1.2rem; align-items: flex-start; }
-    .why-dot {
-      width: 6px; height: 6px;
-      background: var(--gold);
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 0.55rem;
-    }
-    .why-feature-title {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--cream);
-      margin-bottom: 0.3rem;
-    }
+    .why-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; margin-top: 0.55rem; }
+    .why-feature-title { font-size: 0.9rem; font-weight: 500; color: var(--cream); margin-bottom: 0.3rem; }
     .why-feature-text { font-size: 0.82rem; color: rgba(247,243,238,0.5); line-height: 1.7; }
     .why-right {
-      position: relative;
-      background: var(--charcoal);
-      display: flex; align-items: center; justify-content: center;
-      padding: 5rem 4vw;
+      position: relative; background: var(--charcoal);
+      display: flex; align-items: center; justify-content: center; padding: 5rem 4vw;
     }
     .why-card-stack { position: relative; width: 320px; height: 380px; }
     .why-card {
-      position: absolute;
-      background: rgba(184,151,90,0.08);
-      border: 1px solid var(--border);
-      border-radius: 2px;
-      padding: 2rem;
+      position: absolute; background: rgba(184,151,90,0.08);
+      border: 1px solid var(--border); border-radius: 2px; padding: 2rem;
     }
     .why-card-1 { inset: 0; z-index: 1; }
-    .why-card-2 {
-      top: 1.5rem; left: 1.5rem; right: -1.5rem; bottom: -1.5rem;
-      z-index: 0;
-      background: rgba(184,151,90,0.04);
-    }
-    .why-card-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 4rem;
-      font-weight: 300;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 0.5rem;
-    }
-    .why-card-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: rgba(184,151,90,0.6);
-      margin-bottom: 2rem;
-    }
+    .why-card-2 { top: 1.5rem; left: 1.5rem; right: -1.5rem; bottom: -1.5rem; z-index: 0; background: rgba(184,151,90,0.04); }
+    .why-card-num { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 0.5rem; }
+    .why-card-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(184,151,90,0.6); margin-bottom: 2rem; }
     .why-card-divider { height: 1px; background: var(--border); margin-bottom: 1.5rem; }
     .why-card-items { display: flex; flex-direction: column; gap: 1rem; }
-    .why-card-item {
-      display: flex; gap: 0.8rem;
-      font-size: 0.82rem;
-      color: rgba(247,243,238,0.7);
-      align-items: center;
-    }
-    .why-card-check {
-      width: 16px; height: 16px;
-      border-radius: 50%;
-      background: rgba(184,151,90,0.2);
-      border: 1px solid var(--gold);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
+    .why-card-item { display: flex; gap: 0.8rem; font-size: 0.82rem; color: rgba(247,243,238,0.7); align-items: center; }
+    .why-card-check { width: 16px; height: 16px; border-radius: 50%; background: rgba(184,151,90,0.2); border: 1px solid var(--gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .why-card-check svg { width: 8px; height: 8px; stroke: var(--gold); fill: none; stroke-width: 2; }
 
     /* PROCESS */
@@ -524,143 +368,106 @@
     .process-header { text-align: center; margin-bottom: 5rem; }
     .process-header .section-title { max-width: 100%; }
     .process-steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0;
-      position: relative;
-      max-width: 1000px;
-      margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 0; position: relative; max-width: 1000px; margin: 0 auto;
     }
     .process-steps::before {
-      content: '';
-      position: absolute;
+      content: ''; position: absolute;
       top: 28px; left: 12.5%; right: 12.5%;
-      height: 1px;
-      background: var(--border);
+      height: 1px; background: var(--border);
     }
     .process-step { text-align: center; padding: 0 1.5rem; }
     .step-num {
-      width: 56px; height: 56px;
-      border-radius: 50%;
-      border: 1px solid var(--border);
-      background: var(--warm-white);
+      width: 56px; height: 56px; border-radius: 50%;
+      border: 1px solid var(--border); background: var(--warm-white);
       display: flex; align-items: center; justify-content: center;
       margin: 0 auto 1.5rem;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: var(--gold);
-      position: relative; z-index: 1;
-      transition: background 0.3s, border-color 0.3s;
+      font-size: 1.3rem; font-weight: 400; color: var(--gold);
+      position: relative; z-index: 1; transition: background 0.3s, border-color 0.3s;
     }
     .process-step:hover .step-num { background: var(--gold); color: #fff; border-color: var(--gold); }
-    .step-title {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--dark);
-      margin-bottom: 0.6rem;
-      letter-spacing: 0.03em;
-    }
+    .step-title { font-size: 0.9rem; font-weight: 600; color: var(--dark); margin-bottom: 0.6rem; letter-spacing: 0.03em; }
     .step-text { font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
 
     /* TESTIMONIALS */
     .testimonials { background: var(--warm-white); }
     .testimonials-header { text-align: center; margin-bottom: 4rem; }
     .testimonials-header .section-title { max-width: 100%; }
-    .testi-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
     .testi-card {
-      background: var(--cream);
-      border: 1px solid var(--border);
-      padding: 2.5rem;
-      border-radius: 2px;
-      position: relative;
+      background: var(--cream); border: 1px solid var(--border);
+      padding: 2.5rem; border-radius: 2px; position: relative;
       transition: transform 0.25s, box-shadow 0.25s;
     }
     .testi-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
     .testi-stars { display: flex; gap: 3px; margin-bottom: 1.5rem; }
     .testi-stars span { color: var(--gold); font-size: 0.9rem; }
-    .testi-quote {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      font-weight: 400;
-      color: var(--dark);
-      line-height: 1.6;
-      margin-bottom: 1.8rem;
-    }
+    .testi-quote { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 400; color: var(--dark); line-height: 1.6; margin-bottom: 1.8rem; }
     .testi-quote::before { content: '\201C'; color: var(--gold); font-size: 2rem; line-height: 0; vertical-align: -0.4em; margin-right: 2px; }
     .testi-author { display: flex; gap: 1rem; align-items: center; }
-    .testi-avatar {
-      width: 42px; height: 42px;
-      border-radius: 50%;
-      background: var(--dark);
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem;
-      color: var(--gold-light);
-      font-weight: 600;
-    }
+    .testi-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--dark); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--gold-light); font-weight: 600; }
     .testi-name { font-size: 0.88rem; font-weight: 600; color: var(--dark); }
     .testi-role { font-size: 0.75rem; color: var(--muted); }
 
-    /* CTA */
-    .cta {
+    /* EQUIPO CTA — sin fotos ni nombres */
+    .equipo-cta {
       background: var(--dark);
+      padding: 8rem 5vw;
+      text-align: center;
       position: relative;
       overflow: hidden;
-      text-align: center;
-      padding: 8rem 5vw;
     }
-    .cta-bg {
+    .equipo-cta::before {
+      content: '';
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 50% 100%, rgba(184,151,90,0.15) 0%, transparent 70%);
+      background: radial-gradient(ellipse at 50% 60%, rgba(184,151,90,0.12) 0%, transparent 70%);
+      pointer-events: none;
     }
-    .cta-label { color: var(--gold-light); position: relative; z-index: 1; }
-    .cta-title {
+    .equipo-cta .section-label { color: var(--gold-light); position: relative; z-index: 1; }
+    .equipo-cta-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.5rem, 4vw, 4rem);
-      font-weight: 300;
-      color: var(--cream);
-      line-height: 1.1;
-      margin: 1rem auto 1.5rem;
-      max-width: 640px;
+      font-size: clamp(2.2rem, 4.5vw, 4rem);
+      font-weight: 300; color: var(--cream);
+      line-height: 1.12; margin: 1rem auto 1.8rem;
+      max-width: 700px; position: relative; z-index: 1;
+    }
+    .equipo-cta-title em { font-style: italic; color: var(--gold-light); }
+    .equipo-cta-text {
+      font-size: 1rem; color: rgba(247,243,238,0.55);
+      max-width: 540px; margin: 0 auto 3rem;
+      line-height: 1.9; position: relative; z-index: 1;
+    }
+    .equipo-cta-values {
+      display: flex; gap: 2.5rem; justify-content: center;
+      flex-wrap: wrap; margin-bottom: 3.5rem;
       position: relative; z-index: 1;
     }
+    .equipo-cta-value {
+      display: flex; align-items: center; gap: 0.65rem;
+      font-size: 0.85rem; color: rgba(247,243,238,0.55);
+    }
+    .equipo-cta-value svg { width: 15px; height: 15px; stroke: var(--gold); fill: none; stroke-width: 2.5; flex-shrink: 0; }
+    .equipo-cta-btn { position: relative; z-index: 1; }
+    .equipo-cta-btn .btn-primary {
+      font-size: 0.85rem; padding: 1rem 2.8rem;
+      letter-spacing: 0.14em;
+    }
+
+    /* CTA */
+    .cta { background: var(--dark); position: relative; overflow: hidden; text-align: center; padding: 8rem 5vw; }
+    .cta-bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 100%, rgba(184,151,90,0.15) 0%, transparent 70%); }
+    .cta-label { color: var(--gold-light); position: relative; z-index: 1; }
+    .cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 300; color: var(--cream); line-height: 1.1; margin: 1rem auto 1.5rem; max-width: 640px; position: relative; z-index: 1; }
     .cta-title em { font-style: italic; color: var(--gold-light); }
-    .cta-text {
-      font-size: 0.92rem;
-      color: rgba(247,243,238,0.55);
-      max-width: 480px;
-      margin: 0 auto 3rem;
-      line-height: 1.8;
-      position: relative; z-index: 1;
-    }
+    .cta-text { font-size: 0.92rem; color: rgba(247,243,238,0.55); max-width: 480px; margin: 0 auto 3rem; line-height: 1.8; position: relative; z-index: 1; }
     .cta-btns { display: flex; gap: 1rem; justify-content: center; position: relative; z-index: 1; flex-wrap: wrap; }
-    .cta-info {
-      display: flex; gap: 3rem; justify-content: center; margin-top: 3rem;
-      position: relative; z-index: 1; flex-wrap: wrap;
-    }
-    .cta-info-item {
-      display: flex; align-items: center; gap: 0.6rem;
-      font-size: 0.8rem; color: rgba(247,243,238,0.4);
-      letter-spacing: 0.05em;
-    }
+    .cta-info { display: flex; gap: 3rem; justify-content: center; margin-top: 3rem; position: relative; z-index: 1; flex-wrap: wrap; }
+    .cta-info-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.8rem; color: rgba(247,243,238,0.4); letter-spacing: 0.05em; }
     .cta-info-item svg { width: 14px; height: 14px; stroke: var(--gold); fill: none; stroke-width: 2; flex-shrink: 0; }
 
     /* CONTACT */
-    .contact {
-      background: var(--cream);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: start;
-      padding: 7rem 7vw;
-    }
+    .contact { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; padding: 7rem 7vw; }
     .contact-left .section-title { margin-bottom: 1.5rem; }
     .contact-text { font-size: 0.9rem; color: var(--muted); line-height: 1.8; margin-bottom: 2.5rem; }
     .contact-details { display: flex; flex-direction: column; gap: 1.2rem; }
@@ -672,182 +479,24 @@
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
     .form-label { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
-    .form-input, .form-textarea {
-      background: var(--warm-white);
-      border: 1px solid var(--border);
-      padding: 0.85rem 1rem;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.88rem;
-      color: var(--dark);
-      border-radius: 2px;
-      transition: border-color 0.2s;
-      outline: none;
-    }
+    .form-input, .form-textarea { background: var(--warm-white); border: 1px solid var(--border); padding: 0.85rem 1rem; font-family: 'Outfit', sans-serif; font-size: 0.88rem; color: var(--dark); border-radius: 2px; transition: border-color 0.2s; outline: none; }
     .form-input:focus, .form-textarea:focus { border-color: var(--gold); }
     .form-textarea { resize: vertical; min-height: 120px; }
-    .form-submit {
-      background: var(--gold);
-      color: #fff;
-      border: none;
-      padding: 1rem 2.5rem;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      cursor: pointer;
-      border-radius: 2px;
-      transition: background 0.25s, transform 0.2s;
-      align-self: flex-start;
-    }
+    .form-submit { background: var(--gold); color: #fff; border: none; padding: 1rem 2.5rem; font-family: 'Outfit', sans-serif; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; border-radius: 2px; transition: background 0.25s, transform 0.2s; align-self: flex-start; }
     .form-submit:hover { background: var(--charcoal); transform: translateY(-2px); }
-
-    /* FOOTER */
-    footer {
-      background: var(--charcoal);
-      padding: 3rem 5vw;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      border-top: 1px solid rgba(184,151,90,0.1);
-      text-align: center;
-    }
-    .footer-links {
-      display: flex; gap: 1.5rem; list-style: none;
-      flex-wrap: wrap; justify-content: center;
-    }
-    .footer-links a {
-      font-size: 0.78rem; color: rgba(247,243,238,0.4);
-      text-decoration: none; letter-spacing: 0.05em;
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: var(--gold-light); }
-    .footer-copy { font-size: 0.75rem; color: rgba(247,243,238,0.3); }
-    .footer-social { display: flex; gap: 0.8rem; justify-content: center; }
-    .footer-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.8rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      color: var(--cream);
-      text-decoration: none;
-      display: block;
-      text-align: center;
-      width: 100%;
-    }
-    .footer-logo span { color: var(--gold); }
-    .footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
-    .footer-links a {
-      font-size: 0.78rem;
-      color: rgba(247,243,238,0.4);
-      text-decoration: none;
-      letter-spacing: 0.05em;
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: var(--gold-light); }
-    .footer-copy { font-size: 0.75rem; color: rgba(247,243,238,0.3); }
-
-    /* COOKIE BANNER */
-    .cookie-banner {
-      position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
-      background: var(--dark);
-      border-top: 1px solid var(--border);
-      padding: 1.2rem 5vw;
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 1.5rem; flex-wrap: wrap;
-      transition: transform 0.3s ease;
-    }
-    .cookie-banner.hidden { transform: translateY(100%); }
-    .cookie-text { font-size: 0.82rem; color: rgba(247,243,238,0.65); line-height: 1.6; max-width: 600px; }
-    .cookie-text a { color: var(--gold-light); text-decoration: none; }
-    .cookie-btns { display: flex; gap: 0.8rem; flex-shrink: 0; flex-wrap: wrap; }
-    .cookie-accept {
-      background: var(--gold); color: #fff; border: none;
-      padding: 0.65rem 1.5rem; font-family: 'Outfit', sans-serif;
-      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
-      text-transform: uppercase; cursor: pointer; border-radius: 2px;
-      transition: background 0.2s;
-    }
-    .cookie-accept:hover { background: var(--gold-light); }
-    .cookie-reject {
-      background: transparent; color: rgba(247,243,238,0.4);
-      border: 1px solid rgba(247,243,238,0.15);
-      padding: 0.65rem 1.2rem; font-family: 'Outfit', sans-serif;
-      font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
-      cursor: pointer; border-radius: 2px; transition: all 0.2s;
-    }
-    .cookie-reject:hover { border-color: rgba(247,243,238,0.3); color: rgba(247,243,238,0.6); }
-    .nav-propietarios {
-      display: flex; align-items: center; gap: 0.5rem;
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--dark) !important;
-      padding: 0.45rem 1rem;
-      border-radius: 2px;
-      font-size: 0.75rem !important;
-      letter-spacing: 0.1em;
-      transition: all 0.2s !important;
-    }
-    .nav-propietarios svg { width: 13px; height: 13px; stroke: var(--gold); fill: none; stroke-width: 2; }
-    .nav-propietarios:hover { background: var(--gold) !important; color: #fff !important; border-color: var(--gold) !important; }
-    .nav-propietarios:hover svg { stroke: #fff; }
 
     /* PRICING */
     .pricing { background: var(--cream); }
     .pricing-header { text-align: center; margin-bottom: 1rem; }
     .pricing-header .section-title { max-width: 100%; }
     .pricing-sub { text-align: center; font-size: 0.9rem; color: var(--muted); margin-bottom: 4rem; }
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      max-width: 1000px;
-      margin: 0 auto 2rem;
-    }
-    .pricing-card {
-      background: var(--warm-white);
-      border: 1px solid var(--border);
-      padding: 2.5rem 2rem;
-      border-radius: 2px;
-      position: relative;
-      transition: transform 0.25s, box-shadow 0.25s;
-      text-align: center;
-    }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1000px; margin: 0 auto 2rem; }
+    .pricing-card { background: var(--warm-white); border: 1px solid var(--border); padding: 2.5rem 2rem; border-radius: 2px; position: relative; transition: transform 0.25s, box-shadow 0.25s; text-align: center; }
     .pricing-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-    .pricing-card.featured {
-      background: var(--dark);
-      border-color: var(--gold);
-    }
-    .pricing-badge {
-      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-      background: var(--gold);
-      color: #fff;
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      padding: 0.3rem 1rem;
-      border-radius: 20px;
-      white-space: nowrap;
-    }
-    .pricing-plan {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1rem;
-    }
-    .pricing-price {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3rem;
-      font-weight: 300;
-      color: var(--dark);
-      line-height: 1;
-      margin-bottom: 0.3rem;
-    }
+    .pricing-card.featured { background: var(--dark); border-color: var(--gold); }
+    .pricing-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: #fff; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.3rem 1rem; border-radius: 20px; white-space: nowrap; }
+    .pricing-plan { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .pricing-price { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; color: var(--dark); line-height: 1; margin-bottom: 0.3rem; }
     .pricing-card.featured .pricing-price { color: var(--cream); }
     .pricing-price sup { font-size: 1.2rem; vertical-align: super; }
     .pricing-price sub { font-size: 0.9rem; color: var(--muted); }
@@ -856,130 +505,29 @@
     .pricing-card.featured .pricing-note { color: rgba(247,243,238,0.4); }
     .pricing-divider { height: 1px; background: var(--border); margin-bottom: 1.8rem; }
     .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 0.9rem; margin-bottom: 2rem; text-align: left; }
-    .pricing-features li {
-      display: flex; gap: 0.75rem; align-items: flex-start;
-      font-size: 0.83rem; color: var(--muted); line-height: 1.5;
-    }
+    .pricing-features li { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 0.83rem; color: var(--muted); line-height: 1.5; }
     .pricing-card.featured .pricing-features li { color: rgba(247,243,238,0.65); }
     .pricing-check { color: var(--gold); font-size: 0.9rem; flex-shrink: 0; margin-top: 1px; }
-    .pricing-btn {
-      display: block; width: 100%;
-      background: var(--gold); color: #fff;
-      padding: 0.85rem; border: none; cursor: pointer;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.78rem; font-weight: 500;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      text-decoration: none; border-radius: 2px;
-      transition: background 0.2s;
-    }
+    .pricing-btn { display: block; width: 100%; background: var(--gold); color: #fff; padding: 0.85rem; border: none; cursor: pointer; font-family: 'Outfit', sans-serif; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.2s; }
     .pricing-btn:hover { background: var(--charcoal); }
     .pricing-card:not(.featured) .pricing-btn { background: transparent; border: 1px solid var(--border); color: var(--dark); }
     .pricing-card:not(.featured) .pricing-btn:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
     .pricing-disclaimer { text-align: center; font-size: 0.78rem; color: var(--muted); max-width: 600px; margin: 0 auto; line-height: 1.7; }
 
-    /* TEAM */
-    .team { background: var(--warm-white); }
-    .team-header { text-align: center; margin-bottom: 4rem; }
-    .team-header .section-title { max-width: 100%; }
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .team-card {
-      text-align: center;
-      transition: transform 0.25s;
-    }
-    .team-card:hover { transform: translateY(-4px); }
-    .team-avatar-wrap {
-      width: 110px; height: 110px;
-      border-radius: 50%;
-      margin: 0 auto 1.2rem;
-      background: var(--cream);
-      border: 2px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      overflow: hidden;
-      position: relative;
-    }
-    .team-avatar-wrap::after {
-      content: '';
-      position: absolute; bottom: 0; left: 0; right: 0;
-      height: 3px; background: var(--gold);
-    }
-    .team-initials {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem; font-weight: 400;
-      color: var(--gold);
-    }
-    .team-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.25rem; font-weight: 400;
-      color: var(--dark); margin-bottom: 0.3rem;
-    }
-    .team-role {
-      font-size: 0.72rem; font-weight: 500;
-      letter-spacing: 0.15em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 0.8rem;
-    }
-    .team-bio { font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
-    .team-colegiado {
-      display: inline-block; margin-top: 0.8rem;
-      font-size: 0.7rem; color: var(--muted);
-      border: 1px solid var(--border);
-      padding: 0.25rem 0.7rem; border-radius: 20px;
-    }
-
     /* INCIDENCIAS */
-    .incidencias {
-      background: var(--dark);
-      padding: 7rem 5vw;
-      text-align: center;
-    }
+    .incidencias { background: var(--dark); padding: 7rem 5vw; text-align: center; }
     .incidencias .section-label { color: var(--gold-light); }
     .incidencias .section-title { color: var(--cream); max-width: 100%; margin: 0 auto 1rem; }
     .incidencias-sub { font-size: 0.9rem; color: rgba(247,243,238,0.5); margin-bottom: 3.5rem; }
-    .incidencias-steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      max-width: 800px;
-      margin: 0 auto 3rem;
-    }
-    .inc-step {
-      background: rgba(184,151,90,0.07);
-      border: 1px solid var(--border);
-      padding: 2rem 1.5rem;
-      border-radius: 2px;
-      transition: background 0.2s;
-    }
+    .incidencias-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 800px; margin: 0 auto 3rem; }
+    .inc-step { background: rgba(184,151,90,0.07); border: 1px solid var(--border); padding: 2rem 1.5rem; border-radius: 2px; transition: background 0.2s; }
     .inc-step:hover { background: rgba(184,151,90,0.13); }
-    .inc-step-icon {
-      width: 48px; height: 48px;
-      border-radius: 50%;
-      background: rgba(184,151,90,0.12);
-      border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 1.2rem;
-    }
+    .inc-step-icon { width: 48px; height: 48px; border-radius: 50%; background: rgba(184,151,90,0.12); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem; }
     .inc-step-icon svg { width: 22px; height: 22px; stroke: var(--gold-light); fill: none; stroke-width: 1.5; }
     .inc-step-title { font-size: 0.9rem; font-weight: 600; color: var(--cream); margin-bottom: 0.5rem; }
     .inc-step-text { font-size: 0.8rem; color: rgba(247,243,238,0.5); line-height: 1.65; }
     .incidencias-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn-whatsapp {
-      background: #25D366;
-      color: #fff;
-      padding: 0.9rem 2.2rem;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 2px;
-      display: inline-flex; align-items: center; gap: 0.6rem;
-      transition: background 0.25s, transform 0.2s;
-    }
+    .btn-whatsapp { background: #25D366; color: #fff; padding: 0.9rem 2.2rem; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border-radius: 2px; display: inline-flex; align-items: center; gap: 0.6rem; transition: background 0.25s, transform 0.2s; }
     .btn-whatsapp:hover { background: #1ebe5d; transform: translateY(-2px); }
     .btn-whatsapp svg { width: 18px; height: 18px; fill: #fff; }
 
@@ -987,36 +535,18 @@
     .faq { background: var(--cream); }
     .faq-header { text-align: center; margin-bottom: 4rem; }
     .faq-header .section-title { max-width: 100%; }
-    .faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-      overflow: hidden;
-    }
+    .faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; }
+    .faq-item { border-bottom: 1px solid var(--border); overflow: hidden; }
     .faq-item:first-child { border-top: 1px solid var(--border); }
-    .faq-question {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1.6rem 0; cursor: pointer; gap: 1rem;
-      transition: color 0.2s;
-      user-select: none;
-    }
+    .faq-question { display: flex; justify-content: space-between; align-items: center; padding: 1.6rem 0; cursor: pointer; gap: 1rem; transition: color 0.2s; user-select: none; }
     .faq-question:hover { color: var(--gold); }
     .faq-q-text { font-size: 0.95rem; font-weight: 500; color: inherit; line-height: 1.4; }
-    .faq-icon {
-      width: 24px; height: 24px; flex-shrink: 0;
-      border: 1px solid var(--border); border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s, border-color 0.2s, transform 0.3s;
-    }
+    .faq-icon { width: 24px; height: 24px; flex-shrink: 0; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background 0.2s, border-color 0.2s, transform 0.3s; }
     .faq-icon svg { width: 10px; height: 10px; stroke: var(--muted); fill: none; stroke-width: 2.5; transition: stroke 0.2s; }
     .faq-item.open .faq-icon { background: var(--gold); border-color: var(--gold); transform: rotate(45deg); }
     .faq-item.open .faq-icon svg { stroke: #fff; }
     .faq-item.open .faq-question { color: var(--gold); }
-    .faq-answer {
-      font-size: 0.87rem; color: var(--muted); line-height: 1.8;
-      max-height: 0; overflow: hidden;
-      transition: max-height 0.4s ease, padding 0.3s;
-      padding: 0;
-    }
+    .faq-answer { font-size: 0.87rem; color: var(--muted); line-height: 1.8; max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
     .faq-answer-inner { padding-bottom: 1.5rem; }
     .faq-item.open .faq-answer { max-height: 300px; }
 
@@ -1024,171 +554,120 @@
     .blog { background: var(--warm-white); }
     .blog-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
     .blog-header .section-title { margin: 0; }
-    .blog-ver-mas {
-      font-size: 0.78rem; font-weight: 500;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--gold); text-decoration: none;
-      display: flex; align-items: center; gap: 0.5rem;
-      transition: gap 0.2s;
-    }
+    .blog-ver-mas { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: gap 0.2s; }
     .blog-ver-mas:hover { gap: 0.9rem; }
     .blog-ver-mas svg { width: 14px; height: 14px; stroke: var(--gold); fill: none; stroke-width: 2; }
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .blog-card {
-      background: var(--cream);
-      border: 1px solid var(--border);
-      border-radius: 2px;
-      overflow: hidden;
-      transition: transform 0.25s, box-shadow 0.25s;
-      cursor: pointer;
-    }
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+    .blog-card { background: var(--cream); border: 1px solid var(--border); border-radius: 2px; overflow: hidden; transition: transform 0.25s, box-shadow 0.25s; cursor: pointer; }
     .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-    .blog-card-img {
-      height: 160px;
-      background: var(--dark);
-      position: relative;
-      overflow: hidden;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .blog-card-img-pattern {
-      position: absolute; inset: 0; opacity: 0.08;
-    }
-    .blog-card-cat {
-      position: absolute; top: 1rem; left: 1rem;
-      background: var(--gold);
-      color: #fff; font-size: 0.65rem;
-      font-weight: 600; letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 0.25rem 0.7rem; border-radius: 20px;
-    }
+    .blog-card-img { height: 160px; background: var(--dark); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .blog-card-cat { position: absolute; top: 1rem; left: 1rem; background: var(--gold); color: #fff; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.25rem 0.7rem; border-radius: 20px; }
     .blog-card-icon { width: 40px; height: 40px; stroke: rgba(184,151,90,0.3); fill: none; stroke-width: 1; }
     .blog-card-body { padding: 1.5rem; }
     .blog-card-date { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.08em; margin-bottom: 0.6rem; }
-    .blog-card-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem; font-weight: 400;
-      color: var(--dark); line-height: 1.4; margin-bottom: 0.8rem;
-    }
+    .blog-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 400; color: var(--dark); line-height: 1.4; margin-bottom: 0.8rem; }
     .blog-card-excerpt { font-size: 0.82rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.2rem; }
-    .blog-card-link {
-      font-size: 0.75rem; font-weight: 500;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--gold); text-decoration: none;
-    }
+    .blog-card-link { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); text-decoration: none; }
 
-    /* WHATSAPP FLOTANTE */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 2rem; right: 2rem;
-      z-index: 200;
-      display: flex; flex-direction: column; align-items: flex-end; gap: 0.75rem;
-    }
-    .whatsapp-tooltip {
-      background: var(--dark);
-      color: var(--cream);
-      font-size: 0.8rem;
-      padding: 0.6rem 1rem;
-      border-radius: 4px;
-      white-space: nowrap;
-      opacity: 0; transform: translateX(10px);
-      transition: opacity 0.2s, transform 0.2s;
-      pointer-events: none;
-    }
+    /* WHATSAPP */
+    .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 200; display: flex; flex-direction: column; align-items: flex-end; gap: 0.75rem; }
+    .whatsapp-tooltip { background: var(--dark); color: var(--cream); font-size: 0.8rem; padding: 0.6rem 1rem; border-radius: 4px; white-space: nowrap; opacity: 0; transform: translateX(10px); transition: opacity 0.2s, transform 0.2s; pointer-events: none; }
     .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; transform: translateX(0); }
-    .whatsapp-btn {
-      width: 56px; height: 56px;
-      background: #25D366;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-      animation: pulse-wa 2.5s infinite;
-    }
-    .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
+    .whatsapp-btn { width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; animation: pulse-wa 2.5s infinite; }
+    .whatsapp-btn:hover { transform: scale(1.1); }
     .whatsapp-btn svg { width: 28px; height: 28px; fill: #fff; }
-    @keyframes pulse-wa {
-      0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
-      50% { box-shadow: 0 4px 30px rgba(37,211,102,0.7), 0 0 0 8px rgba(37,211,102,0.1); }
-    }
+    @keyframes pulse-wa { 0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.4)}50%{box-shadow:0 4px 30px rgba(37,211,102,0.7),0 0 0 8px rgba(37,211,102,0.1)} }
 
-    /* RESPONSIVE nuevos */
-    @media (max-width: 900px) {
-      .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 2rem; }
-      .team-grid { grid-template-columns: 1fr 1fr; }
-      .incidencias-steps { grid-template-columns: 1fr; max-width: 380px; }
-      .blog-grid { grid-template-columns: 1fr; }
-      .blog-header { flex-direction: column; align-items: flex-start; }
-    }
-    @media (max-width: 600px) {
-      .team-grid { grid-template-columns: 1fr; }
-    }
-
-    .footer-social { display: flex; gap: 0.8rem; align-items: center; }
-    .social-btn {
-      width: 36px; height: 36px;
-      border-radius: 50%;
-      border: 1px solid rgba(184,151,90,0.3);
-      display: flex; align-items: center; justify-content: center;
-      text-decoration: none;
-      transition: background 0.2s, border-color 0.2s;
-    }
+    /* FOOTER */
+    footer { background: var(--charcoal); padding: 3rem 5vw; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; border-top: 1px solid rgba(184,151,90,0.1); text-align: center; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 600; letter-spacing: 0.04em; color: var(--cream); text-decoration: none; display: block; text-align: center; width: 100%; }
+    .footer-logo span { color: var(--gold); }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { font-size: 0.78rem; color: rgba(247,243,238,0.4); text-decoration: none; letter-spacing: 0.05em; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold-light); }
+    .footer-social { display: flex; gap: 0.8rem; justify-content: center; }
+    .social-btn { width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(184,151,90,0.3); display: flex; align-items: center; justify-content: center; text-decoration: none; transition: background 0.2s, border-color 0.2s; }
     .social-btn:hover { background: var(--gold); border-color: var(--gold); }
     .social-btn svg { width: 16px; height: 16px; fill: rgba(247,243,238,0.5); transition: fill 0.2s; }
     .social-btn:hover svg { fill: #fff; }
-    footer { flex-wrap: wrap; gap: 1.5rem; }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
+    .footer-copy { font-size: 0.75rem; color: rgba(247,243,238,0.3); }
+
+    /* COOKIE BANNER */
+    .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; z-index: 500; background: var(--dark); border-top: 1px solid var(--border); padding: 1.2rem 5vw; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; transition: transform 0.3s ease; }
+    .cookie-banner.hidden { transform: translateY(100%); }
+    .cookie-text { font-size: 0.82rem; color: rgba(247,243,238,0.65); line-height: 1.6; max-width: 600px; }
+    .cookie-text a { color: var(--gold-light); text-decoration: none; }
+    .cookie-btns { display: flex; gap: 0.8rem; flex-shrink: 0; }
+    .cookie-accept { background: var(--gold); color: #fff; border: none; padding: 0.65rem 1.5rem; font-family: 'Outfit', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; border-radius: 2px; transition: background 0.2s; }
+    .cookie-accept:hover { background: var(--gold-light); }
+    .cookie-reject { background: transparent; color: rgba(247,243,238,0.4); border: 1px solid rgba(247,243,238,0.15); padding: 0.65rem 1.2rem; font-family: 'Outfit', sans-serif; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; border-radius: 2px; transition: all 0.2s; }
+    .cookie-reject:hover { border-color: rgba(247,243,238,0.3); color: rgba(247,243,238,0.6); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp { from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)} }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
     /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2,1fr); }
+      .testi-grid { grid-template-columns: repeat(2,1fr); }
+      .blog-grid { grid-template-columns: repeat(2,1fr); }
+      .pricing-grid { grid-template-columns: 1fr 1fr; }
+      .process-steps { grid-template-columns: repeat(2,1fr); gap: 2.5rem; }
+      .process-steps::before { display: none; }
+      .contact { grid-template-columns: 1fr; padding: 5rem 6vw; }
+    }
     @media (max-width: 900px) {
+      section { padding: 5rem 5vw; }
       .hero { grid-template-columns: 1fr; min-height: auto; }
-      .hero-left { padding: 8rem 6vw 4rem; }
+      .hero-left { padding: 4rem 6vw; }
       .hero-left::after { display: none; }
-      .hero-right { height: 320px; display: none; }
+      .hero-right { display: none; }
+      .hero-title { font-size: 2.8rem; }
       .services-grid { grid-template-columns: 1fr; }
       .why { grid-template-columns: 1fr; }
       .why-left { padding: 5rem 6vw; }
       .why-right { padding: 4rem 6vw; }
-      .why-card-stack { width: 100%; max-width: 320px; }
+      .why-card-stack { width: 100%; max-width: 320px; margin: 0 auto; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 2rem; }
+      .incidencias-steps { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-header { flex-direction: column; align-items: flex-start; }
+      .equipo-cta-values { gap: 1.5rem; }
       .process-steps { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
       .process-steps::before { display: none; }
-      .testi-grid { grid-template-columns: 1fr; }
-      .contact { grid-template-columns: 1fr; padding: 5rem 6vw; }
-      .form-row { grid-template-columns: 1fr; }
-      .nav-links { display: none !important; }
-      .hamburger { display: flex; }
     }
     @media (max-width: 600px) {
+      section { padding: 4rem 5vw; }
+      .hero-left { padding: 3rem 5vw; }
+      .hero-title { font-size: 2.2rem; }
+      .hero-btns { flex-direction: column; }
       .hero-stats { flex-direction: column; gap: 1.5rem; }
+      .trust-bar { gap: 1.5rem; flex-direction: column; align-items: flex-start; }
       .process-steps { grid-template-columns: 1fr; }
-      .trust-bar { gap: 2rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .cta-btns { flex-direction: column; align-items: center; }
+      .cookie-banner { flex-direction: column; }
+      .incidencias-btns { flex-direction: column; align-items: center; }
+      .equipo-cta-values { flex-direction: column; align-items: center; }
+    }
+    @media (min-width: 1200px) {
+      .services-grid { grid-template-columns: repeat(3,1fr); }
+      .testi-grid { grid-template-columns: repeat(3,1fr); }
+      .blog-grid { grid-template-columns: repeat(3,1fr); }
+      .pricing-grid { grid-template-columns: repeat(3,1fr); }
     }
   </style>
 </head>
 <body>
 
-<!-- NAV — 2 filas -->
+<!-- NAV -->
 <nav id="mainNav">
-  <!-- FILA 1: Logo entero -->
   <a class="nav-logo" href="index.html">
     <img src="logoheader.png" alt="FincasMoreno" class="nav-logo-img" />
   </a>
-  <!-- FILA 2: Links principales + hamburger -->
   <div class="nav-bar">
     <div class="nav-bar-links">
       <a href="#servicios">Servicios</a>
@@ -1205,7 +684,6 @@
 <!-- MENÚ DESPLEGABLE -->
 <div class="nav-dropdown" id="navDropdown">
   <a href="#nosotros" onclick="closeDropdown()">Nosotros</a>
-  <a href="#equipo" onclick="closeDropdown()">Equipo</a>
   <a href="#faq" onclick="closeDropdown()">Preguntas Frecuentes</a>
   <a href="#testimonios" onclick="closeDropdown()">Clientes</a>
   <a href="#proceso" onclick="closeDropdown()">Cómo trabajamos</a>
@@ -1219,45 +697,26 @@
 <section class="hero">
   <div class="hero-left">
     <p class="hero-eyebrow">Administración de Fincas · Desde 1998</p>
-    <h1 class="hero-title">
-      Tu comunidad,<br/>
-      <em>gestionada</em><br/>
-      con excelencia.
-    </h1>
-    <p class="hero-subtitle">
-      FincasMoreno es tu administrador de confianza. Gestión integral de comunidades de propietarios con transparencia, rigor legal y atención personalizada.
-    </p>
+    <h1 class="hero-title">Tu comunidad,<br/><em>gestionada</em><br/>con excelencia.</h1>
+    <p class="hero-subtitle">FincasMoreno es tu administrador de confianza. Gestión integral de comunidades de propietarios con transparencia, rigor legal y atención personalizada.</p>
     <div class="hero-btns">
       <a href="#contacto" class="btn-primary">Solicitar Presupuesto</a>
       <a href="#servicios" class="btn-outline">Ver Servicios</a>
     </div>
     <div class="hero-stats">
-      <div>
-        <div class="hero-stat-num">+500</div>
-        <div class="hero-stat-label">Comunidades</div>
-      </div>
-      <div>
-        <div class="hero-stat-num">25+</div>
-        <div class="hero-stat-label">Años de experiencia</div>
-      </div>
-      <div>
-        <div class="hero-stat-num">98%</div>
-        <div class="hero-stat-label">Satisfacción</div>
-      </div>
+      <div><div class="hero-stat-num">+500</div><div class="hero-stat-label">Comunidades</div></div>
+      <div><div class="hero-stat-num">25+</div><div class="hero-stat-label">Años de experiencia</div></div>
+      <div><div class="hero-stat-num">98%</div><div class="hero-stat-label">Satisfacción</div></div>
     </div>
   </div>
   <div class="hero-right">
     <div class="hero-right-overlay"></div>
     <svg class="hero-pattern" viewBox="0 0 400 400" fill="none">
-      <defs>
-        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#b8975a" stroke-width="0.8"/>
-        </pattern>
-      </defs>
+      <defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#b8975a" stroke-width="0.8"/></pattern></defs>
       <rect width="400" height="400" fill="url(#grid)"/>
     </svg>
     <div class="hero-badge">
-      <div class="hero-badge-title">Colegiado Nº 2847</div>
+      <div class="hero-badge-title">Colegiada Nº 35682</div>
       <div class="hero-badge-text">Miembro del Consejo General de Colegios de Administradores de Fincas de España</div>
     </div>
   </div>
@@ -1265,22 +724,10 @@
 
 <!-- TRUST BAR -->
 <div class="trust-bar">
-  <div class="trust-item">
-    <svg class="trust-icon" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-    Colegiados Oficiales
-  </div>
-  <div class="trust-item">
-    <svg class="trust-icon" viewBox="0 0 24 24"><path d="M12 22S3 17.5 3 10V5L12 2L21 5V10C21 17.5 12 22 12 22Z"/></svg>
-    Plenamente Asegurados
-  </div>
-  <div class="trust-item">
-    <svg class="trust-icon" viewBox="0 0 24 24"><path d="M17 21V19A4 4 0 0 0 13 15H5A4 4 0 0 0 1 19V21M23 21V19A4 4 0 0 0 18.85 15.13M16 3.13A4 4 0 0 1 16 11M9 11A4 4 0 1 0 9 3A4 4 0 0 0 9 11Z"/></svg>
-    Atención Personalizada
-  </div>
-  <div class="trust-item">
-    <svg class="trust-icon" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2S22 6.477 22 12S17.523 22 12 22ZM11 11V17H13V11H11ZM11 7V9H13V7H11Z"/></svg>
-    Gestión 100% Transparente
-  </div>
+  <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>Colegiados Oficiales</div>
+  <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24"><path d="M12 22S3 17.5 3 10V5L12 2L21 5V10C21 17.5 12 22 12 22Z"/></svg>Plenamente Asegurados</div>
+  <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24"><path d="M17 21V19A4 4 0 0 0 13 15H5A4 4 0 0 0 1 19V21M23 21V19A4 4 0 0 0 18.85 15.13M16 3.13A4 4 0 0 1 16 11M9 11A4 4 0 1 0 9 3A4 4 0 0 0 9 11Z"/></svg>Atención Personalizada</div>
+  <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2S22 6.477 22 12S17.523 22 12 22ZM11 11V17H13V11H11ZM11 7V9H13V7H11Z"/></svg>Gestión 100% Transparente</div>
 </div>
 
 <!-- SERVICES -->
@@ -1291,44 +738,32 @@
   </div>
   <div class="services-grid">
     <div class="service-card reveal">
-      <div class="service-icon-wrap">
-        <svg class="service-icon" viewBox="0 0 24 24"><path d="M3 9L12 2L21 9V20A1 1 0 0 1 20 21H15V16H9V21H4A1 1 0 0 1 3 20V9Z"/></svg>
-      </div>
+      <div class="service-icon-wrap"><svg class="service-icon" viewBox="0 0 24 24"><path d="M3 9L12 2L21 9V20A1 1 0 0 1 20 21H15V16H9V21H4A1 1 0 0 1 3 20V9Z"/></svg></div>
       <div class="service-name">Administración de Comunidades</div>
       <p class="service-desc">Gestión completa de la junta de propietarios, convocatorias, actas y cumplimiento de la Ley de Propiedad Horizontal. Transparencia total en cada decisión.</p>
     </div>
     <div class="service-card reveal">
-      <div class="service-icon-wrap">
-        <svg class="service-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-      </div>
+      <div class="service-icon-wrap"><svg class="service-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div>
       <div class="service-name">Gestión Contable y Financiera</div>
       <p class="service-desc">Presupuestos anuales, control de gastos, cobro de cuotas, gestión de morosos y toda la contabilidad de tu comunidad con informes periódicos detallados.</p>
     </div>
     <div class="service-card reveal">
-      <div class="service-icon-wrap">
-        <svg class="service-icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-      </div>
+      <div class="service-icon-wrap"><svg class="service-icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
       <div class="service-name">Mantenimiento y Obras</div>
       <p class="service-desc">Coordinación de reparaciones, mantenimiento preventivo, obtención de presupuestos y supervisión de obras. Proveedores de confianza a los mejores precios.</p>
     </div>
     <div class="service-card reveal">
-      <div class="service-icon-wrap">
-        <svg class="service-icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      </div>
+      <div class="service-icon-wrap"><svg class="service-icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
       <div class="service-name">Asesoría Legal</div>
       <p class="service-desc">Asesoramiento jurídico en materia de propiedad horizontal, reclamaciones a propietarios morosos, recursos ante el SEAC y representación legal cuando sea necesario.</p>
     </div>
     <div class="service-card reveal">
-      <div class="service-icon-wrap">
-        <svg class="service-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      </div>
+      <div class="service-icon-wrap"><svg class="service-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
       <div class="service-name">Plataforma Digital 24/7</div>
       <p class="service-desc">Acceso a tu área de propietario online: consulta documentos, recibos, actas de reuniones e incidencias en cualquier momento desde tu móvil o tablet.</p>
     </div>
     <div class="service-card reveal">
-      <div class="service-icon-wrap">
-        <svg class="service-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
+      <div class="service-icon-wrap"><svg class="service-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
       <div class="service-name">Gestión de Seguros</div>
       <p class="service-desc">Estudio y contratación de seguros comunitarios óptimos, gestión de siniestros y tramitación con compañías aseguradoras para la mejor protección de tu edificio.</p>
     </div>
@@ -1342,27 +777,9 @@
     <h2 class="section-title reveal">Más de <em>25 años</em> siendo el administrador de confianza</h2>
     <p class="why-body reveal">En FincasMoreno combinamos la experiencia de una empresa solvente con el trato cercano y personalizado que tu comunidad merece. No somos una gran corporación; somos tu vecino de confianza.</p>
     <div class="why-features reveal">
-      <div class="why-feature">
-        <div class="why-dot"></div>
-        <div>
-          <div class="why-feature-title">Administrador dedicado</div>
-          <div class="why-feature-text">Tendrás siempre el mismo gestor asignado a tu comunidad. Sin rotaciones, sin impersonalidad.</div>
-        </div>
-      </div>
-      <div class="why-feature">
-        <div class="why-dot"></div>
-        <div>
-          <div class="why-feature-title">Respuesta en menos de 24 horas</div>
-          <div class="why-feature-text">Garantizamos respuesta a cualquier incidencia o consulta en el mismo día laborable.</div>
-        </div>
-      </div>
-      <div class="why-feature">
-        <div class="why-dot"></div>
-        <div>
-          <div class="why-feature-title">Tecnología y transparencia</div>
-          <div class="why-feature-text">Informes mensuales claros, acceso a toda la documentación online y cero sorpresas en las cuentas.</div>
-        </div>
-      </div>
+      <div class="why-feature"><div class="why-dot"></div><div><div class="why-feature-title">Administrador dedicado</div><div class="why-feature-text">Tendrás siempre el mismo gestor asignado a tu comunidad. Sin rotaciones, sin impersonalidad.</div></div></div>
+      <div class="why-feature"><div class="why-dot"></div><div><div class="why-feature-title">Respuesta en menos de 24 horas</div><div class="why-feature-text">Garantizamos respuesta a cualquier incidencia o consulta en el mismo día laborable.</div></div></div>
+      <div class="why-feature"><div class="why-dot"></div><div><div class="why-feature-title">Tecnología y transparencia</div><div class="why-feature-text">Informes mensuales claros, acceso a toda la documentación online y cero sorpresas en las cuentas.</div></div></div>
     </div>
     <a href="#contacto" class="btn-primary reveal">Hablar con un Experto</a>
   </div>
@@ -1374,102 +791,57 @@
         <div class="why-card-label">Índice de satisfacción</div>
         <div class="why-card-divider"></div>
         <div class="why-card-items">
-          <div class="why-card-item">
-            <div class="why-card-check"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></div>
-            Gestión sin comisiones ocultas
-          </div>
-          <div class="why-card-item">
-            <div class="why-card-check"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></div>
-            Colegiado con seguro de responsabilidad
-          </div>
-          <div class="why-card-item">
-            <div class="why-card-check"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></div>
-            Informes mensuales automáticos
-          </div>
-          <div class="why-card-item">
-            <div class="why-card-check"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></div>
-            Plataforma digital para propietarios
-          </div>
-          <div class="why-card-item">
-            <div class="why-card-check"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></div>
-            Atención de urgencias 24/7
-          </div>
+          <div class="why-card-item"><div class="why-card-check"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></div>Gestión sin comisiones ocultas</div>
+          <div class="why-card-item"><div class="why-card-check"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></div>Colegiado con seguro de responsabilidad</div>
+          <div class="why-card-item"><div class="why-card-check"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></div>Informes mensuales automáticos</div>
+          <div class="why-card-item"><div class="why-card-check"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></div>Plataforma digital para propietarios</div>
+          <div class="why-card-item"><div class="why-card-check"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></div>Atención de urgencias 24/7</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROCESS -->
+<!-- PROCESO -->
 <section class="process" id="proceso">
   <div class="process-header reveal">
     <p class="section-label">Cómo trabajamos</p>
     <h2 class="section-title">Tu comunidad en manos expertas en <em>4 pasos</em></h2>
   </div>
   <div class="process-steps">
-    <div class="process-step reveal">
-      <div class="step-num">01</div>
-      <div class="step-title">Consulta Gratuita</div>
-      <p class="step-text">Analizamos el estado actual de tu comunidad sin compromiso y te presentamos una propuesta personalizada.</p>
-    </div>
-    <div class="process-step reveal">
-      <div class="step-num">02</div>
-      <div class="step-title">Propuesta a Medida</div>
-      <p class="step-text">Elaboramos un presupuesto claro y detallado adaptado a las necesidades y tamaño de tu comunidad.</p>
-    </div>
-    <div class="process-step reveal">
-      <div class="step-num">03</div>
-      <div class="step-title">Traspaso sin Estrés</div>
-      <p class="step-text">Nos encargamos de todo el proceso de cambio de administrador. Tú no tienes que hacer nada.</p>
-    </div>
-    <div class="process-step reveal">
-      <div class="step-num">04</div>
-      <div class="step-title">Gestión Continua</div>
-      <p class="step-text">A partir del primer día, tu administrador dedicado gestiona todo con total transparencia y eficiencia.</p>
-    </div>
+    <div class="process-step reveal"><div class="step-num">01</div><div class="step-title">Consulta Gratuita</div><p class="step-text">Analizamos el estado actual de tu comunidad sin compromiso y te presentamos una propuesta personalizada.</p></div>
+    <div class="process-step reveal"><div class="step-num">02</div><div class="step-title">Propuesta a Medida</div><p class="step-text">Elaboramos un presupuesto claro y detallado adaptado a las necesidades y tamaño de tu comunidad.</p></div>
+    <div class="process-step reveal"><div class="step-num">03</div><div class="step-title">Traspaso sin Estrés</div><p class="step-text">Nos encargamos de todo el proceso de cambio de administrador. Tú no tienes que hacer nada.</p></div>
+    <div class="process-step reveal"><div class="step-num">04</div><div class="step-title">Gestión Continua</div><p class="step-text">A partir del primer día, tu administrador dedicado gestiona todo con total transparencia y eficiencia.</p></div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- TESTIMONIOS -->
 <section class="testimonials" id="testimonios">
   <div class="testimonials-header reveal">
     <p class="section-label">Lo que dicen nuestros clientes</p>
     <h2 class="section-title">Comunidades que confían en <em>FincasMoreno</em></h2>
   </div>
   <div class="testi-grid">
-    <div class="testi-card reveal">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-quote">Llevamos 8 años con FincasMoreno y la diferencia con el anterior administrador es abismal. Transparencia total, responden siempre el mismo día y nuestras derramas han bajado notablemente.</p>
-      <div class="testi-author">
-        <div class="testi-avatar">MR</div>
-        <div>
-          <div class="testi-name">María Rodríguez</div>
-          <div class="testi-role">Presidenta C. Calle Mayor, 14</div>
-        </div>
-      </div>
-    </div>
-    <div class="testi-card reveal">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-quote">El cambio fue muy sencillo, ellos se encargaron de todo. Ahora tenemos acceso online a todos los documentos y las juntas son mucho más organizadas. Muy recomendables.</p>
-      <div class="testi-author">
-        <div class="testi-avatar">JL</div>
-        <div>
-          <div class="testi-name">Javier López</div>
-          <div class="testi-role">Presidente C. Residencial Pinos</div>
-        </div>
-      </div>
-    </div>
-    <div class="testi-card reveal">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-quote">Cuando tuvimos la avería de la caldera, a las 2 horas ya había un técnico. Eso no lo habíamos visto nunca. El trato personal y la rapidez de respuesta es excepcional.</p>
-      <div class="testi-author">
-        <div class="testi-avatar">AC</div>
-        <div>
-          <div class="testi-name">Ana Castellano</div>
-          <div class="testi-role">Propietaria C. Los Olivos, 3</div>
-        </div>
-      </div>
-    </div>
+    <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-quote">Llevamos 8 años con FincasMoreno y la diferencia con el anterior administrador es abismal. Transparencia total, responden siempre el mismo día y nuestras derramas han bajado notablemente.</p><div class="testi-author"><div class="testi-avatar">MR</div><div><div class="testi-name">María Rodríguez</div><div class="testi-role">Presidenta C. Calle Mayor, 14</div></div></div></div>
+    <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-quote">El cambio fue muy sencillo, ellos se encargaron de todo. Ahora tenemos acceso online a todos los documentos y las juntas son mucho más organizadas. Muy recomendables.</p><div class="testi-author"><div class="testi-avatar">JL</div><div><div class="testi-name">Javier López</div><div class="testi-role">Presidente C. Residencial Pinos</div></div></div></div>
+    <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-quote">Cuando tuvimos la avería de la caldera, a las 2 horas ya había un técnico. Eso no lo habíamos visto nunca. El trato personal y la rapidez de respuesta es excepcional.</p><div class="testi-author"><div class="testi-avatar">AC</div><div><div class="testi-name">Ana Castellano</div><div class="testi-role">Propietaria C. Los Olivos, 3</div></div></div></div>
+  </div>
+</section>
+
+<!-- EQUIPO CTA — sin fotos ni nombres -->
+<section class="equipo-cta" id="equipo">
+  <p class="section-label reveal">Nuestro equipo</p>
+  <h2 class="equipo-cta-title reveal">Las personas que <em>cuidarán</em><br/>tu comunidad</h2>
+  <p class="equipo-cta-text reveal">Un equipo de profesionales colegiados con más de 25 años de experiencia gestionando comunidades en Granada y provincia. Cercanos, transparentes y siempre disponibles para lo que necesites.</p>
+  <div class="equipo-cta-values reveal">
+    <div class="equipo-cta-value"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Colegiadas y aseguradas</div>
+    <div class="equipo-cta-value"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Licenciadas en Derecho y Económicas</div>
+    <div class="equipo-cta-value"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Más de 25 años de experiencia</div>
+    <div class="equipo-cta-value"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Atención personalizada siempre</div>
+  </div>
+  <div class="equipo-cta-btn reveal">
+    <a href="#contacto" class="btn-primary">Obtén tu presupuesto gratis</a>
   </div>
 </section>
 
@@ -1481,21 +853,12 @@
   <p class="cta-text">Solicita una consulta gratuita y sin compromiso. Te analizamos la situación actual y te decimos exactamente qué podemos mejorar.</p>
   <div class="cta-btns">
     <a href="#contacto" class="btn-primary">Solicitar Presupuesto Gratis</a>
-    <a href="tel:+34912345678" class="btn-outline">Llamar Ahora</a>
+    <a href="tel:+34668558159" class="btn-outline">📞 668 558 159</a>
   </div>
   <div class="cta-info">
-    <div class="cta-info-item">
-      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-      Sin permanencia mínima
-    </div>
-    <div class="cta-info-item">
-      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-      Presupuesto en 48 horas
-    </div>
-    <div class="cta-info-item">
-      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-      Cambio de administrador incluido
-    </div>
+    <div class="cta-info-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Sin permanencia mínima</div>
+    <div class="cta-info-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Presupuesto en 48 horas</div>
+    <div class="cta-info-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Cambio de administrador incluido</div>
   </div>
 </section>
 
@@ -1508,68 +871,38 @@
     <div class="contact-details reveal">
       <div class="contact-detail">
         <svg class="contact-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.12 6.12l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <div>
-          <div class="contact-detail-label">Teléfono</div>
-          <div class="contact-detail-value">+34 912 345 678</div>
-        </div>
+        <div><div class="contact-detail-label">Teléfono</div><div class="contact-detail-value"><a href="tel:+34668558159" style="color:inherit;text-decoration:none">668 558 159</a></div></div>
       </div>
       <div class="contact-detail">
         <svg class="contact-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <div>
-          <div class="contact-detail-label">Email</div>
-          <div class="contact-detail-value">info@fincasmoreno.es</div>
-        </div>
+        <div><div class="contact-detail-label">Email</div><div class="contact-detail-value">info@fincasmoreno.es</div></div>
       </div>
       <div class="contact-detail">
         <svg class="contact-icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <div>
-          <div class="contact-detail-label">Oficina</div>
-          <div class="contact-detail-value">C/ Gran Vía 42, 2º · Madrid</div>
-        </div>
+        <div><div class="contact-detail-label">Oficina</div><div class="contact-detail-value">Av. Diputación, 81A · 18100 Armilla, Granada</div></div>
       </div>
       <div class="contact-detail">
         <svg class="contact-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <div>
-          <div class="contact-detail-label">Horario</div>
-          <div class="contact-detail-value">Lun–Vie: 9:00 – 18:30</div>
-        </div>
+        <div><div class="contact-detail-label">Horario</div><div class="contact-detail-value">Lun–Vie: 9:00 – 18:30</div></div>
       </div>
     </div>
   </div>
   <div class="contact-form reveal">
     <div class="form-row">
-      <div class="form-group">
-        <label class="form-label">Nombre</label>
-        <input class="form-input" type="text" placeholder="Juan García" />
-      </div>
-      <div class="form-group">
-        <label class="form-label">Teléfono</label>
-        <input class="form-input" type="tel" placeholder="+34 6XX XXX XXX" />
-      </div>
+      <div class="form-group"><label class="form-label">Nombre</label><input class="form-input" type="text" placeholder="Juan García" /></div>
+      <div class="form-group"><label class="form-label">Teléfono</label><input class="form-input" type="tel" placeholder="+34 6XX XXX XXX" /></div>
     </div>
-    <div class="form-group">
-      <label class="form-label">Email</label>
-      <input class="form-input" type="email" placeholder="juan@ejemplo.com" />
-    </div>
-    <div class="form-group">
-      <label class="form-label">Comunidad / Dirección</label>
-      <input class="form-input" type="text" placeholder="Calle Ejemplo 1, Madrid" />
-    </div>
-    <div class="form-group">
-      <label class="form-label">¿En qué podemos ayudarte?</label>
-      <textarea class="form-textarea" placeholder="Cuéntanos tu situación..."></textarea>
-    </div>
+    <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="juan@ejemplo.com" /></div>
+    <div class="form-group"><label class="form-label">Comunidad / Dirección</label><input class="form-input" type="text" placeholder="Calle Ejemplo 1, Granada" /></div>
+    <div class="form-group"><label class="form-label">¿En qué podemos ayudarte?</label><textarea class="form-textarea" placeholder="Cuéntanos tu situación..."></textarea></div>
     <button class="form-submit">Enviar Consulta</button>
   </div>
 </section>
 
 <!-- PRICING -->
 <section class="pricing" id="precios">
-  <div class="pricing-header reveal">
-    <p class="section-label">Tarifas orientativas</p>
-    <h2 class="section-title">Gestión profesional a un precio <em>justo</em></h2>
-  </div>
-  <p class="pricing-sub reveal">Precios aproximados por vivienda/mes · El presupuesto final depende del tamaño y necesidades de tu comunidad</p>
+  <div class="pricing-header reveal"><p class="section-label">Tarifas orientativas</p><h2 class="section-title">Gestión profesional a un precio <em>justo</em></h2></div>
+  <p class="pricing-sub reveal">Precios aproximados por comunidad/mes · El presupuesto final depende del tamaño y necesidades de tu comunidad</p>
   <div class="pricing-grid">
     <div class="pricing-card reveal">
       <div class="pricing-plan">Esencial</div>
@@ -1620,190 +953,65 @@
   <p class="pricing-disclaimer reveal">* Precios orientativos por comunidad y mes, sin IVA. El presupuesto definitivo se elabora tras analizar las características específicas de tu comunidad. <strong>Consulta gratuita y sin compromiso.</strong></p>
 </section>
 
-<!-- TEAM -->
-<section class="team" id="equipo">
-  <div class="team-header reveal">
-    <p class="section-label">Nuestro equipo</p>
-    <h2 class="section-title">Las personas que cuidarán tu <em>comunidad</em></h2>
-  </div>
-  <div class="team-grid">
-    <div class="team-card reveal">
-      <div class="team-avatar-wrap">
-        <div class="team-initials">AM</div>
-      </div>
-      <div class="team-name">Antonio Moreno</div>
-      <div class="team-role">Director · Administrador Principal</div>
-      <p class="team-bio">Administrador de Fincas colegiado con más de 25 años de experiencia. Especialista en comunidades complejas y resolución de conflictos vecinales.</p>
-      <span class="team-colegiado">Colegiado Nº 2847</span>
-    </div>
-    <div class="team-card reveal">
-      <div class="team-avatar-wrap">
-        <div class="team-initials">LM</div>
-      </div>
-      <div class="team-name">Laura Moreno</div>
-      <div class="team-role">Gestora de Comunidades</div>
-      <p class="team-bio">Graduada en Administración y Dirección de Empresas. Especializada en gestión contable y financiera de comunidades de propietarios.</p>
-      <span class="team-colegiado">Colegiada Nº 3142</span>
-    </div>
-    <div class="team-card reveal">
-      <div class="team-avatar-wrap">
-        <div class="team-initials">CR</div>
-      </div>
-      <div class="team-name">Carlos Ruiz</div>
-      <div class="team-role">Asesor Jurídico</div>
-      <p class="team-bio">Abogado especialista en Derecho Civil y Propiedad Horizontal. Gestiona todas las reclamaciones legales y recursos de las comunidades clientes.</p>
-      <span class="team-colegiado">Abogado Nº 8821</span>
-    </div>
-  </div>
-</section>
-
 <!-- INCIDENCIAS -->
 <section class="incidencias" id="incidencias">
   <p class="section-label reveal">Para propietarios actuales</p>
   <h2 class="section-title reveal">¿Tienes una avería o incidencia? <em>Te atendemos ya.</em></h2>
   <p class="incidencias-sub reveal">Reporta cualquier problema en 3 sencillos pasos. Respuesta garantizada en menos de 24h laborables.</p>
   <div class="incidencias-steps">
-    <div class="inc-step reveal">
-      <div class="inc-step-icon">
-        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      </div>
-      <div class="inc-step-title">1. Contáctanos</div>
-      <p class="inc-step-text">Escríbenos por WhatsApp, llama al teléfono o envía un email con la descripción del problema.</p>
-    </div>
-    <div class="inc-step reveal">
-      <div class="inc-step-icon">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      </div>
-      <div class="inc-step-title">2. Gestión inmediata</div>
-      <p class="inc-step-text">En menos de 24 horas coordinamos la solución con nuestros proveedores de confianza.</p>
-    </div>
-    <div class="inc-step reveal">
-      <div class="inc-step-icon">
-        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-      </div>
-      <div class="inc-step-title">3. Resolución y cierre</div>
-      <p class="inc-step-text">Te informamos de cada paso hasta la resolución. Cero sorpresas en el presupuesto.</p>
-    </div>
+    <div class="inc-step reveal"><div class="inc-step-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="inc-step-title">1. Contáctanos</div><p class="inc-step-text">Escríbenos por WhatsApp, llama al teléfono o envía un email con la descripción del problema.</p></div>
+    <div class="inc-step reveal"><div class="inc-step-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="inc-step-title">2. Gestión inmediata</div><p class="inc-step-text">En menos de 24 horas coordinamos la solución con nuestros proveedores de confianza.</p></div>
+    <div class="inc-step reveal"><div class="inc-step-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="inc-step-title">3. Resolución y cierre</div><p class="inc-step-text">Te informamos de cada paso hasta la resolución. Cero sorpresas en el presupuesto.</p></div>
   </div>
   <div class="incidencias-btns reveal">
-    <a href="https://wa.me/34600000000?text=Hola,%20soy%20propietario%20y%20quiero%20reportar%20una%20incidencia" class="btn-whatsapp" target="_blank">
+    <a href="https://wa.me/34668558159?text=Hola,%20soy%20propietario%20y%20quiero%20reportar%20una%20incidencia" class="btn-whatsapp" target="_blank">
       <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       WhatsApp Directo
     </a>
-    <a href="tel:+34912345678" class="btn-primary">Llamar Ahora</a>
-    <a href="mailto:incidencias@fincasmoreno.es" class="btn-outline" style="border-color:rgba(247,243,238,0.3);color:var(--cream)">Enviar Email</a>
+    <a href="tel:+34668558159" class="btn-primary">📞 668 558 159</a>
+    <a href="mailto:info@fincasmoreno.es" class="btn-outline" style="border-color:rgba(247,243,238,0.3);color:var(--cream)">Enviar Email</a>
   </div>
 </section>
 
 <!-- FAQ -->
 <section class="faq" id="faq">
-  <div class="faq-header reveal">
-    <p class="section-label">Preguntas frecuentes</p>
-    <h2 class="section-title">Todo lo que quieres <em>saber</em> antes de llamar</h2>
-  </div>
+  <div class="faq-header reveal"><p class="section-label">Preguntas frecuentes</p><h2 class="section-title">Todo lo que quieres <em>saber</em> antes de llamar</h2></div>
   <div class="faq-list">
-    <div class="faq-item reveal">
-      <div class="faq-question" onclick="toggleFaq(this)">
-        <span class="faq-q-text">¿Cuánto cuesta cambiar de administrador de fincas?</span>
-        <div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div>
-      </div>
-      <div class="faq-answer"><div class="faq-answer-inner">El cambio de administrador no tiene ningún coste para la comunidad. Nosotros nos encargamos de todo el proceso de traspaso, incluyendo la recogida de documentación del anterior administrador. La única inversión es nuestra tarifa mensual de gestión, que puedes consultar en la sección de precios.</div></div>
-    </div>
-    <div class="faq-item reveal">
-      <div class="faq-question" onclick="toggleFaq(this)">
-        <span class="faq-q-text">¿Cuánto tiempo tarda el traspaso?</span>
-        <div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div>
-      </div>
-      <div class="faq-answer"><div class="faq-answer-inner">Normalmente entre 2 y 4 semanas desde que se aprueba en junta el cambio de administrador. El proceso incluye la comunicación al anterior administrador, recogida de toda la documentación (contabilidad, contratos, actas) y traspaso de cuentas bancarias. Durante todo el proceso te mantenemos informado.</div></div>
-    </div>
-    <div class="faq-item reveal">
-      <div class="faq-question" onclick="toggleFaq(this)">
-        <span class="faq-q-text">¿Tengo que hablar yo con el administrador anterior?</span>
-        <div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div>
-      </div>
-      <div class="faq-answer"><div class="faq-answer-inner">No. Nosotros nos encargamos de toda la comunicación con el administrador saliente. Solo necesitamos que la junta apruebe el cambio y que el presidente firme la documentación necesaria. A partir de ahí, gestionamos todo sin que suponga ninguna molestia para los propietarios.</div></div>
-    </div>
-    <div class="faq-item reveal">
-      <div class="faq-question" onclick="toggleFaq(this)">
-        <span class="faq-q-text">¿Cómo reclamáis a los vecinos morosos?</span>
-        <div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div>
-      </div>
-      <div class="faq-answer"><div class="faq-answer-inner">Seguimos un proceso escalado: primero enviamos recordatorios amistosos, luego reclamaciones formales por carta certificada y, si no hay respuesta, iniciamos el proceso monitorio judicial (que es ágil y económico). Todo sin coste adicional para la comunidad en los planes Completo y Premium.</div></div>
-    </div>
-    <div class="faq-item reveal">
-      <div class="faq-question" onclick="toggleFaq(this)">
-        <span class="faq-q-text">¿Tenéis contrato de permanencia?</span>
-        <div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div>
-      </div>
-      <div class="faq-answer"><div class="faq-answer-inner">No exigimos permanencia mínima. Trabajamos con contratos anuales renovables, como marca la Ley de Propiedad Horizontal, pero si la comunidad no está satisfecha con el servicio, puede cambiarnos en la siguiente junta ordinaria. Nuestra mejor garantía es que nuestros clientes llevan con nosotros una media de 9 años.</div></div>
-    </div>
-    <div class="faq-item reveal">
-      <div class="faq-question" onclick="toggleFaq(this)">
-        <span class="faq-q-text">¿Puedo ver los gastos de mi comunidad en tiempo real?</span>
-        <div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div>
-      </div>
-      <div class="faq-answer"><div class="faq-answer-inner">Sí. A través de nuestra plataforma Netfincas (disponible próximamente), cualquier propietario puede consultar el estado de cuentas, los últimos recibos, las actas de juntas y el histórico de incidencias desde su móvil o tablet en cualquier momento. La transparencia total es uno de nuestros valores fundamentales.</div></div>
-    </div>
+    <div class="faq-item reveal"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-q-text">¿Cuánto cuesta cambiar de administrador de fincas?</span><div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div></div><div class="faq-answer"><div class="faq-answer-inner">El cambio de administrador no tiene ningún coste para la comunidad. Nosotros nos encargamos de todo el proceso de traspaso, incluyendo la recogida de documentación del anterior administrador. La única inversión es nuestra tarifa mensual de gestión.</div></div></div>
+    <div class="faq-item reveal"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-q-text">¿Cuánto tiempo tarda el traspaso?</span><div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div></div><div class="faq-answer"><div class="faq-answer-inner">Normalmente entre 2 y 4 semanas desde que se aprueba en junta el cambio de administrador. Nos encargamos de toda la documentación y durante todo el proceso te mantenemos informado.</div></div></div>
+    <div class="faq-item reveal"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-q-text">¿Tengo que hablar yo con el administrador anterior?</span><div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div></div><div class="faq-answer"><div class="faq-answer-inner">No. Nosotros nos encargamos de toda la comunicación con el administrador saliente. Solo necesitamos que la junta apruebe el cambio y que el presidente firme la documentación necesaria.</div></div></div>
+    <div class="faq-item reveal"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-q-text">¿Cómo reclamáis a los vecinos morosos?</span><div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div></div><div class="faq-answer"><div class="faq-answer-inner">Seguimos un proceso escalado: primero recordatorios amistosos, luego reclamaciones formales por carta certificada y si no hay respuesta, iniciamos el proceso monitorio judicial. Todo sin coste adicional en los planes Completo y Premium.</div></div></div>
+    <div class="faq-item reveal"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-q-text">¿Tenéis contrato de permanencia?</span><div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div></div><div class="faq-answer"><div class="faq-answer-inner">No exigimos permanencia mínima. Trabajamos con contratos anuales renovables. Si la comunidad no está satisfecha puede cambiarnos en la siguiente junta ordinaria. Nuestros clientes llevan con nosotros una media de 9 años.</div></div></div>
+    <div class="faq-item reveal"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-q-text">¿Puedo ver los gastos de mi comunidad en tiempo real?</span><div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div></div><div class="faq-answer"><div class="faq-answer-inner">Sí. A través de nuestra plataforma Netfincas (disponible próximamente), cualquier propietario puede consultar el estado de cuentas, recibos, actas y el histórico de incidencias desde su móvil en cualquier momento.</div></div></div>
   </div>
 </section>
 
 <!-- BLOG -->
 <section class="blog" id="blog">
   <div class="blog-header reveal">
-    <div>
-      <p class="section-label">Blog y noticias</p>
-      <h2 class="section-title">Consejos y novedades para <em>propietarios</em></h2>
-    </div>
-    <a href="index.html#blog" class="blog-ver-mas">Ver todos los artículos <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <div><p class="section-label">Blog y noticias</p><h2 class="section-title">Consejos y novedades para <em>propietarios</em></h2></div>
+    <a href="blog.html" class="blog-ver-mas">Ver todos los artículos <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
   </div>
   <div class="blog-grid">
-    <!-- CARD 1: LPH -->
     <div class="blog-card reveal">
-      <div class="blog-card-img">
-        <svg class="blog-card-icon" viewBox="0 0 24 24"><path d="M3 9L12 2L21 9V20A1 1 0 0 1 20 21H15V16H9V21H4A1 1 0 0 1 3 20V9Z"/></svg>
-        <div class="blog-card-cat">Legal</div>
-        <svg class="blog-card-img-pattern" viewBox="0 0 100 100"><defs><pattern id="dots1" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1" fill="#b8975a"/></pattern></defs><rect width="100" height="100" fill="url(#dots1)"/></svg>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">15 Enero 2025</div>
-        <div class="blog-card-title">Ley de Propiedad Horizontal 2025: Guía completa para propietarios</div>
-        <p class="blog-card-excerpt">Todo lo que necesitas saber sobre tus derechos y obligaciones como propietario, juntas, cuotas, obras y mucho más.</p>
-        <a href="ley-propiedad-horizontal.html" class="blog-card-link">Leer más →</a>
-      </div>
+      <div class="blog-card-img"><svg class="blog-card-icon" viewBox="0 0 24 24"><path d="M3 9L12 2L21 9V20A1 1 0 0 1 20 21H15V16H9V21H4A1 1 0 0 1 3 20V9Z"/></svg><div class="blog-card-cat">Legal</div></div>
+      <div class="blog-card-body"><div class="blog-card-date">15 Enero 2025</div><div class="blog-card-title">Ley de Propiedad Horizontal 2025: Guía completa para propietarios</div><p class="blog-card-excerpt">Todo lo que necesitas saber sobre tus derechos y obligaciones como propietario, juntas, cuotas, obras y mucho más.</p><a href="ley-propiedad-horizontal.html" class="blog-card-link">Leer más →</a></div>
     </div>
-    <!-- CARD 2: MOROSOS -->
     <div class="blog-card reveal">
-      <div class="blog-card-img" style="background:#2e2a25">
-        <svg class="blog-card-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-        <div class="blog-card-cat">Finanzas</div>
-        <svg class="blog-card-img-pattern" viewBox="0 0 100 100"><defs><pattern id="dots2" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1" fill="#b8975a"/></pattern></defs><rect width="100" height="100" fill="url(#dots2)"/></svg>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">3 Diciembre 2024</div>
-        <div class="blog-card-title">Cómo reclamar a un vecino moroso paso a paso</div>
-        <p class="blog-card-excerpt">Guía práctica para presidentes de comunidad: desde la primera notificación amistosa hasta el proceso monitorio judicial.</p>
-        <a href="vecinos-morosos.html" class="blog-card-link">Leer más →</a>
-      </div>
+      <div class="blog-card-img" style="background:#2e2a25"><svg class="blog-card-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg><div class="blog-card-cat">Finanzas</div></div>
+      <div class="blog-card-body"><div class="blog-card-date">3 Diciembre 2024</div><div class="blog-card-title">Cómo reclamar a un vecino moroso paso a paso</div><p class="blog-card-excerpt">Guía práctica para presidentes de comunidad: desde la primera notificación amistosa hasta el proceso monitorio judicial.</p><a href="vecinos-morosos.html" class="blog-card-link">Leer más →</a></div>
     </div>
-    <!-- CARD 3: SUBVENCIONES -->
     <div class="blog-card reveal">
-      <div class="blog-card-img" style="background:#1a1714">
-        <svg class="blog-card-icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-        <div class="blog-card-cat">Mantenimiento</div>
-        <svg class="blog-card-img-pattern" viewBox="0 0 100 100"><defs><pattern id="dots3" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1" fill="#b8975a"/></pattern></defs><rect width="100" height="100" fill="url(#dots3)"/></svg>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">20 Noviembre 2024</div>
-        <div class="blog-card-title">Ayudas y subvenciones para rehabilitar tu edificio en 2025</div>
-        <p class="blog-card-excerpt">El Plan de Recuperación incluye fondos para eficiencia energética. Te explicamos cómo acceder a estas ayudas desde tu comunidad.</p>
-        <a href="subvenciones-rehabilitacion.html" class="blog-card-link">Leer más →</a>
-      </div>
+      <div class="blog-card-img" style="background:#1a1714"><svg class="blog-card-icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg><div class="blog-card-cat">Mantenimiento</div></div>
+      <div class="blog-card-body"><div class="blog-card-date">20 Noviembre 2024</div><div class="blog-card-title">Ayudas y subvenciones para rehabilitar tu edificio en 2025</div><p class="blog-card-excerpt">El Plan de Recuperación incluye fondos para eficiencia energética. Te explicamos cómo acceder a estas ayudas desde tu comunidad.</p><a href="subvenciones-rehabilitacion.html" class="blog-card-link">Leer más →</a></div>
     </div>
   </div>
 </section>
+
+<!-- WHATSAPP -->
 <div class="whatsapp-float">
   <div class="whatsapp-tooltip">💬 ¿Hablamos? Respuesta inmediata</div>
-  <a href="https://wa.me/34600000000?text=Hola,%20me%20gustaría%20obtener%20información%20sobre%20vuestros%20servicios" class="whatsapp-btn" target="_blank" aria-label="Contactar por WhatsApp">
+  <a href="https://wa.me/34668558159?text=Hola,%20me%20gustaría%20obtener%20información%20sobre%20vuestros%20servicios" class="whatsapp-btn" target="_blank" aria-label="Contactar por WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 </div>
@@ -1814,7 +1022,6 @@
   <ul class="footer-links">
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#precios">Precios</a></li>
-    <li><a href="#equipo">Equipo</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#blog">Blog</a></li>
     <li><a href="#contacto">Contacto</a></li>
@@ -1822,21 +1029,15 @@
     <li><a href="politica-privacidad.html">Aviso Legal</a></li>
   </ul>
   <div class="footer-social">
-    <a href="https://www.facebook.com/fincasmoreno" target="_blank" class="social-btn" aria-label="Facebook">
-      <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-    </a>
-    <a href="https://www.instagram.com/fincasmoreno" target="_blank" class="social-btn" aria-label="Instagram">
-      <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-    </a>
+    <a href="https://www.facebook.com/fincasmoreno" target="_blank" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/fincasmoreno" target="_blank" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
   </div>
-  <p class="footer-copy">© 2025 FincasMoreno · Todos los derechos reservados</p>
+  <p class="footer-copy">© 2026 FincasMoreno · Todos los derechos reservados · <a href="tel:+34668558159" style="color:inherit;text-decoration:none">668 558 159</a></p>
 </footer>
 
 <!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner">
-  <p class="cookie-text">
-    🍪 Usamos cookies propias y de terceros para mejorar tu experiencia y analizar el tráfico. Puedes aceptarlas todas o solo las necesarias. Más info en nuestra <a href="politica-privacidad.html">Política de Cookies</a>.
-  </p>
+  <p class="cookie-text">🍪 Usamos cookies propias y de terceros para mejorar tu experiencia. Más info en nuestra <a href="politica-privacidad.html">Política de Cookies</a>.</p>
   <div class="cookie-btns">
     <button class="cookie-reject" onclick="rejectCookies()">Solo necesarias</button>
     <button class="cookie-accept" onclick="acceptCookies()">Aceptar todas</button>
@@ -1844,7 +1045,7 @@
 </div>
 
 <script>
-  // Ajustar padding del body según altura del nav
+  // Padding automático según altura del nav
   function setNavPadding() {
     const navH = document.getElementById('mainNav').offsetHeight;
     document.body.style.paddingTop = navH + 'px';
@@ -1853,59 +1054,38 @@
   window.addEventListener('resize', setNavPadding);
   window.addEventListener('load', setNavPadding);
 
-  // Nav — se oculta al bajar, aparece al subir
+  // Nav ocultar al bajar, mostrar al subir
   const nav = document.getElementById('mainNav');
   const dropdown = document.getElementById('navDropdown');
   let lastScroll = 0;
   window.addEventListener('scroll', () => {
     const current = window.scrollY;
-    if (current > lastScroll && current > 100) {
-      // Bajando — ocultar nav
+    if (current > lastScroll && current > 150) {
       nav.style.transform = 'translateY(-100%)';
       dropdown.classList.remove('open');
       document.getElementById('navBurger').classList.remove('open');
     } else {
-      // Subiendo — mostrar nav
       nav.style.transform = 'translateY(0)';
     }
-    nav.classList.toggle('scrolled', current > 40);
     lastScroll = current;
   });
-  nav.style.transition = 'transform 0.35s ease, box-shadow 0.3s';
+  nav.style.transition = 'transform 0.35s ease';
 
-  // Dropdown menu
+  // Dropdown
   function toggleDropdown() {
-    const dropdown = document.getElementById('navDropdown');
-    const burger = document.getElementById('navBurger');
-    const nav = document.getElementById('mainNav');
     const isOpen = dropdown.classList.toggle('open');
-    burger.classList.toggle('open', isOpen);
+    document.getElementById('navBurger').classList.toggle('open', isOpen);
     dropdown.style.top = nav.offsetHeight + 'px';
   }
   function closeDropdown() {
-    document.getElementById('navDropdown').classList.remove('open');
+    dropdown.classList.remove('open');
     document.getElementById('navBurger').classList.remove('open');
   }
-  // Cerrar al pulsar fuera
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('nav') && !e.target.closest('.nav-dropdown')) {
-      closeDropdown();
-    }
+    if (!e.target.closest('nav') && !e.target.closest('.nav-dropdown')) closeDropdown();
   });
 
-  // Mobile menu
-  function toggleMenu() {
-    const menu = document.getElementById('mobileMenu');
-    const btn = document.getElementById('hamburger');
-    const isOpen = menu.classList.toggle('open');
-    btn.textContent = isOpen ? '✕' : '☰';
-  }
-  function closeMenu() {
-    document.getElementById('mobileMenu').classList.remove('open');
-    document.getElementById('hamburger').textContent = '☰';
-  }
-
-  // FAQ accordion
+  // FAQ
   function toggleFaq(el) {
     const item = el.parentElement;
     const isOpen = item.classList.contains('open');
@@ -1913,27 +1093,16 @@
     if (!isOpen) item.classList.add('open');
   }
 
-  // Cookie banner
-  if (localStorage.getItem('cookieConsent')) {
-    document.getElementById('cookieBanner').classList.add('hidden');
-  }
-  function acceptCookies() {
-    localStorage.setItem('cookieConsent', 'accepted');
-    document.getElementById('cookieBanner').classList.add('hidden');
-  }
-  function rejectCookies() {
-    localStorage.setItem('cookieConsent', 'rejected');
-    document.getElementById('cookieBanner').classList.add('hidden');
-  }
+  // Cookies
+  if (localStorage.getItem('cookieConsent')) document.getElementById('cookieBanner').classList.add('hidden');
+  function acceptCookies() { localStorage.setItem('cookieConsent','accepted'); document.getElementById('cookieBanner').classList.add('hidden'); }
+  function rejectCookies() { localStorage.setItem('cookieConsent','rejected'); document.getElementById('cookieBanner').classList.add('hidden'); }
 
-  // Reveal on scroll
+  // Reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        observer.unobserve(entry.target);
-      }
+      if (entry.isIntersecting) { setTimeout(() => entry.target.classList.add('visible'), i * 80); observer.unobserve(entry.target); }
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   reveals.forEach(el => observer.observe(el));
