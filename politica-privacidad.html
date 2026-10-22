@@ -42,7 +42,6 @@
     .legal-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--cream); }
     .legal-date { margin-top: 1rem; font-size: 0.8rem; color: rgba(247,243,238,0.4); }
 
-    /* TABS */
     .legal-tabs {
       display: flex; justify-content: center; gap: 0;
       border-bottom: 1px solid var(--border);
@@ -76,11 +75,9 @@
     .callout { background: var(--cream); border-left: 3px solid var(--gold); padding: 1.2rem 1.5rem; margin: 1.5rem 0; border-radius: 0 2px 2px 0; }
     .callout p { margin: 0; font-size: 0.85rem; }
 
-    /* COOKIE BANNER */
     .cookie-banner {
       position: fixed; bottom: 0; left: 0; right: 0; z-index: 300;
-      background: var(--dark);
-      border-top: 1px solid var(--border);
+      background: var(--dark); border-top: 1px solid var(--border);
       padding: 1.2rem 5vw;
       display: flex; align-items: center; justify-content: space-between;
       gap: 1.5rem; flex-wrap: wrap;
@@ -90,22 +87,9 @@
     .cookie-text { font-size: 0.82rem; color: rgba(247,243,238,0.65); line-height: 1.6; max-width: 600px; }
     .cookie-text a { color: var(--gold-light); text-decoration: none; }
     .cookie-btns { display: flex; gap: 0.8rem; flex-shrink: 0; }
-    .cookie-accept {
-      background: var(--gold); color: #fff;
-      border: none; padding: 0.65rem 1.5rem;
-      font-family: 'Outfit', sans-serif; font-size: 0.78rem;
-      font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-      cursor: pointer; border-radius: 2px; transition: background 0.2s;
-    }
+    .cookie-accept { background: var(--gold); color: #fff; border: none; padding: 0.65rem 1.5rem; font-family: 'Outfit', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; border-radius: 2px; transition: background 0.2s; }
     .cookie-accept:hover { background: var(--gold-light); }
-    .cookie-reject {
-      background: transparent; color: rgba(247,243,238,0.4);
-      border: 1px solid rgba(247,243,238,0.15);
-      padding: 0.65rem 1.2rem;
-      font-family: 'Outfit', sans-serif; font-size: 0.78rem;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      cursor: pointer; border-radius: 2px; transition: all 0.2s;
-    }
+    .cookie-reject { background: transparent; color: rgba(247,243,238,0.4); border: 1px solid rgba(247,243,238,0.15); padding: 0.65rem 1.2rem; font-family: 'Outfit', sans-serif; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; border-radius: 2px; transition: all 0.2s; }
     .cookie-reject:hover { border-color: rgba(247,243,238,0.3); color: rgba(247,243,238,0.6); }
 
     footer { background: var(--charcoal); padding: 2rem 5vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid rgba(184,151,90,0.1); }
@@ -120,10 +104,9 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a class="nav-logo" href="index.html">
-    <img src="logo.png" alt="FincasMoreno" />
+    <img src="logoheader.png" alt="FincasMoreno" />
   </a>
   <a href="index.html" class="nav-back">
     <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
@@ -131,21 +114,18 @@
   </a>
 </nav>
 
-<!-- HERO -->
 <div class="legal-hero">
   <p class="legal-eyebrow">Información legal</p>
   <h1 class="legal-title">Aviso Legal y Política de Privacidad</h1>
-  <p class="legal-date">Última actualización: enero 2025</p>
+  <p class="legal-date">Última actualización: octubre 2026</p>
 </div>
 
-<!-- TABS -->
 <div class="legal-tabs">
   <button class="tab-btn active" onclick="showTab('privacidad', this)">Política de Privacidad</button>
   <button class="tab-btn" onclick="showTab('legal', this)">Aviso Legal</button>
   <button class="tab-btn" onclick="showTab('cookies', this)">Política de Cookies</button>
 </div>
 
-<!-- CONTENIDO -->
 <div class="legal-content">
 
   <!-- PRIVACIDAD -->
@@ -154,10 +134,10 @@
     <p>En cumplimiento del Reglamento (UE) 2016/679 del Parlamento Europeo (RGPD) y la Ley Orgánica 3/2018 de Protección de Datos Personales (LOPDGDD), te informamos:</p>
     <ul>
       <li><strong>Responsable:</strong> FincasMoreno – Administración de Fincas</li>
-      <li><strong>Dirección:</strong> [Dirección pendiente de confirmar]</li>
+      <li><strong>Dirección:</strong> Av. Diputación, 81A, 18100 Armilla, Granada</li>
       <li><strong>Email:</strong> info@fincasmoreno.es</li>
-      <li><strong>Teléfono:</strong> [Teléfono pendiente de confirmar]</li>
-      <li><strong>Nº Colegiado:</strong> [Pendiente de confirmar]</li>
+      <li><strong>Teléfono:</strong> 668 558 159</li>
+      <li><strong>Nº Colegiada:</strong> 35682</li>
     </ul>
 
     <h2>2. Datos que recogemos</h2>
@@ -198,12 +178,12 @@
     <p>En cumplimiento del artículo 10 de la Ley 34/2002 de Servicios de la Sociedad de la Información (LSSI), se facilitan los siguientes datos:</p>
     <ul>
       <li><strong>Denominación:</strong> FincasMoreno – Administración de Fincas</li>
-      <li><strong>Domicilio:</strong> [Dirección pendiente de confirmar]</li>
+      <li><strong>Domicilio:</strong> Av. Diputación, 81A, 18100 Armilla, Granada</li>
       <li><strong>Email de contacto:</strong> info@fincasmoreno.es</li>
-      <li><strong>Teléfono:</strong> [Pendiente de confirmar]</li>
+      <li><strong>Teléfono:</strong> 668 558 159</li>
       <li><strong>Actividad:</strong> Administración de fincas y comunidades de propietarios</li>
-      <li><strong>Colegio profesional:</strong> Colegio de Administradores de Fincas</li>
-      <li><strong>Nº de colegiado:</strong> [Pendiente de confirmar]</li>
+      <li><strong>Colegio profesional:</strong> Colegio de Administradores de Fincas de Granada</li>
+      <li><strong>Nº de colegiada:</strong> 35682</li>
     </ul>
 
     <h2>2. Objeto y ámbito de aplicación</h2>
@@ -226,7 +206,7 @@
   <!-- COOKIES -->
   <div class="legal-section" id="cookies">
     <h2>1. ¿Qué son las cookies?</h2>
-    <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas un sitio web. Permiten que el sitio recuerde tus preferencias y mejoren tu experiencia de navegación.</p>
+    <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas un sitio web. Permiten que el sitio recuerde tus preferencias y mejoran tu experiencia de navegación.</p>
 
     <h2>2. Cookies que utilizamos</h2>
     <h3>Cookies técnicas (necesarias)</h3>
@@ -260,19 +240,15 @@
 
 </div>
 
-<!-- FOOTER -->
 <footer>
   <a class="footer-logo" href="index.html">
-    <img src="logo.png" alt="FincasMoreno" />
+    <img src="logoheader.png" alt="FincasMoreno" />
   </a>
-  <p class="footer-copy">© 2025 FincasMoreno · Todos los derechos reservados</p>
+  <p class="footer-copy">© 2026 FincasMoreno · Todos los derechos reservados · <a href="tel:+34668558159" style="color:inherit;text-decoration:none">668 558 159</a></p>
 </footer>
 
-<!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner">
-  <p class="cookie-text">
-    Usamos cookies propias y de terceros para mejorar tu experiencia y analizar el tráfico. Puedes aceptarlas todas o solo las necesarias. Más info en nuestra <a href="politica-privacidad.html#cookies">Política de Cookies</a>.
-  </p>
+  <p class="cookie-text">Usamos cookies propias y de terceros para mejorar tu experiencia. Más info en nuestra <a href="politica-privacidad.html">Política de Cookies</a>.</p>
   <div class="cookie-btns">
     <button class="cookie-reject" onclick="rejectCookies()">Solo necesarias</button>
     <button class="cookie-accept" onclick="acceptCookies()">Aceptar todas</button>
@@ -280,25 +256,15 @@
 </div>
 
 <script>
-  // Tabs
   function showTab(id, btn) {
     document.querySelectorAll('.legal-section').forEach(s => s.classList.remove('active'));
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
     document.getElementById(id).classList.add('active');
     btn.classList.add('active');
   }
-  // Cookies banner
-  if (localStorage.getItem('cookieConsent')) {
-    document.getElementById('cookieBanner').classList.add('hidden');
-  }
-  function acceptCookies() {
-    localStorage.setItem('cookieConsent', 'accepted');
-    document.getElementById('cookieBanner').classList.add('hidden');
-  }
-  function rejectCookies() {
-    localStorage.setItem('cookieConsent', 'rejected');
-    document.getElementById('cookieBanner').classList.add('hidden');
-  }
+  if (localStorage.getItem('cookieConsent')) document.getElementById('cookieBanner').classList.add('hidden');
+  function acceptCookies() { localStorage.setItem('cookieConsent','accepted'); document.getElementById('cookieBanner').classList.add('hidden'); }
+  function rejectCookies() { localStorage.setItem('cookieConsent','rejected'); document.getElementById('cookieBanner').classList.add('hidden'); }
 </script>
 </body>
 </html>
